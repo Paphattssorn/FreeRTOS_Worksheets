@@ -230,10 +230,26 @@ idf.py build
 ## คำถามทบทวหน
 
 1. ไฟล์ใดบ้างที่จำเป็นสำหรับโปรเจกต์ ESP-IDF ขั้นต่ำ?
-2. ความแตกต่างระหว่าง `hello_esp32.bin` และ `hello_esp32.elf` คืออะไร?
-3. คำสั่ง `idf.py set-target` ทำอะไร?
-4. โฟลเดอร์ `build/` มีไฟล์อะไรบ้าง?
-5. การใช้ `vTaskDelay()` แทน `delay()` มีความสำคัญอย่างไร?
+CMakeLists.txt (ไฟล์ตั้งค่าการ build ของโปรเจกต์หลัก)
+main/CMakeLists.txt (ตั้งค่าการ build ของ component หลัก)
+main/hello_esp32.c (ไฟล์โค้ดหลักที่มี app_main())
+
+3. ความแตกต่างระหว่าง `hello_esp32.bin` และ `hello_esp32.elf` คืออะไร?
+ไฟล์	ี่
+.bin ไฟล์ไบนารีที่ถูก compile แล้ว ใช้สำหรับ “แฟลชลงบอร์ด” โดยตรง
+.elf ไฟล์ที่มีข้อมูล debug (เช่น symbol, address) ใช้สำหรับการดีบักในโปรแกรมเช่น VS Code หรือ idf-monitor
+
+4. คำสั่ง `idf.py set-target` ทำอะไร?
+ใช้ตั้งค่า “ชิปเป้าหมาย” (Target Chip) ที่จะ build ให้ตรงกับบอร์ด 
+
+5. โฟลเดอร์ `build/` มีไฟล์อะไรบ้าง?
+<img width="430" height="248" alt="image" src="https://github.com/user-attachments/assets/3d812077-f171-452c-a034-03c9bc93b753" />
+
+6. การใช้ `vTaskDelay()` แทน `delay()` มีความสำคัญอย่างไร?
+vTaskDelay() เป็นฟังก์ชันของ FreeRTOS ใช้หน่วงเวลาแบบไม่บล็อกระบบ
+CPU จะ “ยกเวลาให้ task อื่นทำงานต่อ” ระหว่างหน่วง
+ต่างจาก delay() ที่จะ “หยุดทั้งโปรแกรม” ชั่วคราว
+สรุป: vTaskDelay() ช่วยให้ระบบ multitasking ทำงานลื่น ไม่ค้าง
 
 ## บทสรุป
 
