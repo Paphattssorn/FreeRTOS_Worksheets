@@ -366,10 +366,25 @@ xTaskCreatePinnedToCore(low_priority_task, "LowPrio", 3072, NULL, 1, NULL, 1);  
 ## คำถามสำหรับวิเคราะห์
 
 1. Priority ไหนทำงานมากที่สุด? เพราะอะไร?
+
+“ยิ่ง Priority สูง → ได้ CPU มากกว่า”
+เช่น Priority 5 (High) > Priority 3 (Medium) > Priority 1 (Low)
+
 2. เกิด Priority Inversion หรือไม่? จะแก้ไขได้อย่างไร?
+
+กิดได้เมื่อ Low ถือทรัพยากรแล้ว High ต้องรอ แก้ด้วย Mutex ที่มี Priority Inheritance
+
 3. Tasks ที่มี priority เดียวกันทำงานอย่างไร?
+
+ผลัดกันทำงานแบบ Round-Robin คือสลับกันรันทีละช่วงเวลา
+
 4. การเปลี่ยน Priority แบบ dynamic ส่งผลอย่างไร?
+
+ส่งผลให้การจัดลำดับเปลี่ยนทันที เช่น เพิ่ม Priority แล้วแย่ง CPU ได้ทันที
+
 5. CPU utilization ของแต่ละ priority เป็นอย่างไร?
+
+High ใช้ CPU มากสุด → Medium รองลงมา → Low น้อยสุด
 
 ## ผลการทดลองที่คาดหวัง
 
