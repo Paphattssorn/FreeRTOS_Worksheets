@@ -470,10 +470,34 @@ void update_state_display(eTaskState current_state)
 ## คำถามสำหรับวิเคราะห์
 
 1. Task อยู่ใน Running state เมื่อไหร่บ้าง?
+
+เมื่อ Task กำลังทำงานจริงและได้รับ CPU จาก Scheduler
+สังเกตได้จาก LED ที่ GPIO2 (RUNNING) ติดขึ้น
+
 2. ความแตกต่างระหว่าง Ready และ Blocked state คืออะไร?
+
+Task พร้อมทำงานแต่ยังไม่ได้รับ CPU เพราะมี Task อื่นที่มี Priority สูงกว่า
+ในโปรแกรม จะเห็นตอน Task เรียก taskYIELD()
+LED ที่ GPIO4 (READY) จะติด
+
 3. การใช้ vTaskDelay() ทำให้ task อยู่ใน state ใด?
+
+เกิดขึ้นเมื่อ Task รอเหตุการณ์ เช่น การใช้ vTaskDelay() หรือ xSemaphoreTake()
+ในโปรแกรมนี้จะเห็นเมื่อ Task รอ Semaphore หรือ Delay 1 วินาที
+ไฟที่ GPIO5 (BLOCKED) จะติดขึ้น
+
 4. การ Suspend task ต่างจาก Block อย่างไร?
+
+เมื่อกดปุ่มที่ต่อกับ GPIO0
+Task จะถูก Suspend โดยคำสั่ง vTaskSuspend()
+LED ที่ GPIO18 (SUSPENDED) จะติดค้าง
+จนกว่าจะกดอีกครั้งเพื่อ Resume กลับมาทำงาน
+
 5. Task ที่ถูก Delete จะกลับมาได้หรือไม่?
+
+Task จะเข้าสู่สถานะ Deleted เมื่อถูกลบออกจากระบบ
+เช่นใน control_task() เรียก vTaskDelete(external_delete_handle);
+หลังจากนั้นจะไม่มีการแสดงผลของ Task นั้นอีกใน Serial Monitor
 
 ## ผลการทดลองที่คาดหวัง
 
