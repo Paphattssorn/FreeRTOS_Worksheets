@@ -1,0 +1,730 @@
+Command: C:\Users\HP\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\HP\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\HP\Documents\APPLICATIONSOFMICROCONTROLLERS\ESPRTOS\FreeRTOS_Worksheets\producer_consumer\build\producer_consumer.elf C:\Users\HP\Documents\APPLICATIONSOFMICROCONTROLLERS\ESPRTOS\FreeRTOS_Worksheets\producer_consumer\build\bootloader\bootloader.elf --force-color -m 'C:\Users\HP\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\HP\esp\v5.5.1\esp-idf\tools\idf.py'
+
+
+rst:0x1 (POWERON_RES�C�
+B��J���� Enabling RNG early entropy source...
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Le�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 14 2025 00:09:13[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a338h ( 41784) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a360 vaddr=3ffb0000 size=02408h (  9224) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c770 vaddr=40080000 size=038a8h ( 14504) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=171b0h ( 94640) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=000371d8 vaddr=400838a8 size=0987ch ( 39036) load[0m
+[0;32mI (162) esp_image: segment 5: paddr=00040a5c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (168) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (168) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     producer_consumer[0m
+[0;32mI (193) app_init: App version:      813e069[0m
+[0;32mI (197) app_init: Compile time:     Oct 14 2025 00:08:31[0m
+[0;32mI (202) app_init: ELF file SHA256:  804b8ff93...[0m
+[0;32mI (206) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (210) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (214) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (218) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (222) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (228) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (233) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (238) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (244) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (249) heap_init: At 4008D124 len 00012EDC (75 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (258) spi_flash: flash io: dio[0m
+[0;33mW (261) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (274) main_task: Started on CPU0[0m
+[0;32mI (284) main_task: Calling app_main()[0m
+[0;32mI (284) PROD_CONS: Producer-Consumer System Lab Starting...[0m
+[0;32mI (284) PROD_CONS: Queue and mutex created successfully[0m
+Producer 1 started
+✓ Producer 1: Created Product-P1-#0 (processing: 2459ms)
+Producer 2 started
+✓ Producer 2: Created Product-P2-#0 (processing: 1427ms)
+Producer 3 started
+✓ Producer 3: Created Product-P3-#0 (processing: 760ms)
+Producer 4 started
+✓ Producer 4: Created Product-P4-#0 (processing: 1474ms)
+Consumer 1 started
+→ Consumer 1: Processing Product-P1-#0 (queue time: 30ms)
+Consumer 2 started
+→ Consumer 2: Processing Product-P2-#0 (queue time: 30ms)
+Statistics task started
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 4
+Products Consumed: 2
+Products Dropped:  0
+[0;32mI (334) PROD_CONS: All tasks created. System operational.[0m
+Load balancer started
+[0;32mI (344) main_task: Returned from app_main()[0m
+Queue Backlog:     2
+System Efficiency: 50.0%
+Queue: [■■□□□□□□□□]
+═══════════════════════════
+
+✓ Producer 1: Created Product-P1-#1 (processing: 2195ms)
+✓ Consumer 2: Finished Product-P2-#0
+→ Consumer 2: Processing Product-P3-#0 (queue time: 1440ms)
+✓ Consumer 2: Finished Product-P3-#0
+→ Consumer 2: Processing Product-P4-#0 (queue time: 2200ms)
+✓ Producer 4: Created Product-P4-#1 (processing: 1832ms)
+✓ Producer 3: Created Product-P3-#1 (processing: 2104ms)
+✓ Consumer 1: Finished Product-P1-#0
+→ Consumer 1: Processing Product-P1-#1 (queue time: 1130ms)
+✓ Producer 2: Created Product-P2-#1 (processing: 1206ms)
+✓ Producer 1: Created Product-P1-#2 (processing: 2288ms)
+✓ Producer 4: Created Product-P4-#2 (processing: 2363ms)
+✓ Consumer 2: Finished Product-P4-#0
+→ Consumer 2: Processing Product-P4-#1 (queue time: 1400ms)
+✓ Consumer 1: Finished Product-P1-#1
+→ Consumer 1: Processing Product-P3-#1 (queue time: 2380ms)
+✓ Producer 3: Created Product-P3-#2 (processing: 1858ms)
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 11
+Products Consumed: 7
+Products Dropped:  0
+Queue Backlog:     4
+System Efficiency: 63.6%
+Queue: [■■■■□□□□□□]
+═══════════════════════════
+
+✓ Producer 2: Created Product-P2-#2 (processing: 557ms)
+✓ Consumer 2: Finished Product-P4-#1
+→ Consumer 2: Processing Product-P2-#1 (queue time: 2800ms)
+✓ Producer 1: Created Product-P1-#3 (processing: 2022ms)
+✓ Producer 4: Created Product-P4-#3 (processing: 1118ms)
+✓ Consumer 2: Finished Product-P2-#1
+→ Consumer 2: Processing Product-P1-#2 (queue time: 3270ms)
+✓ Consumer 1: Finished Product-P3-#1
+→ Consumer 1: Processing Product-P4-#2 (queue time: 3200ms)
+✓ Producer 3: Created Product-P3-#3 (processing: 1608ms)
+✓ Producer 4: Created Product-P4-#4 (processing: 2081ms)
+✓ Producer 1: Created Product-P1-#4 (processing: 1162ms)
+✓ Producer 2: Created Product-P2-#3 (processing: 1151ms)
+✓ Consumer 2: Finished Product-P1-#2
+→ Consumer 2: Processing Product-P3-#2 (queue time: 4150ms)
+✓ Consumer 1: Finished Product-P4-#2
+→ Consumer 1: Processing Product-P2-#2 (queue time: 3720ms)
+✓ Consumer 1: Finished Product-P2-#2
+→ Consumer 1: Processing Product-P1-#3 (queue time: 3670ms)
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 18
+Products Consumed: 13
+Products Dropped:  0
+Queue Backlog:     5
+System Efficiency: 72.2%
+Queue: [■■■■■□□□□□]
+═══════════════════════════
+
+✓ Producer 3: Created Product-P3-#4 (processing: 2123ms)
+✓ Producer 4: Created Product-P4-#5 (processing: 1040ms)
+✓ Consumer 2: Finished Product-P3-#2
+→ Consumer 2: Processing Product-P4-#3 (queue time: 4510ms)
+✓ Producer 1: Created Product-P1-#5 (processing: 2271ms)
+✓ Producer 2: Created Product-P2-#4 (processing: 2051ms)
+✓ Consumer 1: Finished Product-P1-#3
+→ Consumer 1: Processing Product-P3-#3 (queue time: 4320ms)
+✓ Consumer 2: Finished Product-P4-#3
+→ Consumer 2: Processing Product-P4-#4 (queue time: 4080ms)
+✓ Producer 3: Created Product-P3-#5 (processing: 2063ms)
+✓ Producer 1: Created Product-P1-#6 (processing: 1080ms)
+✓ Consumer 1: Finished Product-P3-#3
+→ Consumer 1: Processing Product-P1-#4 (queue time: 5160ms)
+✓ Producer 4: Created Product-P4-#6 (processing: 881ms)
+✓ Producer 2: Created Product-P2-#5 (processing: 928ms)
+✓ Producer 3: Created Product-P3-#6 (processing: 2390ms)
+✓ Consumer 2: Finished Product-P4-#4
+→ Consumer 2: Processing Product-P2-#3 (queue time: 5730ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 1: Finished Product-P1-#4
+→ Consumer 1: Processing Product-P3-#4 (queue time: 4370ms)
+✓ Producer 1: Created Product-P1-#7 (processing: 2258ms)
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 28
+Products Consumed: 19
+Products Dropped:  0
+Queue Backlog:     9
+System Efficiency: 67.9%
+Queue: [■■■■■■■■■□]
+═══════════════════════════
+
+✓ Consumer 2: Finished Product-P2-#3
+→ Consumer 2: Processing Product-P4-#5 (queue time: 4350ms)
+✓ Producer 2: Created Product-P2-#6 (processing: 823ms)
+✓ Producer 4: Created Product-P4-#7 (processing: 1433ms)
+✓ Consumer 2: Finished Product-P4-#5
+→ Consumer 2: Processing Product-P1-#5 (queue time: 5330ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 3: Created Product-P3-#7 (processing: 1341ms)
+✓ Consumer 1: Finished Product-P3-#4
+→ Consumer 1: Processing Product-P2-#4 (queue time: 5310ms)
+✓ Producer 2: Created Product-P2-#7 (processing: 1604ms)
+✗ Producer 1: Queue full! Dropped Product-P1-#8
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 2: Finished Product-P1-#5
+✓ Producer 4: Created Product-P4-#8 (processing: 1710ms)
+→ Consumer 2: Processing Product-P3-#5 (queue time: 6250ms)
+✗ Producer 3: Queue full! Dropped Product-P3-#8
+✓ Consumer 1: Finished Product-P2-#4
+→ Consumer 1: Processing Product-P1-#6 (queue time: 5760ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 2: Created Product-P2-#8 (processing: 1443ms)
+✓ Consumer 1: Finished Product-P1-#6
+✓ Producer 4: Created Product-P4-#9 (processing: 877ms)
+→ Consumer 1: Processing Product-P4-#6 (queue time: 6210ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 35
+Products Consumed: 25
+Products Dropped:  2
+Queue Backlog:     10
+System Efficiency: 71.4%
+Queue: [■■■■■■■■■■]
+═══════════════════════════
+
+✗ Producer 1: Queue full! Dropped Product-P1-#9
+✓ Consumer 2: Finished Product-P3-#5
+→ Consumer 2: Processing Product-P2-#5 (queue time: 6710ms)
+✓ Consumer 1: Finished Product-P4-#6
+→ Consumer 1: Processing Product-P3-#6 (queue time: 6610ms)
+✓ Producer 3: Created Product-P3-#9 (processing: 2321ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 2: Finished Product-P2-#5
+→ Consumer 2: Processing Product-P1-#7 (queue time: 6780ms)
+✓ Producer 2: Created Product-P2-#9 (processing: 683ms)
+✓ Producer 3: Created Product-P3-#10 (processing: 724ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✗ Producer 4: Queue full! Dropped Product-P4-#10
+✗ Producer 1: Queue full! Dropped Product-P1-#10
+✗ Producer 2: Queue full! Dropped Product-P2-#10
+✓ Consumer 1: Finished Product-P3-#6
+→ Consumer 1: Processing Product-P2-#6 (queue time: 7660ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 4: Created Product-P4-#11 (processing: 1484ms)
+✓ Consumer 2: Finished Product-P1-#7
+→ Consumer 2: Processing Product-P4-#7 (queue time: 7650ms)
+✓ Consumer 1: Finished Product-P2-#6
+→ Consumer 1: Processing Product-P3-#7 (queue time: 7250ms)
+✓ Producer 1: Created Product-P1-#11 (processing: 2362ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 4: Created Product-P4-#12 (processing: 1519ms)
+✗ Producer 3: Queue full! Dropped Product-P3-#11
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 41
+Products Consumed: 31
+Products Dropped:  7
+Queue Backlog:     10
+System Efficiency: 75.6%
+Queue: [■■■■■■■■■■]
+═══════════════════════════
+
+✓ Consumer 1: Finished Product-P3-#7
+→ Consumer 1: Processing Product-P2-#7 (queue time: 8540ms)
+✓ Producer 2: Created Product-P2-#11 (processing: 946ms)
+✓ Consumer 2: Finished Product-P4-#7
+→ Consumer 2: Processing Product-P4-#8 (queue time: 6710ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 1: Created Product-P1-#12 (processing: 1873ms)
+✓ Consumer 1: Finished Product-P2-#7
+→ Consumer 1: Processing Product-P2-#8 (queue time: 7880ms)
+✓ Consumer 2: Finished Product-P4-#8
+→ Consumer 2: Processing Product-P4-#9 (queue time: 7150ms)
+✓ Producer 4: Created Product-P4-#13 (processing: 2066ms)
+✓ Producer 1: Created Product-P1-#13 (processing: 1853ms)
+✓ Consumer 2: Finished Product-P4-#9
+✓ Producer 3: Created Product-P3-#12 (processing: 1709ms)
+→ Consumer 2: Processing Product-P3-#9 (queue time: 7120ms)
+✗ Producer 2: Queue full! Dropped Product-P2-#12
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 1: Finished Product-P2-#8
+→ Consumer 1: Processing Product-P2-#9 (queue time: 6610ms)
+✓ Consumer 1: Finished Product-P2-#9
+→ Consumer 1: Processing Product-P3-#10 (queue time: 6880ms)
+✓ Producer 4: Created Product-P4-#14 (processing: 1262ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 1: Finished Product-P3-#10
+→ Consumer 1: Processing Product-P4-#11 (queue time: 6120ms)
+✓ Producer 1: Created Product-P1-#14 (processing: 1969ms)
+✓ Consumer 2: Finished Product-P3-#9
+→ Consumer 2: Processing Product-P1-#11 (queue time: 5650ms)
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 48
+Products Consumed: 40
+Products Dropped:  8
+Queue Backlog:     8
+System Efficiency: 83.3%
+Queue: [■■■■■■■■□□]
+═══════════════════════════
+
+✓ Producer 3: Created Product-P3-#13 (processing: 1742ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 4: Created Product-P4-#15 (processing: 1623ms)
+✗ Producer 2: Queue full! Dropped Product-P2-#13
+✓ Consumer 1: Finished Product-P4-#11
+→ Consumer 1: Processing Product-P4-#12 (queue time: 6150ms)
+✓ Producer 1: Created Product-P1-#15 (processing: 1524ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✗ Producer 3: Queue full! Dropped Product-P3-#14
+✓ Consumer 2: Finished Product-P1-#11
+→ Consumer 2: Processing Product-P2-#11 (queue time: 7260ms)
+✓ Producer 4: Created Product-P4-#16 (processing: 2326ms)
+✓ Consumer 1: Finished Product-P4-#12
+→ Consumer 1: Processing Product-P1-#12 (queue time: 6620ms)
+✓ Producer 2: Created Product-P2-#14 (processing: 1021ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 2: Finished Product-P2-#11
+→ Consumer 2: Processing Product-P4-#13 (queue time: 5850ms)
+✓ Producer 3: Created Product-P3-#15 (processing: 729ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 1: Finished Product-P1-#12
+✓ Producer 1: Created Product-P1-#16 (processing: 2402ms)
+→ Consumer 1: Processing Product-P1-#13 (queue time: 6770ms)
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 55
+Products Consumed: 45
+Products Dropped:  10
+Queue Backlog:     10
+System Efficiency: 81.8%
+Queue: [■■■■■■■■■■]
+═══════════════════════════
+
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✗ Producer 4: Queue full! Dropped Product-P4-#17
+✓ Consumer 2: Finished Product-P4-#13
+→ Consumer 2: Processing Product-P3-#12 (queue time: 7680ms)
+✓ Producer 2: Created Product-P2-#15 (processing: 2298ms)
+✗ Producer 3: Queue full! Dropped Product-P3-#16
+✓ Consumer 1: Finished Product-P1-#13
+→ Consumer 1: Processing Product-P4-#14 (queue time: 7360ms)
+✓ Producer 1: Created Product-P1-#17 (processing: 2299ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 2: Finished Product-P3-#12
+→ Consumer 2: Processing Product-P1-#14 (queue time: 7440ms)
+✓ Producer 3: Created Product-P3-#17 (processing: 891ms)
+✗ Producer 2: Queue full! Dropped Product-P2-#16
+✓ Consumer 1: Finished Product-P4-#14
+→ Consumer 1: Processing Product-P3-#13 (queue time: 7150ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 4: Created Product-P4-#18 (processing: 567ms)
+✗ Producer 1: Queue full! Dropped Product-P1-#18
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 2: Finished Product-P1-#14
+→ Consumer 2: Processing Product-P4-#15 (queue time: 8490ms)
+✓ Consumer 1: Finished Product-P3-#13
+→ Consumer 1: Processing Product-P1-#15 (queue time: 7690ms)
+✓ Producer 2: Created Product-P2-#17 (processing: 2167ms)
+✓ Producer 3: Created Product-P3-#18 (processing: 2205ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✗ Producer 4: Queue full! Dropped Product-P4-#19
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 61
+Products Consumed: 51
+Products Dropped:  15
+Queue Backlog:     10
+System Efficiency: 83.6%
+Queue: [■■■■■■■■■■]
+═══════════════════════════
+
+✓ Consumer 2: Finished Product-P4-#15
+→ Consumer 2: Processing Product-P4-#16 (queue time: 8220ms)
+✓ Consumer 1: Finished Product-P1-#15
+→ Consumer 1: Processing Product-P2-#14 (queue time: 8100ms)
+✓ Producer 1: Created Product-P1-#19 (processing: 1607ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 3: Created Product-P3-#19 (processing: 2118ms)
+✓ Consumer 1: Finished Product-P2-#14
+→ Consumer 1: Processing Product-P3-#15 (queue time: 8430ms)
+✓ Producer 2: Created Product-P2-#18 (processing: 1194ms)
+✗ Producer 4: Queue full! Dropped Product-P4-#20
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 1: Finished Product-P3-#15
+→ Consumer 1: Processing Product-P1-#16 (queue time: 8170ms)
+✓ Consumer 2: Finished Product-P4-#16
+→ Consumer 2: Processing Product-P2-#15 (queue time: 7570ms)
+✓ Producer 1: Created Product-P1-#20 (processing: 907ms)
+✓ Producer 3: Created Product-P3-#20 (processing: 2435ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✗ Producer 4: Queue full! Dropped Product-P4-#21
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 1: Finished Product-P1-#16
+→ Consumer 1: Processing Product-P1-#17 (queue time: 8590ms)
+✓ Producer 2: Created Product-P2-#19 (processing: 1103ms)
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 67
+Products Consumed: 57
+Products Dropped:  17
+Queue Backlog:     10
+System Efficiency: 85.1%
+Queue: [■■■■■■■■■■]
+═══════════════════════════
+
+✓ Consumer 2: Finished Product-P2-#15
+→ Consumer 2: Processing Product-P3-#17 (queue time: 7990ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 4: Created Product-P4-#22 (processing: 1844ms)
+✓ Consumer 2: Finished Product-P3-#17
+→ Consumer 2: Processing Product-P4-#18 (queue time: 8320ms)
+✓ Producer 3: Created Product-P3-#21 (processing: 1088ms)
+✗ Producer 1: Queue full! Dropped Product-P1-#21
+✓ Consumer 2: Finished Product-P4-#18
+→ Consumer 2: Processing Product-P2-#17 (queue time: 6830ms)
+✓ Producer 2: Created Product-P2-#20 (processing: 2293ms)
+✓ Consumer 1: Finished Product-P1-#17
+→ Consumer 1: Processing Product-P3-#18 (queue time: 7250ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 1: Created Product-P1-#22 (processing: 1092ms)
+✗ Producer 4: Queue full! Dropped Product-P4-#23
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✗ Producer 3: Queue full! Dropped Product-P3-#22
+✗ Producer 2: Queue full! Dropped Product-P2-#21
+✓ Consumer 2: Finished Product-P2-#17
+→ Consumer 2: Processing Product-P1-#19 (queue time: 8000ms)
+✓ Consumer 1: Finished Product-P3-#18
+→ Consumer 1: Processing Product-P3-#19 (queue time: 7760ms)
+✓ Producer 1: Created Product-P1-#23 (processing: 1409ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 2: Created Product-P2-#22 (processing: 2218ms)
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 73
+Products Consumed: 63
+Products Dropped:  21
+Queue Backlog:     10
+System Efficiency: 86.3%
+Queue: [■■■■■■■■■■]
+═══════════════════════════
+
+✗ Producer 4: Queue full! Dropped Product-P4-#24
+✗ Producer 3: Queue full! Dropped Product-P3-#23
+✓ Consumer 2: Finished Product-P1-#19
+→ Consumer 2: Processing Product-P2-#18 (queue time: 8370ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 1: Finished Product-P3-#19
+→ Consumer 1: Processing Product-P1-#20 (queue time: 8040ms)
+✓ Consumer 2: Finished Product-P2-#18
+→ Consumer 2: Processing Product-P3-#20 (queue time: 8180ms)
+✓ Producer 1: Created Product-P1-#24 (processing: 627ms)
+✓ Producer 2: Created Product-P2-#23 (processing: 575ms)
+✓ Producer 4: Created Product-P4-#25 (processing: 849ms)
+✓ Consumer 1: Finished Product-P1-#20
+→ Consumer 1: Processing Product-P2-#19 (queue time: 7360ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 3: Created Product-P3-#24 (processing: 1928ms)
+✗ Producer 1: Queue full! Dropped Product-P1-#25
+✓ Consumer 1: Finished Product-P2-#19
+✓ Producer 4: Created Product-P4-#26 (processing: 968ms)
+→ Consumer 1: Processing Product-P4-#22 (queue time: 7460ms)
+✓ Consumer 2: Finished Product-P3-#20
+→ Consumer 2: Processing Product-P3-#21 (queue time: 7870ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 2: Created Product-P2-#24 (processing: 664ms)
+✗ Producer 4: Queue full! Dropped Product-P4-#27
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 79
+Products Consumed: 69
+Products Dropped:  25
+Queue Backlog:     10
+System Efficiency: 87.3%
+Queue: [■■■■■■■■■■]
+═══════════════════════════
+
+✓ Consumer 2: Finished Product-P3-#21
+→ Consumer 2: Processing Product-P2-#20 (queue time: 8070ms)
+✓ Consumer 1: Finished Product-P4-#22
+→ Consumer 1: Processing Product-P1-#22 (queue time: 7460ms)
+✓ Producer 3: Created Product-P3-#25 (processing: 1562ms)
+✓ Producer 2: Created Product-P2-#25 (processing: 2255ms)
+✗ Producer 1: Queue full! Dropped Product-P1-#26
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 1: Finished Product-P1-#22
+→ Consumer 1: Processing Product-P1-#23 (queue time: 6890ms)
+✓ Producer 3: Created Product-P3-#26 (processing: 2372ms)
+✓ Consumer 2: Finished Product-P2-#20
+→ Consumer 2: Processing Product-P2-#22 (queue time: 7430ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 1: Finished Product-P1-#23
+→ Consumer 1: Processing Product-P1-#24 (queue time: 5930ms)
+✓ Producer 2: Created Product-P2-#26 (processing: 725ms)
+✓ Producer 1: Created Product-P1-#27 (processing: 1991ms)
+✗ Producer 4: Queue full! Dropped Product-P4-#28
+✓ Consumer 1: Finished Product-P1-#24
+→ Consumer 1: Processing Product-P2-#23 (queue time: 6260ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 1: Finished Product-P2-#23
+→ Consumer 1: Processing Product-P4-#25 (queue time: 6720ms)
+✓ Producer 3: Created Product-P3-#27 (processing: 1597ms)
+✓ Producer 4: Created Product-P4-#29 (processing: 2024ms)
+✓ Consumer 2: Finished Product-P2-#22
+→ Consumer 2: Processing Product-P3-#24 (queue time: 6460ms)
+✓ Producer 2: Created Product-P2-#27 (processing: 1416ms)
+✓ Consumer 1: Finished Product-P4-#25
+→ Consumer 1: Processing Product-P4-#26 (queue time: 6390ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 1: Created Product-P1-#28 (processing: 1469ms)
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 88
+Products Consumed: 78
+Products Dropped:  27
+Queue Backlog:     10
+System Efficiency: 88.6%
+Queue: [■■■■■■■■■■]
+═══════════════════════════
+
+✓ Consumer 1: Finished Product-P4-#26
+✓ Producer 3: Created Product-P3-#28 (processing: 860ms)
+→ Consumer 1: Processing Product-P2-#24 (queue time: 6400ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 1: Finished Product-P2-#24
+→ Consumer 1: Processing Product-P3-#25 (queue time: 5970ms)
+✓ Consumer 2: Finished Product-P3-#24
+→ Consumer 2: Processing Product-P2-#25 (queue time: 5900ms)
+✓ Producer 1: Created Product-P1-#29 (processing: 632ms)
+✓ Producer 2: Created Product-P2-#28 (processing: 1632ms)
+✗ Producer 4: Queue full! Dropped Product-P4-#30
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✗ Producer 3: Queue full! Dropped Product-P3-#29
+✓ Consumer 1: Finished Product-P3-#25
+→ Consumer 1: Processing Product-P3-#26 (queue time: 6360ms)
+✓ Producer 4: Created Product-P4-#31 (processing: 1615ms)
+✗ Producer 2: Queue full! Dropped Product-P2-#29
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 2: Finished Product-P2-#25
+→ Consumer 2: Processing Product-P2-#26 (queue time: 5970ms)
+✓ Producer 3: Created Product-P3-#30 (processing: 1786ms)
+✓ Consumer 2: Finished Product-P2-#26
+→ Consumer 2: Processing Product-P1-#27 (queue time: 6610ms)
+✓ Producer 4: Created Product-P4-#32 (processing: 2043ms)
+✗ Producer 1: Queue full! Dropped Product-P1-#30
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 94
+Products Consumed: 84
+Products Dropped:  31
+Queue Backlog:     10
+System Efficiency: 89.4%
+Queue: [■■■■■■■■■■]
+═══════════════════════════
+
+✓ Consumer 1: Finished Product-P3-#26
+→ Consumer 1: Processing Product-P3-#27 (queue time: 6240ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 2: Created Product-P2-#30 (processing: 2243ms)
+✓ Consumer 2: Finished Product-P1-#27
+→ Consumer 2: Processing Product-P4-#29 (queue time: 7090ms)
+✓ Producer 1: Created Product-P1-#31 (processing: 989ms)
+✓ Consumer 1: Finished Product-P3-#27
+✓ Producer 3: Created Product-P3-#31 (processing: 821ms)
+→ Consumer 1: Processing Product-P2-#27 (queue time: 7330ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✗ Producer 4: Queue full! Dropped Product-P4-#33
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 1: Finished Product-P2-#27
+→ Consumer 1: Processing Product-P1-#28 (queue time: 8370ms)
+✓ Consumer 2: Finished Product-P4-#29
+→ Consumer 2: Processing Product-P3-#28 (queue time: 7740ms)
+✓ Producer 2: Created Product-P2-#31 (processing: 2139ms)
+✓ Producer 3: Created Product-P3-#32 (processing: 2466ms)
+✓ Consumer 2: Finished Product-P3-#28
+→ Consumer 2: Processing Product-P1-#29 (queue time: 7740ms)
+✓ Producer 1: Created Product-P1-#32 (processing: 1560ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✗ Producer 4: Queue full! Dropped Product-P4-#34
+✓ Consumer 1: Finished Product-P1-#28
+→ Consumer 1: Processing Product-P2-#28 (queue time: 8000ms)
+✓ Producer 2: Created Product-P2-#32 (processing: 2440ms)
+✓ Consumer 2: Finished Product-P1-#29
+→ Consumer 2: Processing Product-P4-#31 (queue time: 6610ms)
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 101
+Products Consumed: 92
+Products Dropped:  33
+Queue Backlog:     9
+System Efficiency: 91.1%
+Queue: [■■■■■■■■■□]
+═══════════════════════════
+
+✓ Producer 1: Created Product-P1-#33 (processing: 791ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✗ Producer 4: Queue full! Dropped Product-P4-#35
+✗ Producer 3: Queue full! Dropped Product-P3-#33
+✓ Consumer 1: Finished Product-P2-#28
+→ Consumer 1: Processing Product-P3-#30 (queue time: 7270ms)
+✓ Consumer 2: Finished Product-P4-#31
+→ Consumer 2: Processing Product-P4-#32 (queue time: 7070ms)
+✓ Producer 2: Created Product-P2-#33 (processing: 1831ms)
+✓ Producer 4: Created Product-P4-#36 (processing: 2384ms)
+✗ Producer 1: Queue full! Dropped Product-P1-#34
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✗ Producer 3: Queue full! Dropped Product-P3-#34
+✓ Consumer 1: Finished Product-P3-#30
+→ Consumer 1: Processing Product-P2-#30 (queue time: 7170ms)
+✓ Consumer 2: Finished Product-P4-#32
+→ Consumer 2: Processing Product-P1-#31 (queue time: 6920ms)
+✓ Producer 1: Created Product-P1-#35 (processing: 2331ms)
+✓ Consumer 2: Finished Product-P1-#31
+→ Consumer 2: Processing Product-P3-#31 (queue time: 7680ms)
+✓ Producer 4: Created Product-P4-#37 (processing: 813ms)
+✓ Producer 2: Created Product-P2-#34 (processing: 610ms)
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 107
+Products Consumed: 97
+Products Dropped:  37
+Queue Backlog:     10
+System Efficiency: 90.7%
+Queue: [■■■■■■■■■■]
+═══════════════════════════
+
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 2: Finished Product-P3-#31
+→ Consumer 2: Processing Product-P2-#31 (queue time: 6720ms)
+✓ Consumer 1: Finished Product-P2-#30
+→ Consumer 1: Processing Product-P3-#32 (queue time: 6580ms)
+✓ Producer 3: Created Product-P3-#35 (processing: 1033ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 1: Created Product-P1-#36 (processing: 752ms)
+✗ Producer 2: Queue full! Dropped Product-P2-#35
+✗ Producer 3: Queue full! Dropped Product-P3-#36
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 2: Finished Product-P2-#31
+✓ Producer 4: Created Product-P4-#38 (processing: 1315ms)
+→ Consumer 2: Processing Product-P1-#32 (queue time: 8160ms)
+✓ Consumer 1: Finished Product-P3-#32
+→ Consumer 1: Processing Product-P2-#32 (queue time: 8100ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 4: Created Product-P4-#39 (processing: 753ms)
+✓ Consumer 2: Finished Product-P1-#32
+→ Consumer 2: Processing Product-P1-#33 (queue time: 8480ms)
+✓ Producer 2: Created Product-P2-#36 (processing: 575ms)
+✗ Producer 1: Queue full! Dropped Product-P1-#37
+✓ Consumer 2: Finished Product-P1-#33
+✓ Producer 4: Created Product-P4-#40 (processing: 1415ms)
+→ Consumer 2: Processing Product-P2-#33 (queue time: 7950ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✗ Producer 3: Queue full! Dropped Product-P3-#37
+
+═══ SYSTEM STATISTICS ═══
+Products Produced: 113
+Products Consumed: 103
+Products Dropped:  41
+Queue Backlog:     10
+System Efficiency: 91.2%
+Queue: [■■■■■■■■■■]
+═══════════════════════════
+
+✓ Consumer 1: Finished Product-P2-#32
+→ Consumer 1: Processing Product-P4-#36 (queue time: 7800ms)
+✓ Producer 2: Created Product-P2-#37 (processing: 795ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✗ Producer 4: Queue full! Dropped Product-P4-#41
+✗ Producer 1: Queue full! Dropped Product-P1-#38
+✓ Consumer 2: Finished Product-P2-#33
+→ Consumer 2: Processing Product-P1-#35 (queue time: 7520ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 9
+💡 Suggestion: Add more consumers or optimize processing
+✓ Producer 3: Created Product-P3-#38 (processing: 2450ms)
+✓ Consumer 1: Finished Product-P4-#36
+→ Consumer 1: Processing Product-P4-#37 (queue time: 7940ms)
+✓ Producer 4: Created Product-P4-#42 (processing: 2413ms)
+⚠️  HIGH LOAD DETECTED! Queue size: 10
+💡 Suggestion: Add more consumers or optimize processing
+✓ Consumer 1: Finished Product-P4-#37
+✓ Producer 3: Created Product-P3-#39 (processing: 1430ms)
+→ Consumer 1: Processing Product-P2-#34 (queue time: 8540ms)
+✗ Producer 2: Queue full! Dropped Product-P2-#38
+✓ Consumer 2: Finished Product-P1-#35
+✓ Producer 1: Created Product-P1-#39 (processing: 2101ms)
+→ Consumer 2: Processing Product-P3-#35 (queue time: 8530ms)
+✓ Consumer 1: Finished Product-P2-#34
+→ Consumer 1: Processing Product-P1-#36 (queue time: 7030ms)

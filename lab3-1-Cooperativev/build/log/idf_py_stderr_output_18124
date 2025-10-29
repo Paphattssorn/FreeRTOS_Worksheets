@@ -1,0 +1,6 @@
+Command: C:\Users\HP\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\HP\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p com5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\HP\Documents\APPLICATIONSOFMICROCONTROLLERS\ESPRTOS\FreeRTOS_Worksheets\lab3-1-Cooperativev\build\lab3-1-Cooperativev.elf C:\Users\HP\Documents\APPLICATIONSOFMICROCONTROLLERS\ESPRTOS\FreeRTOS_Worksheets\lab3-1-Cooperativev\build\bootloader\bootloader.elf --force-color -m 'C:\Users\HP\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\HP\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'com5'
+[0;33m--- esp-idf-monitor 1.7.0 on com5 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/Users/HP/esp/v5.5.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Users/HP/esp/v5.5.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m

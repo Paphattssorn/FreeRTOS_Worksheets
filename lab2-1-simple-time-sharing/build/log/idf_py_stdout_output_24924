@@ -1,0 +1,41 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\windows\system32\cmd.exe /C "cd /D C:\Users\HP\Documents\APPLICATIONSOFMICROCONTROLLERS\ESPRTOS\FreeRTOS_Worksheets\lab2-1-simple-time-sharing\build\bootloader\esp-idf\esptool_py && C:\Users\HP\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/HP/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/HP/Documents/APPLICATIONSOFMICROCONTROLLERS/ESPRTOS/FreeRTOS_Worksheets/lab2-1-simple-time-sharing/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/simple-time-sharing.c.obj
+C:/Users/HP/Documents/APPLICATIONSOFMICROCONTROLLERS/ESPRTOS/FreeRTOS_Worksheets/lab2-1-simple-time-sharing/main/simple-time-sharing.c: In function 'simulate_sensor_task':
+C:/Users/HP/Documents/APPLICATIONSOFMICROCONTROLLERS/ESPRTOS/FreeRTOS_Worksheets/lab2-1-simple-time-sharing/main/simple-time-sharing.c:42:26: warning: unused variable 'dummy' [-Wunused-variable]
+   42 |             volatile int dummy = i;
+      |                          ^~~~~
+C:/Users/HP/Documents/APPLICATIONSOFMICROCONTROLLERS/ESPRTOS/FreeRTOS_Worksheets/lab2-1-simple-time-sharing/main/simple-time-sharing.c: In function 'simulate_processing_task':
+C:/Users/HP/Documents/APPLICATIONSOFMICROCONTROLLERS/ESPRTOS/FreeRTOS_Worksheets/lab2-1-simple-time-sharing/main/simple-time-sharing.c:57:26: warning: unused variable 'dummy' [-Wunused-variable]
+   57 |             volatile int dummy = i * i;
+      |                          ^~~~~
+C:/Users/HP/Documents/APPLICATIONSOFMICROCONTROLLERS/ESPRTOS/FreeRTOS_Worksheets/lab2-1-simple-time-sharing/main/simple-time-sharing.c: In function 'simulate_actuator_task':
+C:/Users/HP/Documents/APPLICATIONSOFMICROCONTROLLERS/ESPRTOS/FreeRTOS_Worksheets/lab2-1-simple-time-sharing/main/simple-time-sharing.c:72:22: warning: unused variable 'dummy' [-Wunused-variable]
+   72 |         volatile int dummy = i + 100;
+      |                      ^~~~~
+C:/Users/HP/Documents/APPLICATIONSOFMICROCONTROLLERS/ESPRTOS/FreeRTOS_Worksheets/lab2-1-simple-time-sharing/main/simple-time-sharing.c: In function 'simulate_display_task':
+C:/Users/HP/Documents/APPLICATIONSOFMICROCONTROLLERS/ESPRTOS/FreeRTOS_Worksheets/lab2-1-simple-time-sharing/main/simple-time-sharing.c:87:22: warning: unused variable 'dummy' [-Wunused-variable]
+   87 |         volatile int dummy = i / 2;
+      |                      ^~~~~
+C:/Users/HP/Documents/APPLICATIONSOFMICROCONTROLLERS/ESPRTOS/FreeRTOS_Worksheets/lab2-1-simple-time-sharing/main/simple-time-sharing.c: In function 'manual_scheduler':
+C:/Users/HP/Documents/APPLICATIONSOFMICROCONTROLLERS/ESPRTOS/FreeRTOS_Worksheets/lab2-1-simple-time-sharing/main/simple-time-sharing.c:103:22: warning: unused variable 'dummy' [-Wunused-variable]
+  103 |         volatile int dummy = i;
+      |                      ^~~~~
+C:/Users/HP/Documents/APPLICATIONSOFMICROCONTROLLERS/ESPRTOS/FreeRTOS_Worksheets/lab2-1-simple-time-sharing/main/simple-time-sharing.c:124:22: warning: unused variable 'dummy' [-Wunused-variable]
+  124 |         volatile int dummy = i;
+      |                      ^~~~~
+[5/9] Linking C static library esp-idf\main\libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+[7/9] Linking CXX executable simple-time-sharing.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.10.dev2
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/HP/Documents/APPLICATIONSOFMICROCONTROLLERS/ESPRTOS/FreeRTOS_Worksheets/lab2-1-simple-time-sharing/build/simple-time-sharing.bin
+[9/9] C:\windows\system32\cmd.exe /C "cd /D C:\Users\HP\Documents\APPLICATIONSOFMICROCONTROLLERS\ESPRTOS\FreeRTOS_Worksheets\lab2-1-simple-time-sharing\build\esp-idf\esptool_py && C:\Users\HP\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/HP/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/HP/Documents/APPLICATIONSOFMICROCONTROLLERS/ESPRTOS/FreeRTOS_Worksheets/lab2-1-simple-time-sharing/build/partition_table/partition-table.bin C:/Users/HP/Documents/APPLICATIONSOFMICROCONTROLLERS/ESPRTOS/FreeRTOS_Worksheets/lab2-1-simple-time-sharing/build/simple-time-sharing.bin"
+simple-time-sharing.bin binary size 0x2e1b0 bytes. Smallest app partition is 0x100000 bytes. 0xd1e50 bytes (82%) free.

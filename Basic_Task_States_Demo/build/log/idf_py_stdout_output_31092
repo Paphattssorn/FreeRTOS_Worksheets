@@ -1,0 +1,226 @@
+Command: C:\Users\HP\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\HP\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\HP\Documents\APPLICATIONSOFMICROCONTROLLERS\ESPRTOS\FreeRTOS_Worksheets\Basic_Task_States_Demo\build\Basic_Task_States_Demo.elf C:\Users\HP\Documents\APPLICATIONSOFMICROCONTROLLERS\ESPRTOS\FreeRTOS_Worksheets\Basic_Task_States_Demo\build\bootloader\bootloader.elf --force-color -m 'C:\Users\HP\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\HP\esp\v5.5.1\esp-idf\tools\idf.py'
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drvѥѥ���Table:
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 �ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 15 2025 13:08:54[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a5e0h ( 42464) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001a608 vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001ca48 vaddr=40080000 size=035d0h ( 13776) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14a90h ( 84624) map[0m
+[0;32mI (143) esp_image: segment 4: paddr=00034ab8 vaddr=400835d0 size=09d7ch ( 40316) load[0m
+[0;32mI (159) esp_image: segment 5: paddr=0003e83c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (166) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (177) cpu_start: Multicore app[0m
+[0;32mI (185) cpu_start: Pro cpu start user code[0m
+[0;32mI (185) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (185) app_init: Application information:[0m
+[0;32mI (185) app_init: Project name:     Basic_Task_States_Demo[0m
+[0;32mI (191) app_init: App version:      813e069[0m
+[0;32mI (195) app_init: Compile time:     Oct 15 2025 13:09:43[0m
+[0;32mI (200) app_init: ELF file SHA256:  46c18b65a...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB2D40 len 0002D2C0 (180 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (241) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008D34C len 00012CB4 (75 KiB): IRAM[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (259) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (272) main_task: Started on CPU0[0m
+[0;32mI (282) main_task: Calling app_main()[0m
+[0;32mI (282) TASK_STATES: === Exercise 1 & 2: State Counter + LED Indicator ===[0m
+[0;32mI (282) TASK_STATES: State Demo Task started[0m
+[0;32mI (282) TASK_STATES: State change: Ready -> Running (Count: 1)[0m
+[0;32mI (292) TASK_STATES: Task is RUNNING[0m
+[0;32mI (372) TASK_STATES: State change: Running -> Ready (Count: 1)[0m
+[0;32mI (372) TASK_STATES: Task will be READY[0m
+[0;32mI (372) TASK_STATES: Control Task started[0m
+[0;32mI (372) TASK_STATES: External delete task running: 0[0m
+[0;32mI (372) TASK_STATES: System ready. Press GPIO0 to Suspend/Resume, GPIO15 to Give Semaphore.[0m
+[0;32mI (382) main_task: Returned from app_main()[0m
+[0;32mI (472) TASK_STATES: State change: Ready -> Blocked (Count: 1)[0m
+[0;32mI (472) TASK_STATES: Task waiting for semaphore[0m
+[0;32mI (1372) TASK_STATES: External delete task running: 1[0m
+[0;32mI (2372) TASK_STATES: External delete task running: 2[0m
+[0;32mI (2472) TASK_STATES: Timeout[0m
+[0;32mI (3372) TASK_STATES: External delete task running: 3[0m
+[0;32mI (3472) TASK_STATES: State change: Blocked -> Running (Count: 2)[0m
+[0;32mI (3472) TASK_STATES: Task is RUNNING[0m
+[0;32mI (3542) TASK_STATES: State change: Running -> Ready (Count: 2)[0m
+[0;32mI (3542) TASK_STATES: Task will be READY[0m
+[0;32mI (3642) TASK_STATES: State change: Ready -> Blocked (Count: 2)[0m
+[0;32mI (3642) TASK_STATES: Task waiting for semaphore[0m
+[0;32mI (4372) TASK_STATES: External delete task running: 4[0m
+[0;32mI (5272) TASK_STATES: === STATE CHANGE COUNTER ===[0m
+[0;32mI (5272) TASK_STATES: Running: 2[0m
+[0;32mI (5272) TASK_STATES: Ready: 2[0m
+[0;32mI (5272) TASK_STATES: Blocked: 2[0m
+[0;32mI (5272) TASK_STATES: Suspended: 0[0m
+[0;32mI (5272) TASK_STATES: Deleted: 0[0m
+[0;32mI (5372) TASK_STATES: External delete task running: 5[0m
+[0;32mI (5642) TASK_STATES: Timeout[0m
+[0;32mI (6372) TASK_STATES: External delete task running: 6[0m
+[0;32mI (6642) TASK_STATES: State change: Blocked -> Running (Count: 3)[0m
+[0;32mI (6642) TASK_STATES: Task is RUNNING[0m
+[0;32mI (6712) TASK_STATES: State change: Running -> Ready (Count: 3)[0m
+[0;32mI (6712) TASK_STATES: Task will be READY[0m
+[0;32mI (6812) TASK_STATES: State change: Ready -> Blocked (Count: 3)[0m
+[0;32mI (6812) TASK_STATES: Task waiting for semaphore[0m
+[0;32mI (7372) TASK_STATES: External delete task running: 7[0m
+[0;33mW (7422) TASK_STATES: Suspending Task[0m
+[0;32mI (7422) TASK_STATES: State change: Blocked -> Suspended (Count: 1)[0m
+[0;32mI (8372) TASK_STATES: External delete task running: 8[0m
+[0;32mI (9372) TASK_STATES: External delete task running: 9[0m
+[0;32mI (10372) TASK_STATES: External delete task running: 10[0m
+[0;32mI (11372) TASK_STATES: External delete task running: 11[0m
+[0;33mW (11632) TASK_STATES: Resuming Task[0m
+[0;32mI (11632) TASK_STATES: State change: Suspended -> Running (Count: 4)[0m
+[0;32mI (11632) TASK_STATES: Timeout[0m
+[0;33mW (12162) TASK_STATES: Suspending Task[0m
+[0;32mI (12162) TASK_STATES: State change: Blocked -> Suspended (Count: 2)[0m
+[0;32mI (12372) TASK_STATES: External delete task running: 12[0m
+[0;33mW (12582) TASK_STATES: Resuming Task[0m
+[0;32mI (12582) TASK_STATES: State change: Suspended -> Running (Count: 5)[0m
+[0;32mI (12582) TASK_STATES: State change: Blocked -> Running (Count: 6)[0m
+[0;32mI (12582) TASK_STATES: Task is RUNNING[0m
+[0;32mI (12662) TASK_STATES: State change: Running -> Ready (Count: 4)[0m
+[0;32mI (12662) TASK_STATES: Task will be READY[0m
+[0;32mI (12762) TASK_STATES: State change: Ready -> Blocked (Count: 4)[0m
+[0;32mI (12762) TASK_STATES: Task waiting for semaphore[0m
+[0;33mW (12972) TASK_STATES: Suspending Task[0m
+[0;32mI (12972) TASK_STATES: State change: Blocked -> Suspended (Count: 3)[0m
+[0;32mI (13372) TASK_STATES: External delete task running: 13[0m
+[0;33mW (13502) TASK_STATES: Resuming Task[0m
+[0;32mI (13502) TASK_STATES: State change: Suspended -> Running (Count: 7)[0m
+[0;33mW (13832) TASK_STATES: Suspending Task[0m
+[0;32mI (13832) TASK_STATES: State change: Blocked -> Suspended (Count: 4)[0m
+[0;33mW (14262) TASK_STATES: Resuming Task[0m
+[0;32mI (14262) TASK_STATES: State change: Suspended -> Running (Count: 8)[0m
+[0;32mI (14372) TASK_STATES: External delete task running: 14[0m
+[0;33mW (14592) TASK_STATES: Suspending Task[0m
+[0;32mI (14592) TASK_STATES: State change: Blocked -> Suspended (Count: 5)[0m
+[0;33mW (14912) TASK_STATES: Resuming Task[0m
+[0;32mI (14912) TASK_STATES: State change: Suspended -> Running (Count: 9)[0m
+[0;32mI (14912) TASK_STATES: Timeout[0m
+[0;32mI (15292) TASK_STATES: === STATE CHANGE COUNTER ===[0m
+[0;32mI (15292) TASK_STATES: Running: 9[0m
+[0;32mI (15292) TASK_STATES: Ready: 4[0m
+[0;32mI (15292) TASK_STATES: Blocked: 4[0m
+[0;32mI (15292) TASK_STATES: Suspended: 5[0m
+[0;32mI (15292) TASK_STATES: Deleted: 0[0m
+[0;32mI (15372) TASK_STATES: External delete task running: 15[0m
+[0;32mI (15912) TASK_STATES: State change: Blocked -> Running (Count: 10)[0m
+[0;32mI (15912) TASK_STATES: Task is RUNNING[0m
+[0;32mI (15982) TASK_STATES: State change: Running -> Ready (Count: 5)[0m
+[0;32mI (15982) TASK_STATES: Task will be READY[0m
+[0;32mI (16082) TASK_STATES: State change: Ready -> Blocked (Count: 5)[0m
+[0;32mI (16082) TASK_STATES: Task waiting for semaphore[0m
+[0;32mI (16372) TASK_STATES: External delete task running: 16[0m
+[0;33mW (16842) TASK_STATES: Suspending Task[0m
+[0;32mI (16842) TASK_STATES: State change: Blocked -> Suspended (Count: 6)[0m
+[0;33mW (17302) TASK_STATES: Resuming Task[0m
+[0;32mI (17302) TASK_STATES: State change: Suspended -> Running (Count: 11)[0m
+[0;32mI (17372) TASK_STATES: External delete task running: 17[0m
+[0;33mW (17582) TASK_STATES: Suspending Task[0m
+[0;32mI (17582) TASK_STATES: State change: Blocked -> Suspended (Count: 7)[0m
+[0;33mW (17932) TASK_STATES: Resuming Task[0m
+[0;32mI (17932) TASK_STATES: State change: Suspended -> Running (Count: 12)[0m
+[0;32mI (18082) TASK_STATES: Timeout[0m
+[0;33mW (18242) TASK_STATES: Suspending Task[0m
+[0;32mI (18242) TASK_STATES: State change: Blocked -> Suspended (Count: 8)[0m
+[0;32mI (18372) TASK_STATES: External delete task running: 18[0m
+[0;33mW (18582) TASK_STATES: Resuming Task[0m
+[0;32mI (18582) TASK_STATES: State change: Suspended -> Running (Count: 13)[0m
+[0;32mI (18582) TASK_STATES: State change: Blocked -> Running (Count: 14)[0m
+[0;32mI (18582) TASK_STATES: Task is RUNNING[0m
+[0;32mI (18662) TASK_STATES: State change: Running -> Ready (Count: 6)[0m
+[0;32mI (18662) TASK_STATES: Task will be READY[0m
+[0;32mI (18762) TASK_STATES: State change: Ready -> Blocked (Count: 6)[0m
+[0;32mI (18762) TASK_STATES: Task waiting for semaphore[0m
+[0;33mW (18942) TASK_STATES: Suspending Task[0m
+[0;32mI (18942) TASK_STATES: State change: Blocked -> Suspended (Count: 9)[0m
+[0;32mI (19372) TASK_STATES: External delete task running: 19[0m
+[0;33mW (19452) TASK_STATES: Resuming Task[0m
+[0;32mI (19452) TASK_STATES: State change: Suspended -> Running (Count: 15)[0m
+[0;32mI (20372) TASK_STATES: External delete task running: 20[0m
+[0;32mI (20762) TASK_STATES: Timeout[0m
+[0;33mW (20912) TASK_STATES: Suspending Task[0m
+[0;32mI (20912) TASK_STATES: State change: Blocked -> Suspended (Count: 10)[0m
+[0;33mW (21252) TASK_STATES: Resuming Task[0m
+[0;32mI (21252) TASK_STATES: State change: Suspended -> Running (Count: 16)[0m
+[0;32mI (21252) TASK_STATES: State change: Blocked -> Running (Count: 17)[0m
+[0;32mI (21252) TASK_STATES: Task is RUNNING[0m
+[0;32mI (21332) TASK_STATES: State change: Running -> Ready (Count: 7)[0m
+[0;32mI (21332) TASK_STATES: Task will be READY[0m
+[0;32mI (21372) TASK_STATES: External delete task running: 21[0m
+[0;32mI (21432) TASK_STATES: State change: Ready -> Blocked (Count: 7)[0m
+[0;32mI (21432) TASK_STATES: Task waiting for semaphore[0m
+[0;33mW (21552) TASK_STATES: Suspending Task[0m
+[0;32mI (21552) TASK_STATES: State change: Blocked -> Suspended (Count: 11)[0m
+[0;33mW (21552) TASK_STATES: Deleting external task[0m
+[0;32mI (21552) TASK_STATES: State change: Running -> Deleted (Count: 1)[0m
+[0;32mI (21552) TASK_STATES: === STATE CHANGE COUNTER ===[0m
+[0;32mI (21562) TASK_STATES: Running: 17[0m
+[0;32mI (21562) TASK_STATES: Ready: 7[0m
+[0;32mI (21562) TASK_STATES: Blocked: 7[0m
+[0;32mI (21572) TASK_STATES: Suspended: 11[0m
+[0;32mI (21572) TASK_STATES: Deleted: 1[0m
+[0;33mW (21722) TASK_STATES: Resuming Task[0m
+[0;32mI (21722) TASK_STATES: State change: Suspended -> Running (Count: 18)[0m
+[0;33mW (21922) TASK_STATES: Suspending Task[0m
+[0;32mI (21922) TASK_STATES: State change: Blocked -> Suspended (Count: 12)[0m
+[0;33mW (22292) TASK_STATES: Resuming Task[0m
+[0;32mI (22292) TASK_STATES: State change: Suspended -> Running (Count: 19)[0m
+[0;33mW (22542) TASK_STATES: Suspending Task[0m
+[0;32mI (22542) TASK_STATES: State change: Blocked -> Suspended (Count: 13)[0m
+[0;33mW (22722) TASK_STATES: Resuming Task[0m
+[0;32mI (22722) TASK_STATES: State change: Suspended -> Running (Count: 20)[0m
+[0;33mW (23052) TASK_STATES: Suspending Task[0m
+[0;32mI (23052) TASK_STATES: State change: Blocked -> Suspended (Count: 14)[0m
+[0;33mW (23602) TASK_STATES: Resuming Task[0m
+[0;32mI (23602) TASK_STATES: State change: Suspended -> Running (Count: 21)[0m
+[0;32mI (23602) TASK_STATES: Timeout[0m
+[0;33mW (23852) TASK_STATES: Suspending Task[0m
+[0;32mI (23852) TASK_STATES: State change: Blocked -> Suspended (Count: 15)[0m
+[0;33mW (24312) TASK_STATES: Resuming Task[0m
+[0;32mI (24312) TASK_STATES: State change: Suspended -> Running (Count: 22)[0m
+[0;32mI (24312) TASK_STATES: State change: Blocked -> Running (Count: 23)[0m
+[0;32mI (24312) TASK_STATES: Task is RUNNING[0m
+[0;32mI (24392) TASK_STATES: State change: Running -> Ready (Count: 8)[0m
+[0;32mI (24392) TASK_STATES: Task will be READY[0m
+[0;32mI (24492) TASK_STATES: State change: Ready -> Blocked (Count: 8)[0m
+[0;32mI (24492) TASK_STATES: Task waiting for semaphore[0m
+[0;33mW (24562) TASK_STATES: Suspending Task[0m
+[0;32mI (24562) TASK_STATES: State change: Blocked -> Suspended (Count: 16)[0m

@@ -1,0 +1,1171 @@
+Command: C:\Users\HP\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\HP\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p com5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\HP\Documents\APPLICATIONSOFMICROCONTROLLERS\ESPRTOS\FreeRTOS_Worksheets\lab2-3-time-Problem\build\lab2-3-time-Problem.elf C:\Users\HP\Documents\APPLICATIONSOFMICROCONTROLLERS\ESPRTOS\FreeRTOS_Worksheets\lab2-3-time-Problem\build\bootloader\bootloader.elf --force-color -m 'C:\Users\HP\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\HP\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'com5'
+0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct  8 2025 11:00:21[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a4b0h ( 42160) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a4d8 vaddr=3ffb0000 size=023f8h (  9208) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c8d8 vaddr=40080000 size=03740h ( 14144) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14974h ( 84340) map[0m
+[0;32mI (143) esp_image: segment 4: paddr=0003499c vaddr=40083740 size=09870h ( 39024) load[0m
+[0;32mI (158) esp_image: segment 5: paddr=0003e214 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (165) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (165) boot: Disabling RNG early entropy source...[0m
+[0;32mI (176) cpu_start: Multicore app[0m
+[0;32mI (185) cpu_start: Pro cpu start user code[0m
+[0;32mI (185) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (185) app_init: Application information:[0m
+[0;32mI (185) app_init: Project name:     lab2-3-time-Problem[0m
+[0;32mI (190) app_init: App version:      813e069[0m
+[0;32mI (194) app_init: Compile time:     Oct  8 2025 10:59:43[0m
+[0;32mI (199) app_init: ELF file SHA256:  e275c1c08...[0m
+[0;32mI (203) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (207) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (211) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (215) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (219) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (225) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (230) heap_init: At 3FFB2CE0 len 0002D320 (180 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (240) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 4008CFB0 len 00013050 (76 KiB): IRAM[0m
+[0;32mI (253) spi_flash: detected chip: generic[0m
+[0;32mI (255) spi_flash: flash io: dio[0m
+[0;33mW (258) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (271) main_task: Started on CPU0[0m
+[0;32mI (281) main_task: Calling app_main()[0m
+[0;32mI (281) TIME_SHARING: Time-Sharing System Started[0m
+[0;32mI (281) TIME_SHARING: Time slice: 50 ms[0m
+[0;32mI (281) TIME_SHARING: Sensor Task 0[0m
+[0;32mI (331) TIME_SHARING: Processing Task 0[0m
+[0;32mI (381) TIME_SHARING: Actuator Task 0[0m
+[0;32mI (431) TIME_SHARING: Display Task 0[0m
+[0;32mI (481) TIME_SHARING: Sensor Task 1[0m
+[0;32mI (531) TIME_SHARING: Processing Task 1[0m
+[0;32mI (581) TIME_SHARING: Actuator Task 1[0m
+[0;32mI (631) TIME_SHARING: Display Task 1[0m
+[0;32mI (681) TIME_SHARING: Sensor Task 2[0m
+[0;32mI (731) TIME_SHARING: Processing Task 2[0m
+[0;32mI (781) TIME_SHARING: Actuator Task 2[0m
+[0;32mI (831) TIME_SHARING: Display Task 2[0m
+[0;32mI (881) TIME_SHARING: Sensor Task 3[0m
+[0;32mI (931) TIME_SHARING: Processing Task 3[0m
+[0;32mI (981) TIME_SHARING: Actuator Task 3[0m
+[0;32mI (1031) TIME_SHARING: Display Task 3[0m
+[0;32mI (1081) TIME_SHARING: Sensor Task 4[0m
+[0;32mI (1131) TIME_SHARING: Processing Task 4[0m
+[0;32mI (1181) TIME_SHARING: Actuator Task 4[0m
+[0;32mI (1231) TIME_SHARING: Display Task 4[0m
+[0;32mI (1281) TIME_SHARING: === Round 1 Statistics ===[0m
+[0;32mI (1281) TIME_SHARING: Context switches: 20[0m
+[0;32mI (1281) TIME_SHARING: Total time: 996181 us[0m
+[0;32mI (1281) TIME_SHARING: Task execution time: 75623 us[0m
+[0;32mI (1281) TIME_SHARING: CPU utilization: 7.6%[0m
+[0;32mI (1291) TIME_SHARING: Overhead: 92.4%[0m
+[0;32mI (1291) TIME_SHARING: Avg time per task: 3781 us[0m
+[0;32mI (1291) TIME_SHARING: Sensor Task 5[0m
+[0;32mI (1351) TIME_SHARING: Processing Task 5[0m
+[0;32mI (1401) TIME_SHARING: Actuator Task 5[0m
+[0;32mI (1451) TIME_SHARING: Display Task 5[0m
+[0;32mI (1501) TIME_SHARING: Sensor Task 6[0m
+[0;32mI (1551) TIME_SHARING: Processing Task 6[0m
+[0;32mI (1601) TIME_SHARING: Actuator Task 6[0m
+[0;32mI (1651) TIME_SHARING: Display Task 6[0m
+[0;32mI (1701) TIME_SHARING: Sensor Task 7[0m
+[0;32mI (1751) TIME_SHARING: Processing Task 7[0m
+[0;32mI (1801) TIME_SHARING: Actuator Task 7[0m
+[0;32mI (1851) TIME_SHARING: Display Task 7[0m
+[0;32mI (1901) TIME_SHARING: Sensor Task 8[0m
+[0;32mI (1951) TIME_SHARING: Processing Task 8[0m
+[0;32mI (2001) TIME_SHARING: Actuator Task 8[0m
+[0;32mI (2051) TIME_SHARING: Display Task 8[0m
+[0;32mI (2101) TIME_SHARING: Sensor Task 9[0m
+[0;32mI (2151) TIME_SHARING: Processing Task 9[0m
+[0;32mI (2201) TIME_SHARING: Actuator Task 9[0m
+[0;32mI (2251) TIME_SHARING: Display Task 9[0m
+[0;32mI (2301) TIME_SHARING: === Round 2 Statistics ===[0m
+[0;32mI (2301) TIME_SHARING: Context switches: 40[0m
+[0;32mI (2301) TIME_SHARING: Total time: 2016181 us[0m
+[0;32mI (2301) TIME_SHARING: Task execution time: 151315 us[0m
+[0;32mI (2301) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (2311) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (2311) TIME_SHARING: Avg time per task: 3782 us[0m
+[0;32mI (2311) TIME_SHARING: Sensor Task 10[0m
+[0;32mI (2371) TIME_SHARING: Processing Task 10[0m
+[0;32mI (2421) TIME_SHARING: Actuator Task 10[0m
+[0;32mI (2471) TIME_SHARING: Display Task 10[0m
+[0;32mI (2521) TIME_SHARING: Sensor Task 11[0m
+[0;32mI (2571) TIME_SHARING: Processing Task 11[0m
+[0;32mI (2621) TIME_SHARING: Actuator Task 11[0m
+[0;32mI (2671) TIME_SHARING: Display Task 11[0m
+[0;32mI (2721) TIME_SHARING: Sensor Task 12[0m
+[0;32mI (2771) TIME_SHARING: Processing Task 12[0m
+[0;32mI (2821) TIME_SHARING: Actuator Task 12[0m
+[0;32mI (2871) TIME_SHARING: Display Task 12[0m
+[0;32mI (2921) TIME_SHARING: Sensor Task 13[0m
+[0;32mI (2971) TIME_SHARING: Processing Task 13[0m
+[0;32mI (3021) TIME_SHARING: Actuator Task 13[0m
+[0;32mI (3071) TIME_SHARING: Display Task 13[0m
+[0;32mI (3121) TIME_SHARING: Sensor Task 14[0m
+[0;32mI (3171) TIME_SHARING: Processing Task 14[0m
+[0;32mI (3221) TIME_SHARING: Actuator Task 14[0m
+[0;32mI (3271) TIME_SHARING: Display Task 14[0m
+[0;32mI (3321) TIME_SHARING: === Round 3 Statistics ===[0m
+[0;32mI (3321) TIME_SHARING: Context switches: 60[0m
+[0;32mI (3321) TIME_SHARING: Total time: 3036181 us[0m
+[0;32mI (3321) TIME_SHARING: Task execution time: 227141 us[0m
+[0;32mI (3321) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (3331) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (3331) TIME_SHARING: Avg time per task: 3785 us[0m
+[0;32mI (3331) TIME_SHARING: Sensor Task 15[0m
+[0;32mI (3391) TIME_SHARING: Processing Task 15[0m
+[0;32mI (3441) TIME_SHARING: Actuator Task 15[0m
+[0;32mI (3491) TIME_SHARING: Display Task 15[0m
+[0;32mI (3541) TIME_SHARING: Sensor Task 16[0m
+[0;32mI (3591) TIME_SHARING: Processing Task 16[0m
+[0;32mI (3641) TIME_SHARING: Actuator Task 16[0m
+[0;32mI (3691) TIME_SHARING: Display Task 16[0m
+[0;32mI (3741) TIME_SHARING: Sensor Task 17[0m
+[0;32mI (3791) TIME_SHARING: Processing Task 17[0m
+[0;32mI (3841) TIME_SHARING: Actuator Task 17[0m
+[0;32mI (3891) TIME_SHARING: Display Task 17[0m
+[0;32mI (3941) TIME_SHARING: Sensor Task 18[0m
+[0;32mI (3991) TIME_SHARING: Processing Task 18[0m
+[0;32mI (4041) TIME_SHARING: Actuator Task 18[0m
+[0;32mI (4091) TIME_SHARING: Display Task 18[0m
+[0;32mI (4141) TIME_SHARING: Sensor Task 19[0m
+[0;32mI (4191) TIME_SHARING: Processing Task 19[0m
+[0;32mI (4241) TIME_SHARING: Actuator Task 19[0m
+[0;32mI (4291) TIME_SHARING: Display Task 19[0m
+[0;32mI (4341) TIME_SHARING: === Round 4 Statistics ===[0m
+[0;32mI (4341) TIME_SHARING: Context switches: 80[0m
+[0;32mI (4341) TIME_SHARING: Total time: 4056181 us[0m
+[0;32mI (4341) TIME_SHARING: Task execution time: 302970 us[0m
+[0;32mI (4341) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (4351) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (4351) TIME_SHARING: Avg time per task: 3787 us[0m
+[0;32mI (4351) TIME_SHARING: Sensor Task 20[0m
+[0;32mI (4411) TIME_SHARING: Processing Task 20[0m
+[0;32mI (4461) TIME_SHARING: Actuator Task 20[0m
+[0;32mI (4511) TIME_SHARING: Display Task 20[0m
+[0;32mI (4561) TIME_SHARING: Sensor Task 21[0m
+[0;32mI (4611) TIME_SHARING: Processing Task 21[0m
+[0;32mI (4661) TIME_SHARING: Actuator Task 21[0m
+[0;32mI (4711) TIME_SHARING: Display Task 21[0m
+[0;32mI (4761) TIME_SHARING: Sensor Task 22[0m
+[0;32mI (4811) TIME_SHARING: Processing Task 22[0m
+[0;32mI (4861) TIME_SHARING: Actuator Task 22[0m
+[0;32mI (4911) TIME_SHARING: Display Task 22[0m
+[0;32mI (4961) TIME_SHARING: Sensor Task 23[0m
+[0;32mI (5011) TIME_SHARING: Processing Task 23[0m
+[0;32mI (5061) TIME_SHARING: Actuator Task 23[0m
+[0;32mI (5111) TIME_SHARING: Display Task 23[0m
+[0;32mI (5161) TIME_SHARING: Sensor Task 24[0m
+[0;32mI (5211) TIME_SHARING: Processing Task 24[0m
+[0;32mI (5261) TIME_SHARING: Actuator Task 24[0m
+[0;32mI (5311) TIME_SHARING: Display Task 24[0m
+[0;32mI (5361) TIME_SHARING: === Round 5 Statistics ===[0m
+[0;32mI (5361) TIME_SHARING: Context switches: 100[0m
+[0;32mI (5361) TIME_SHARING: Total time: 5076181 us[0m
+[0;32mI (5361) TIME_SHARING: Task execution time: 378805 us[0m
+[0;32mI (5361) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (5371) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (5371) TIME_SHARING: Avg time per task: 3788 us[0m
+[0;32mI (5371) TIME_SHARING: Sensor Task 25[0m
+[0;32mI (5431) TIME_SHARING: Processing Task 25[0m
+[0;32mI (5481) TIME_SHARING: Actuator Task 25[0m
+[0;32mI (5531) TIME_SHARING: Display Task 25[0m
+[0;32mI (5581) TIME_SHARING: Sensor Task 26[0m
+[0;32mI (5631) TIME_SHARING: Processing Task 26[0m
+[0;32mI (5681) TIME_SHARING: Actuator Task 26[0m
+[0;32mI (5731) TIME_SHARING: Display Task 26[0m
+[0;32mI (5781) TIME_SHARING: Sensor Task 27[0m
+[0;32mI (5831) TIME_SHARING: Processing Task 27[0m
+[0;32mI (5881) TIME_SHARING: Actuator Task 27[0m
+[0;32mI (5931) TIME_SHARING: Display Task 27[0m
+[0;32mI (5981) TIME_SHARING: Sensor Task 28[0m
+[0;32mI (6031) TIME_SHARING: Processing Task 28[0m
+[0;32mI (6081) TIME_SHARING: Actuator Task 28[0m
+[0;32mI (6131) TIME_SHARING: Display Task 28[0m
+[0;32mI (6181) TIME_SHARING: Sensor Task 29[0m
+[0;32mI (6231) TIME_SHARING: Processing Task 29[0m
+[0;32mI (6281) TIME_SHARING: Actuator Task 29[0m
+[0;32mI (6331) TIME_SHARING: Display Task 29[0m
+[0;32mI (6381) TIME_SHARING: === Round 6 Statistics ===[0m
+[0;32mI (6381) TIME_SHARING: Context switches: 120[0m
+[0;32mI (6381) TIME_SHARING: Total time: 6096181 us[0m
+[0;32mI (6381) TIME_SHARING: Task execution time: 454641 us[0m
+[0;32mI (6381) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (6391) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (6391) TIME_SHARING: Avg time per task: 3788 us[0m
+[0;32mI (6391) TIME_SHARING: Sensor Task 30[0m
+[0;32mI (6451) TIME_SHARING: Processing Task 30[0m
+[0;32mI (6501) TIME_SHARING: Actuator Task 30[0m
+[0;32mI (6551) TIME_SHARING: Display Task 30[0m
+[0;32mI (6601) TIME_SHARING: Sensor Task 31[0m
+[0;32mI (6651) TIME_SHARING: Processing Task 31[0m
+[0;32mI (6701) TIME_SHARING: Actuator Task 31[0m
+[0;32mI (6751) TIME_SHARING: Display Task 31[0m
+[0;32mI (6801) TIME_SHARING: Sensor Task 32[0m
+[0;32mI (6851) TIME_SHARING: Processing Task 32[0m
+[0;32mI (6901) TIME_SHARING: Actuator Task 32[0m
+[0;32mI (6951) TIME_SHARING: Display Task 32[0m
+[0;32mI (7001) TIME_SHARING: Sensor Task 33[0m
+[0;32mI (7051) TIME_SHARING: Processing Task 33[0m
+[0;32mI (7101) TIME_SHARING: Actuator Task 33[0m
+[0;32mI (7151) TIME_SHARING: Display Task 33[0m
+[0;32mI (7201) TIME_SHARING: Sensor Task 34[0m
+[0;32mI (7251) TIME_SHARING: Processing Task 34[0m
+[0;32mI (7301) TIME_SHARING: Actuator Task 34[0m
+[0;32mI (7351) TIME_SHARING: Display Task 34[0m
+[0;32mI (7401) TIME_SHARING: === Round 7 Statistics ===[0m
+[0;32mI (7401) TIME_SHARING: Context switches: 140[0m
+[0;32mI (7401) TIME_SHARING: Total time: 7116181 us[0m
+[0;32mI (7401) TIME_SHARING: Task execution time: 530477 us[0m
+[0;32mI (7401) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (7411) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (7411) TIME_SHARING: Avg time per task: 3789 us[0m
+[0;32mI (7411) TIME_SHARING: Sensor Task 35[0m
+[0;32mI (7471) TIME_SHARING: Processing Task 35[0m
+[0;32mI (7521) TIME_SHARING: Actuator Task 35[0m
+[0;32mI (7571) TIME_SHARING: Display Task 35[0m
+[0;32mI (7621) TIME_SHARING: Sensor Task 36[0m
+[0;32mI (7671) TIME_SHARING: Processing Task 36[0m
+[0;32mI (7721) TIME_SHARING: Actuator Task 36[0m
+[0;32mI (7771) TIME_SHARING: Display Task 36[0m
+[0;32mI (7821) TIME_SHARING: Sensor Task 37[0m
+[0;32mI (7871) TIME_SHARING: Processing Task 37[0m
+[0;32mI (7921) TIME_SHARING: Actuator Task 37[0m
+[0;32mI (7971) TIME_SHARING: Display Task 37[0m
+[0;32mI (8021) TIME_SHARING: Sensor Task 38[0m
+[0;32mI (8071) TIME_SHARING: Processing Task 38[0m
+[0;32mI (8121) TIME_SHARING: Actuator Task 38[0m
+[0;32mI (8171) TIME_SHARING: Display Task 38[0m
+[0;32mI (8221) TIME_SHARING: Sensor Task 39[0m
+[0;32mI (8271) TIME_SHARING: Processing Task 39[0m
+[0;32mI (8321) TIME_SHARING: Actuator Task 39[0m
+[0;32mI (8371) TIME_SHARING: Display Task 39[0m
+[0;32mI (8421) TIME_SHARING: === Round 8 Statistics ===[0m
+[0;32mI (8421) TIME_SHARING: Context switches: 160[0m
+[0;32mI (8421) TIME_SHARING: Total time: 8136181 us[0m
+[0;32mI (8421) TIME_SHARING: Task execution time: 606313 us[0m
+[0;32mI (8421) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (8431) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (8431) TIME_SHARING: Avg time per task: 3789 us[0m
+[0;32mI (8431) TIME_SHARING: Sensor Task 40[0m
+[0;32mI (8491) TIME_SHARING: Processing Task 40[0m
+[0;32mI (8541) TIME_SHARING: Actuator Task 40[0m
+[0;32mI (8591) TIME_SHARING: Display Task 40[0m
+[0;32mI (8641) TIME_SHARING: Sensor Task 41[0m
+[0;32mI (8691) TIME_SHARING: Processing Task 41[0m
+[0;32mI (8741) TIME_SHARING: Actuator Task 41[0m
+[0;32mI (8791) TIME_SHARING: Display Task 41[0m
+[0;32mI (8841) TIME_SHARING: Sensor Task 42[0m
+[0;32mI (8891) TIME_SHARING: Processing Task 42[0m
+[0;32mI (8941) TIME_SHARING: Actuator Task 42[0m
+[0;32mI (8991) TIME_SHARING: Display Task 42[0m
+[0;32mI (9041) TIME_SHARING: Sensor Task 43[0m
+[0;32mI (9091) TIME_SHARING: Processing Task 43[0m
+[0;32mI (9141) TIME_SHARING: Actuator Task 43[0m
+[0;32mI (9191) TIME_SHARING: Display Task 43[0m
+[0;32mI (9241) TIME_SHARING: Sensor Task 44[0m
+[0;32mI (9291) TIME_SHARING: Processing Task 44[0m
+[0;32mI (9341) TIME_SHARING: Actuator Task 44[0m
+[0;32mI (9391) TIME_SHARING: Display Task 44[0m
+[0;32mI (9441) TIME_SHARING: === Round 9 Statistics ===[0m
+[0;32mI (9441) TIME_SHARING: Context switches: 180[0m
+[0;32mI (9441) TIME_SHARING: Total time: 9156181 us[0m
+[0;32mI (9441) TIME_SHARING: Task execution time: 682149 us[0m
+[0;32mI (9441) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (9451) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (9451) TIME_SHARING: Avg time per task: 3789 us[0m
+[0;32mI (9451) TIME_SHARING: Sensor Task 45[0m
+[0;32mI (9511) TIME_SHARING: Processing Task 45[0m
+[0;32mI (9561) TIME_SHARING: Actuator Task 45[0m
+[0;32mI (9611) TIME_SHARING: Display Task 45[0m
+[0;32mI (9661) TIME_SHARING: Sensor Task 46[0m
+[0;32mI (9711) TIME_SHARING: Processing Task 46[0m
+[0;32mI (9761) TIME_SHARING: Actuator Task 46[0m
+[0;32mI (9811) TIME_SHARING: Display Task 46[0m
+[0;32mI (9861) TIME_SHARING: Sensor Task 47[0m
+[0;32mI (9911) TIME_SHARING: Processing Task 47[0m
+[0;32mI (9961) TIME_SHARING: Actuator Task 47[0m
+[0;32mI (10011) TIME_SHARING: Display Task 47[0m
+[0;32mI (10061) TIME_SHARING: Sensor Task 48[0m
+[0;32mI (10111) TIME_SHARING: Processing Task 48[0m
+[0;32mI (10161) TIME_SHARING: Actuator Task 48[0m
+[0;32mI (10211) TIME_SHARING: Display Task 48[0m
+[0;32mI (10261) TIME_SHARING: Sensor Task 49[0m
+[0;32mI (10311) TIME_SHARING: Processing Task 49[0m
+[0;32mI (10361) TIME_SHARING: Actuator Task 49[0m
+[0;32mI (10411) TIME_SHARING: Display Task 49[0m
+[0;32mI (10461) TIME_SHARING: === Round 10 Statistics ===[0m
+[0;32mI (10461) TIME_SHARING: Context switches: 200[0m
+[0;32mI (10461) TIME_SHARING: Total time: 10176181 us[0m
+[0;32mI (10461) TIME_SHARING: Task execution time: 758001 us[0m
+[0;32mI (10461) TIME_SHARING: CPU utilization: 7.4%[0m
+[0;32mI (10471) TIME_SHARING: Overhead: 92.6%[0m
+[0;32mI (10471) TIME_SHARING: Avg time per task: 3790 us[0m
+[0;32mI (10471) TIME_SHARING: Sensor Task 50[0m
+[0;32mI (10531) TIME_SHARING: Processing Task 50[0m
+[0;32mI (10581) TIME_SHARING: Actuator Task 50[0m
+[0;32mI (10631) TIME_SHARING: Display Task 50[0m
+[0;32mI (10681) TIME_SHARING: Sensor Task 51[0m
+[0;32mI (10731) TIME_SHARING: Processing Task 51[0m
+[0;32mI (10781) TIME_SHARING: Actuator Task 51[0m
+[0;32mI (10831) TIME_SHARING: Display Task 51[0m
+[0;32mI (10881) TIME_SHARING: Sensor Task 52[0m
+[0;32mI (10931) TIME_SHARING: Processing Task 52[0m
+[0;32mI (10981) TIME_SHARING: Actuator Task 52[0m
+[0;32mI (11031) TIME_SHARING: Display Task 52[0m
+[0;32mI (11081) TIME_SHARING: Sensor Task 53[0m
+[0;32mI (11131) TIME_SHARING: Processing Task 53[0m
+[0;32mI (11181) TIME_SHARING: Actuator Task 53[0m
+[0;32mI (11231) TIME_SHARING: Display Task 53[0m
+[0;32mI (11281) TIME_SHARING: Sensor Task 54[0m
+[0;32mI (11331) TIME_SHARING: Processing Task 54[0m
+[0;32mI (11381) TIME_SHARING: Actuator Task 54[0m
+[0;32mI (11431) TIME_SHARING: Display Task 54[0m
+[0;32mI (11481) TIME_SHARING: === Round 11 Statistics ===[0m
+[0;32mI (11481) TIME_SHARING: Context switches: 220[0m
+[0;32mI (11481) TIME_SHARING: Total time: 11196181 us[0m
+[0;32mI (11481) TIME_SHARING: Task execution time: 833956 us[0m
+[0;32mI (11481) TIME_SHARING: CPU utilization: 7.4%[0m
+[0;32mI (11491) TIME_SHARING: Overhead: 92.6%[0m
+[0;32mI (11491) TIME_SHARING: Avg time per task: 3790 us[0m
+[0;32mI (11491) TIME_SHARING: Sensor Task 55[0m
+[0;32mI (11551) TIME_SHARING: Processing Task 55[0m
+[0;32mI (11601) TIME_SHARING: Actuator Task 55[0m
+[0;32mI (11651) TIME_SHARING: Display Task 55[0m
+[0;32mI (11701) TIME_SHARING: Sensor Task 56[0m
+[0;32mI (11751) TIME_SHARING: Processing Task 56[0m
+[0;32mI (11801) TIME_SHARING: Actuator Task 56[0m
+[0;32mI (11851) TIME_SHARING: Display Task 56[0m
+[0;32mI (11901) TIME_SHARING: Sensor Task 57[0m
+[0;32mI (11951) TIME_SHARING: Processing Task 57[0m
+[0;32mI (12001) TIME_SHARING: Actuator Task 57[0m
+[0;32mI (12051) TIME_SHARING: Display Task 57[0m
+[0;32mI (12101) TIME_SHARING: Sensor Task 58[0m
+[0;32mI (12151) TIME_SHARING: Processing Task 58[0m
+[0;32mI (12201) TIME_SHARING: Actuator Task 58[0m
+[0;32mI (12251) TIME_SHARING: Display Task 58[0m
+[0;32mI (12301) TIME_SHARING: Sensor Task 59[0m
+[0;32mI (12351) TIME_SHARING: Processing Task 59[0m
+[0;32mI (12401) TIME_SHARING: Actuator Task 59[0m
+[0;32mI (12451) TIME_SHARING: Display Task 59[0m
+[0;32mI (12501) TIME_SHARING: === Round 12 Statistics ===[0m
+[0;32mI (12501) TIME_SHARING: Context switches: 240[0m
+[0;32mI (12501) TIME_SHARING: Total time: 12216181 us[0m
+[0;32mI (12501) TIME_SHARING: Task execution time: 909911 us[0m
+[0;32mI (12501) TIME_SHARING: CPU utilization: 7.4%[0m
+[0;32mI (12511) TIME_SHARING: Overhead: 92.6%[0m
+[0;32mI (12511) TIME_SHARING: Avg time per task: 3791 us[0m
+[0;32mI (12511) TIME_SHARING: Sensor Task 60[0m
+[0;32mI (12571) TIME_SHARING: Processing Task 60[0m
+[0;32mI (12621) TIME_SHARING: Actuator Task 60[0m
+[0;32mI (12671) TIME_SHARING: Display Task 60[0m
+[0;32mI (12721) TIME_SHARING: Sensor Task 61[0m
+[0;32mI (12771) TIME_SHARING: Processing Task 61[0m
+[0;32mI (12821) TIME_SHARING: Actuator Task 61[0m
+[0;32mI (12871) TIME_SHARING: Display Task 61[0m
+[0;32mI (12921) TIME_SHARING: Sensor Task 62[0m
+[0;32mI (12971) TIME_SHARING: Processing Task 62[0m
+[0;32mI (13021) TIME_SHARING: Actuator Task 62[0m
+[0;32mI (13071) TIME_SHARING: Display Task 62[0m
+[0;32mI (13121) TIME_SHARING: Sensor Task 63[0m
+[0;32mI (13171) TIME_SHARING: Processing Task 63[0m
+[0;32mI (13221) TIME_SHARING: Actuator Task 63[0m
+[0;32mI (13271) TIME_SHARING: Display Task 63[0m
+[0;32mI (13321) TIME_SHARING: Sensor Task 64[0m
+[0;32mI (13371) TIME_SHARING: Processing Task 64[0m
+[0;32mI (13421) TIME_SHARING: Actuator Task 64[0m
+[0;32mI (13471) TIME_SHARING: Display Task 64[0m
+[0;32mI (13521) TIME_SHARING: === Round 13 Statistics ===[0m
+[0;32mI (13521) TIME_SHARING: Context switches: 260[0m
+[0;32mI (13521) TIME_SHARING: Total time: 13236181 us[0m
+[0;32mI (13521) TIME_SHARING: Task execution time: 985867 us[0m
+[0;32mI (13521) TIME_SHARING: CPU utilization: 7.4%[0m
+[0;32mI (13531) TIME_SHARING: Overhead: 92.6%[0m
+[0;32mI (13531) TIME_SHARING: Avg time per task: 3791 us[0m
+[0;32mI (13531) TIME_SHARING: Sensor Task 65[0m
+[0;32mI (13591) TIME_SHARING: Processing Task 65[0m
+[0;32mI (13641) TIME_SHARING: Actuator Task 65[0m
+[0;32mI (13691) TIME_SHARING: Display Task 65[0m
+[0;32mI (13741) TIME_SHARING: Sensor Task 66[0m
+[0;32mI (13791) TIME_SHARING: Processing Task 66[0m
+[0;32mI (13841) TIME_SHARING: Actuator Task 66[0m
+[0;32mI (13891) TIME_SHARING: Display Task 66[0m
+[0;32mI (13941) TIME_SHARING: Sensor Task 67[0m
+[0;32mI (13991) TIME_SHARING: Processing Task 67[0m
+[0;32mI (14041) TIME_SHARING: Actuator Task 67[0m
+[0;32mI (14091) TIME_SHARING: Display Task 67[0m
+[0;32mI (14141) TIME_SHARING: Sensor Task 68[0m
+[0;32mI (14191) TIME_SHARING: Processing Task 68[0m
+[0;32mI (14241) TIME_SHARING: Actuator Task 68[0m
+[0;32mI (14291) TIME_SHARING: Display Task 68[0m
+[0;32mI (14341) TIME_SHARING: Sensor Task 69[0m
+[0;32mI (14391) TIME_SHARING: Processing Task 69[0m
+[0;32mI (14441) TIME_SHARING: Actuator Task 69[0m
+[0;32mI (14491) TIME_SHARING: Display Task 69[0m
+[0;32mI (14541) TIME_SHARING: === Round 14 Statistics ===[0m
+[0;32mI (14541) TIME_SHARING: Context switches: 280[0m
+[0;32mI (14541) TIME_SHARING: Total time: 14256181 us[0m
+[0;32mI (14541) TIME_SHARING: Task execution time: 1061827 us[0m
+[0;32mI (14541) TIME_SHARING: CPU utilization: 7.4%[0m
+[0;32mI (14551) TIME_SHARING: Overhead: 92.6%[0m
+[0;32mI (14551) TIME_SHARING: Avg time per task: 3792 us[0m
+[0;32mI (14551) TIME_SHARING: Sensor Task 70[0m
+[0;32mI (14611) TIME_SHARING: Processing Task 70[0m
+[0;32mI (14661) TIME_SHARING: Actuator Task 70[0m
+[0;32mI (14711) TIME_SHARING: Display Task 70[0m
+[0;32mI (14761) TIME_SHARING: Sensor Task 71[0m
+[0;32mI (14811) TIME_SHARING: Processing Task 71[0m
+[0;32mI (14861) TIME_SHARING: Actuator Task 71[0m
+[0;32mI (14911) TIME_SHARING: Display Task 71[0m
+[0;32mI (14961) TIME_SHARING: Sensor Task 72[0m
+[0;32mI (15011) TIME_SHARING: Processing Task 72[0m
+[0;32mI (15061) TIME_SHARING: Actuator Task 72[0m
+[0;32mI (15111) TIME_SHARING: Display Task 72[0m
+[0;32mI (15161) TIME_SHARING: Sensor Task 73[0m
+[0;32mI (15211) TIME_SHARING: Processing Task 73[0m
+[0;32mI (15261) TIME_SHARING: Actuator Task 73[0m
+[0;32mI (15311) TIME_SHARING: Display Task 73[0m
+[0;32mI (15361) TIME_SHARING: Sensor Task 74[0m
+[0;32mI (15411) TIME_SHARING: Processing Task 74[0m
+[0;32mI (15461) TIME_SHARING: Actuator Task 74[0m
+[0;32mI (15511) TIME_SHARING: Display Task 74[0m
+[0;32mI (15561) TIME_SHARING: === Round 15 Statistics ===[0m
+[0;32mI (15561) TIME_SHARING: Context switches: 300[0m
+[0;32mI (15561) TIME_SHARING: Total time: 15276181 us[0m
+[0;32mI (15561) TIME_SHARING: Task execution time: 1137787 us[0m
+[0;32mI (15561) TIME_SHARING: CPU utilization: 7.4%[0m
+[0;32mI (15571) TIME_SHARING: Overhead: 92.6%[0m
+[0;32mI (15571) TIME_SHARING: Avg time per task: 3792 us[0m
+[0;32mI (15571) TIME_SHARING: Sensor Task 75[0m
+[0;32mI (15631) TIME_SHARING: Processing Task 75[0m
+[0;32mI (15681) TIME_SHARING: Actuator Task 75[0m
+[0;32mI (15731) TIME_SHARING: Display Task 75[0m
+[0;32mI (15781) TIME_SHARING: Sensor Task 76[0m
+[0;32mI (15831) TIME_SHARING: Processing Task 76[0m
+[0;32mI (15881) TIME_SHARING: Actuator Task 76[0m
+[0;32mI (15931) TIME_SHARING: Display Task 76[0m
+[0;32mI (15981) TIME_SHARING: Sensor Task 77[0m
+[0;32mI (16031) TIME_SHARING: Processing Task 77[0m
+[0;32mI (16081) TIME_SHARING: Actuator Task 77[0m
+[0;32mI (16131) TIME_SHARING: Display Task 77[0m
+[0;32mI (16181) TIME_SHARING: Sensor Task 78[0m
+[0;32mI (16231) TIME_SHARING: Processing Task 78[0m
+[0;32mI (16281) TIME_SHARING: Actuator Task 78[0m
+[0;32mI (16331) TIME_SHARING: Display Task 78[0m
+[0;32mI (16381) TIME_SHARING: Sensor Task 79[0m
+[0;32mI (16431) TIME_SHARING: Processing Task 79[0m
+[0;32mI (16481) TIME_SHARING: Actuator Task 79[0m
+[0;32mI (16531) TIME_SHARING: Display Task 79[0m
+[0;32mI (16581) TIME_SHARING: === Round 16 Statistics ===[0m
+[0;32mI (16581) TIME_SHARING: Context switches: 320[0m
+[0;32mI (16581) TIME_SHARING: Total time: 16296181 us[0m
+[0;32mI (16581) TIME_SHARING: Task execution time: 1213747 us[0m
+[0;32mI (16581) TIME_SHARING: CPU utilization: 7.4%[0m
+[0;32mI (16591) TIME_SHARING: Overhead: 92.6%[0m
+[0;32mI (16591) TIME_SHARING: Avg time per task: 3792 us[0m
+[0;32mI (16591) TIME_SHARING: Sensor Task 80[0m
+[0;32mI (16651) TIME_SHARING: Processing Task 80[0m
+[0;32mI (16701) TIME_SHARING: Actuator Task 80[0m
+[0;32mI (16751) TIME_SHARING: Display Task 80[0m
+[0;32mI (16801) TIME_SHARING: Sensor Task 81[0m
+[0;32mI (16851) TIME_SHARING: Processing Task 81[0m
+[0;32mI (16901) TIME_SHARING: Actuator Task 81[0m
+[0;32mI (16951) TIME_SHARING: Display Task 81[0m
+[0;32mI (17001) TIME_SHARING: Sensor Task 82[0m
+[0;32mI (17051) TIME_SHARING: Processing Task 82[0m
+[0;32mI (17101) TIME_SHARING: Actuator Task 82[0m
+[0;32mI (17151) TIME_SHARING: Display Task 82[0m
+[0;32mI (17201) TIME_SHARING: Sensor Task 83[0m
+[0;32mI (17251) TIME_SHARING: Processing Task 83[0m
+[0;32mI (17301) TIME_SHARING: Actuator Task 83[0m
+[0;32mI (17351) TIME_SHARING: Display Task 83[0m
+[0;32mI (17401) TIME_SHARING: Sensor Task 84[0m
+[0;32mI (17451) TIME_SHARING: Processing Task 84[0m
+[0;32mI (17501) TIME_SHARING: Actuator Task 84[0m
+[0;32mI (17551) TIME_SHARING: Display Task 84[0m
+[0;32mI (17601) TIME_SHARING: === Round 17 Statistics ===[0m
+[0;32mI (17601) TIME_SHARING: Context switches: 340[0m
+[0;32mI (17601) TIME_SHARING: Total time: 17316181 us[0m
+[0;32mI (17601) TIME_SHARING: Task execution time: 1289707 us[0m
+[0;32mI (17601) TIME_SHARING: CPU utilization: 7.4%[0m
+[0;32mI (17611) TIME_SHARING: Overhead: 92.6%[0m
+[0;32mI (17611) TIME_SHARING: Avg time per task: 3793 us[0m
+[0;32mI (17611) TIME_SHARING: Sensor Task 85[0m
+[0;32mI (17671) TIME_SHARING: Processing Task 85[0m
+[0;32mI (17721) TIME_SHARING: Actuator Task 85[0m
+[0;32mI (17771) TIME_SHARING: Display Task 85[0m
+[0;32mI (17821) TIME_SHARING: Sensor Task 86[0m
+[0;32mI (17871) TIME_SHARING: Processing Task 86[0m
+[0;32mI (17921) TIME_SHARING: Actuator Task 86[0m
+[0;32mI (17971) TIME_SHARING: Display Task 86[0m
+[0;32mI (18021) TIME_SHARING: Sensor Task 87[0m
+[0;32mI (18071) TIME_SHARING: Processing Task 87[0m
+[0;32mI (18121) TIME_SHARING: Actuator Task 87[0m
+[0;32mI (18171) TIME_SHARING: Display Task 87[0m
+[0;32mI (18221) TIME_SHARING: Sensor Task 88[0m
+[0;32mI (18271) TIME_SHARING: Processing Task 88[0m
+[0;32mI (18321) TIME_SHARING: Actuator Task 88[0m
+[0;32mI (18371) TIME_SHARING: Display Task 88[0m
+[0;32mI (18421) TIME_SHARING: Sensor Task 89[0m
+[0;32mI (18471) TIME_SHARING: Processing Task 89[0m
+[0;32mI (18521) TIME_SHARING: Actuator Task 89[0m
+[0;32mI (18571) TIME_SHARING: Display Task 89[0m
+[0;32mI (18621) TIME_SHARING: === Round 18 Statistics ===[0m
+[0;32mI (18621) TIME_SHARING: Context switches: 360[0m
+[0;32mI (18621) TIME_SHARING: Total time: 18336181 us[0m
+[0;32mI (18621) TIME_SHARING: Task execution time: 1365667 us[0m
+[0;32mI (18621) TIME_SHARING: CPU utilization: 7.4%[0m
+[0;32mI (18631) TIME_SHARING: Overhead: 92.6%[0m
+[0;32mI (18631) TIME_SHARING: Avg time per task: 3793 us[0m
+[0;32mI (18631) TIME_SHARING: Sensor Task 90[0m
+[0;32mI (18691) TIME_SHARING: Processing Task 90[0m
+[0;32mI (18741) TIME_SHARING: Actuator Task 90[0m
+[0;32mI (18791) TIME_SHARING: Display Task 90[0m
+[0;32mI (18841) TIME_SHARING: Sensor Task 91[0m
+[0;32mI (18891) TIME_SHARING: Processing Task 91[0m
+[0;32mI (18941) TIME_SHARING: Actuator Task 91[0m
+[0;32mI (18991) TIME_SHARING: Display Task 91[0m
+[0;32mI (19041) TIME_SHARING: Sensor Task 92[0m
+[0;32mI (19091) TIME_SHARING: Processing Task 92[0m
+[0;32mI (19141) TIME_SHARING: Actuator Task 92[0m
+[0;32mI (19191) TIME_SHARING: Display Task 92[0m
+[0;32mI (19241) TIME_SHARING: Sensor Task 93[0m
+[0;32mI (19291) TIME_SHARING: Processing Task 93[0m
+[0;32mI (19341) TIME_SHARING: Actuator Task 93[0m
+[0;32mI (19391) TIME_SHARING: Display Task 93[0m
+[0;32mI (19441) TIME_SHARING: Sensor Task 94[0m
+[0;32mI (19491) TIME_SHARING: Processing Task 94[0m
+[0;32mI (19541) TIME_SHARING: Actuator Task 94[0m
+[0;32mI (19591) TIME_SHARING: Display Task 94[0m
+[0;32mI (19641) TIME_SHARING: === Round 19 Statistics ===[0m
+[0;32mI (19641) TIME_SHARING: Context switches: 380[0m
+[0;32mI (19641) TIME_SHARING: Total time: 19356181 us[0m
+[0;32mI (19641) TIME_SHARING: Task execution time: 1441627 us[0m
+[0;32mI (19641) TIME_SHARING: CPU utilization: 7.4%[0m
+[0;32mI (19651) TIME_SHARING: Overhead: 92.6%[0m
+[0;32mI (19651) TIME_SHARING: Avg time per task: 3793 us[0m
+[0;32mI (19651) TIME_SHARING: Sensor Task 95[0m
+[0;32mI (19711) TIME_SHARING: Processing Task 95[0m
+[0;32mI (19761) TIME_SHARING: Actuator Task 95[0m
+[0;32mI (19811) TIME_SHARING: Display Task 95[0m
+[0;32mI (19861) TIME_SHARING: Sensor Task 96[0m
+[0;32mI (19911) TIME_SHARING: Processing Task 96[0m
+[0;32mI (19961) TIME_SHARING: Actuator Task 96[0m
+[0;32mI (20011) TIME_SHARING: Display Task 96[0m
+[0;32mI (20061) TIME_SHARING: Sensor Task 97[0m
+[0;32mI (20111) TIME_SHARING: Processing Task 97[0m
+[0;32mI (20161) TIME_SHARING: Actuator Task 97[0m
+[0;32mI (20211) TIME_SHARING: Display Task 97[0m
+[0;32mI (20261) TIME_SHARING: Sensor Task 98[0m
+[0;32mI (20311) TIME_SHARING: Processing Task 98[0m
+[0;32mI (20361) TIME_SHARING: Actuator Task 98[0m
+[0;32mI (20411) TIME_SHARING: Display Task 98[0m
+[0;32mI (20461) TIME_SHARING: Sensor Task 99[0m
+[0;32mI (20511) TIME_SHARING: Processing Task 99[0m
+[0;32mI (20561) TIME_SHARING: Actuator Task 99[0m
+[0;32mI (20611) TIME_SHARING: Display Task 99[0m
+[0;32mI (20661) TIME_SHARING: === Round 20 Statistics ===[0m
+[0;32mI (20661) TIME_SHARING: Context switches: 400[0m
+[0;32mI (20661) TIME_SHARING: Total time: 20376181 us[0m
+[0;32mI (20661) TIME_SHARING: Task execution time: 1517587 us[0m
+[0;32mI (20661) TIME_SHARING: CPU utilization: 7.4%[0m
+[0;32mI (20671) TIME_SHARING: Overhead: 92.6%[0m
+[0;32mI (20671) TIME_SHARING: Avg time per task: 3793 us[0m
+[0;32mI (20671) TIME_SHARING: Sensor Task 100[0m
+[0;32mI (20731) TIME_SHARING: Processing Task 100[0m
+[0;32mI (20781) TIME_SHARING: Actuator Task 100[0m
+[0;32mI (20831) TIME_SHARING: Display Task 100[0m
+[0;32mI (20881) TIME_SHARING: Sensor Task 101[0m
+[0;32mI (20931) TIME_SHARING: Processing Task 101[0m
+[0;32mI (20981) TIME_SHARING: Actuator Task 101[0m
+[0;32mI (21031) TIME_SHARING: Display Task 101[0m
+[0;32mI (21081) TIME_SHARING: Sensor Task 102[0m
+[0;32mI (21131) TIME_SHARING: Processing Task 102[0m
+[0;32mI (21181) TIME_SHARING: Actuator Task 102[0m
+[0;32mI (21231) TIME_SHARING: Display Task 102[0m
+[0;32mI (21281) TIME_SHARING: Sensor Task 103[0m
+[0;32mI (21331) TIME_SHARING: Processing Task 103[0m
+[0;32mI (21381) TIME_SHARING: Actuator Task 103[0m
+[0;32mI (21431) TIME_SHARING: Display Task 103[0m
+[0;32mI (21481) TIME_SHARING: Sensor Task 104[0m
+[0;32mI (21531) TIME_SHARING: Processing Task 104[0m
+[0;32mI (21581) TIME_SHARING: Actuator Task 104[0m
+[0;32mI (21631) TIME_SHARING: Display Task 104[0m
+[0;32mI (21681) TIME_SHARING: === Round 21 Statistics ===[0m
+[0;32mI (21681) TIME_SHARING: Context switches: 420[0m
+[0;32mI (21681) TIME_SHARING: Total time: 21396181 us[0m
+[0;32mI (21681) TIME_SHARING: Task execution time: 1593663 us[0m
+[0;32mI (21681) TIME_SHARING: CPU utilization: 7.4%[0m
+[0;32mI (21691) TIME_SHARING: Overhead: 92.6%[0m
+[0;32mI (21691) TIME_SHARING: Avg time per task: 3794 us[0m
+[0;32mI (21691) TIME_SHARING: Sensor Task 105[0m
+[0;32mI (21751) TIME_SHARING: Processing Task 105[0m
+[0;32mI (21801) TIME_SHARING: Actuator Task 105[0m
+[0;32mI (21851) TIME_SHARING: Display Task 105[0m
+[0;32mI (21901) TIME_SHARING: Sensor Task 106[0m
+[0;32mI (21951) TIME_SHARING: Processing Task 106[0m
+[0;32mI (22001) TIME_SHARING: Actuator Task 106[0m
+[0;32mI (22051) TIME_SHARING: Display Task 106[0m
+[0;32mI (22101) TIME_SHARING: Sensor Task 107[0m
+[0;32mI (22151) TIME_SHARING: Processing Task 107[0m
+[0;32mI (22201) TIME_SHARING: Actuator Task 107[0m
+[0;32mI (22251) TIME_SHARING: Display Task 107[0m
+[0;32mI (22301) TIME_SHARING: Sensor Task 108[0m
+[0;32mI (22351) TIME_SHARING: Processing Task 108[0m
+[0;32mI (22401) TIME_SHARING: Actuator Task 108[0m
+[0;32mI (22451) TIME_SHARING: Display Task 108[0m
+[0;32mI (22501) TIME_SHARING: Sensor Task 109[0m
+[0;32mI (22551) TIME_SHARING: Processing Task 109[0m
+[0;32mI (22601) TIME_SHARING: Actuator Task 109[0m
+[0;32mI (22651) TIME_SHARING: Display Task 109[0m
+[0;32mI (22701) TIME_SHARING: === Round 22 Statistics ===[0m
+[0;32mI (22701) TIME_SHARING: Context switches: 440[0m
+[0;32mI (22701) TIME_SHARING: Total time: 22416181 us[0m
+[0;32mI (22701) TIME_SHARING: Task execution time: 1669739 us[0m
+[0;32mI (22701) TIME_SHARING: CPU utilization: 7.4%[0m
+[0;32mI (22711) TIME_SHARING: Overhead: 92.6%[0m
+[0;32mI (22711) TIME_SHARING: Avg time per task: 3794 us[0m
+[0;32mI (22711) TIME_SHARING: Sensor Task 110[0m
+[0;32mI (22771) TIME_SHARING: Processing Task 110[0m
+[0;32mI (22821) TIME_SHARING: Actuator Task 110[0m
+[0;32mI (22871) TIME_SHARING: Display Task 110[0m
+[0;32mI (22921) TIME_SHARING: Sensor Task 111[0m
+[0;32mI (22971) TIME_SHARING: Processing Task 111[0m
+[0;32mI (23021) TIME_SHARING: Actuator Task 111[0m
+[0;32mI (23071) TIME_SHARING: Display Task 111[0m
+[0;32mI (23121) TIME_SHARING: Sensor Task 112[0m
+[0;32mI (23171) TIME_SHARING: Processing Task 112[0m
+[0;32mI (23221) TIME_SHARING: Actuator Task 112[0m
+[0;32mI (23271) TIME_SHARING: Display Task 112[0m
+[0;32mI (23321) TIME_SHARING: Sensor Task 113[0m
+[0;32mI (23371) TIME_SHARING: Processing Task 113[0m
+[0;32mI (23421) TIME_SHARING: Actuator Task 113[0m
+[0;32mI (23471) TIME_SHARING: Display Task 113[0m
+[0;32mI (23521) TIME_SHARING: Sensor Task 114[0m
+[0;32mI (23571) TIME_SHARING: Processing Task 114[0m
+[0;32mI (23621) TIME_SHARING: Actuator Task 114[0m
+[0;32mI (23671) TIME_SHARING: Display Task 114[0m
+[0;32mI (23721) TIME_SHARING: === Round 23 Statistics ===[0m
+[0;32mI (23721) TIME_SHARING: Context switches: 460[0m
+[0;32mI (23721) TIME_SHARING: Total time: 23436181 us[0m
+[0;32mI (23721) TIME_SHARING: Task execution time: 1745815 us[0m
+[0;32mI (23721) TIME_SHARING: CPU utilization: 7.4%[0m
+[0;32mI (23731) TIME_SHARING: Overhead: 92.6%[0m
+[0;32mI (23731) TIME_SHARING: Avg time per task: 3795 us[0m
+[0;32mI (23731) TIME_SHARING: Sensor Task 115[0m
+[0;32mI (23791) TIME_SHARING: Processing Task 115[0m
+[0;32mI (23841) TIME_SHARING: Actuator Task 115[0m
+[0;32mI (23891) TIME_SHARING: Display Task 115[0m
+[0;32mI (23941) TIME_SHARING: Sensor Task 116[0m
+[0;32mI (23991) TIME_SHARING: Processing Task 116[0m
+[0;32mI (24041) TIME_SHARING: Actuator Task 116[0m
+[0;32mI (24091) TIME_SHARING: Display Task 116[0m
+[0;32mI (24141) TIME_SHARING: Sensor Task 117[0m
+[0;32mI (24191) TIME_SHARING: Processing Task 117[0m
+[0;32mI (24241) TIME_SHARING: Actuator Task 117[0m
+[0;32mI (24291) TIME_SHARING: Display Task 117[0m
+[0;32mI (24341) TIME_SHARING: Sensor Task 118[0m
+[0;32mI (24391) TIME_SHARING: Processing Task 118[0m
+[0;32mI (24441) TIME_SHARING: Actuator Task 118[0m
+[0;32mI (24491) TIME_SHARING: Display Task 118[0m
+[0;32mI (24541) TIME_SHARING: Sensor Task 119[0m
+[0;32mI (24591) TIME_SHARING: Processing Task 119[0m
+[0;32mI (24641) TIME_SHARING: Actuator Task 119[0m
+[0;32mI (24691) TIME_SHARING: Display Task 119[0m
+[0;32mI (24741) TIME_SHARING: === Round 24 Statistics ===[0m
+[0;32mI (24741) TIME_SHARING: Context switches: 480[0m
+[0;32mI (24741) TIME_SHARING: Total time: 24456181 us[0m
+[0;32mI (24741) TIME_SHARING: Task execution time: 1821891 us[0m
+[0;32mI (24741) TIME_SHARING: CPU utilization: 7.4%[0m
+[0;32mI (24751) TIME_SHARING: Overhead: 92.6%[0m
+[0;32mI (24751) TIME_SHARING: Avg time per task: 3795 us[0m
+[0;32mI (24751) TIME_SHARING: Sensor Task 120[0m
+[0;32mI (24811) TIME_SHARING: Processing Task 120[0m
+[0;32mI (24861) TIME_SHARING: Actuator Task 120[0m
+[0;32mI (24911) TIME_SHARING: Display Task 120[0m
+[0;32mI (24961) TIME_SHARING: Sensor Task 121[0m
+[0;32mI (25011) TIME_SHARING: Processing Task 121[0m
+[0;32mI (25061) TIME_SHARING: Actuator Task 121[0m
+[0;32mI (25111) TIME_SHARING: Display Task 121[0m
+[0;32mI (25161) TIME_SHARING: Sensor Task 122[0m
+[0;32mI (25211) TIME_SHARING: Processing Task 122[0m
+[0;32mI (25261) TIME_SHARING: Actuator Task 122[0m
+[0;32mI (25311) TIME_SHARING: Display Task 122[0m
+[0;32mI (25361) TIME_SHARING: Sensor Task 123[0m
+[0;32mI (25411) TIME_SHARING: Processing Task 123[0m
+[0;32mI (25461) TIME_SHARING: Actuator Task 123[0m
+[0;32mI (25511) TIME_SHARING: Display Task 123[0m
+[0;32mI (25561) TIME_SHARING: Sensor Task 124[0m
+[0;32mI (25611) TIME_SHARING: Processing Task 124[0m
+[0;32mI (25661) TIME_SHARING: Actuator Task 124[0m
+[0;32mI (25711) TIME_SHARING: Display Task 124[0m
+[0;32mI (25761) TIME_SHARING: === Round 25 Statistics ===[0m
+[0;32mI (25761) TIME_SHARING: Context switches: 500[0m
+[0;32mI (25761) TIME_SHARING: Total time: 25476181 us[0m
+[0;32mI (25761) TIME_SHARING: Task execution time: 1897967 us[0m
+[0;32mI (25761) TIME_SHARING: CPU utilization: 7.4%[0m
+[0;32mI (25771) TIME_SHARING: Overhead: 92.6%[0m
+[0;32mI (25771) TIME_SHARING: Avg time per task: 3795 us[0m
+[0;32mI (25771) TIME_SHARING: Sensor Task 125[0m
+[0;32mI (25831) TIME_SHARING: Processing Task 125[0m
+[0;32mI (25881) TIME_SHARING: Actuator Task 125[0m
+[0;32mI (25931) TIME_SHARING: Display Task 125[0m
+[0;32mI (25981) TIME_SHARING: Sensor Task 126[0m
+[0;32mI (26031) TIME_SHARING: Processing Task 126[0m
+[0;32mI (26081) TIME_SHARING: Actuator Task 126[0m
+[0;32mI (26131) TIME_SHARING: Display Task 126[0m
+[0;32mI (26181) TIME_SHARING: Sensor Task 127[0m
+[0;32mI (26231) TIME_SHARING: Processing Task 127[0m
+[0;32mI (26281) TIME_SHARING: Actuator Task 127[0m
+[0;32mI (26331) TIME_SHARING: Display Task 127[0m
+[0;32mI (26381) TIME_SHARING: Sensor Task 128[0m
+[0;32mI (26431) TIME_SHARING: Processing Task 128[0m
+[0;32mI (26481) TIME_SHARING: Actuator Task 128[0m
+[0;32mI (26531) TIME_SHARING: Display Task 128[0m
+[0;32mI (26581) TIME_SHARING: Sensor Task 129[0m
+[0;32mI (26631) TIME_SHARING: Processing Task 129[0m
+[0;32mI (26681) TIME_SHARING: Actuator Task 129[0m
+[0;32mI (26731) TIME_SHARING: Display Task 129[0m
+[0;32mI (26781) TIME_SHARING: === Round 26 Statistics ===[0m
+[0;32mI (26781) TIME_SHARING: Context switches: 520[0m
+[0;32mI (26781) TIME_SHARING: Total time: 26496181 us[0m
+[0;32mI (26781) TIME_SHARING: Task execution time: 1974043 us[0m
+[0;32mI (26781) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (26791) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (26791) TIME_SHARING: Avg time per task: 3796 us[0m
+[0;32mI (26791) TIME_SHARING: Sensor Task 130[0m
+[0;32mI (26851) TIME_SHARING: Processing Task 130[0m
+[0;32mI (26901) TIME_SHARING: Actuator Task 130[0m
+[0;32mI (26951) TIME_SHARING: Display Task 130[0m
+[0;32mI (27001) TIME_SHARING: Sensor Task 131[0m
+[0;32mI (27051) TIME_SHARING: Processing Task 131[0m
+[0;32mI (27101) TIME_SHARING: Actuator Task 131[0m
+[0;32mI (27151) TIME_SHARING: Display Task 131[0m
+[0;32mI (27201) TIME_SHARING: Sensor Task 132[0m
+[0;32mI (27251) TIME_SHARING: Processing Task 132[0m
+[0;32mI (27301) TIME_SHARING: Actuator Task 132[0m
+[0;32mI (27351) TIME_SHARING: Display Task 132[0m
+[0;32mI (27401) TIME_SHARING: Sensor Task 133[0m
+[0;32mI (27451) TIME_SHARING: Processing Task 133[0m
+[0;32mI (27501) TIME_SHARING: Actuator Task 133[0m
+[0;32mI (27551) TIME_SHARING: Display Task 133[0m
+[0;32mI (27601) TIME_SHARING: Sensor Task 134[0m
+[0;32mI (27651) TIME_SHARING: Processing Task 134[0m
+[0;32mI (27701) TIME_SHARING: Actuator Task 134[0m
+[0;32mI (27751) TIME_SHARING: Display Task 134[0m
+[0;32mI (27801) TIME_SHARING: === Round 27 Statistics ===[0m
+[0;32mI (27801) TIME_SHARING: Context switches: 540[0m
+[0;32mI (27801) TIME_SHARING: Total time: 27516181 us[0m
+[0;32mI (27801) TIME_SHARING: Task execution time: 2050119 us[0m
+[0;32mI (27801) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (27811) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (27811) TIME_SHARING: Avg time per task: 3796 us[0m
+[0;32mI (27811) TIME_SHARING: Sensor Task 135[0m
+[0;32mI (27871) TIME_SHARING: Processing Task 135[0m
+[0;32mI (27921) TIME_SHARING: Actuator Task 135[0m
+[0;32mI (27971) TIME_SHARING: Display Task 135[0m
+[0;32mI (28021) TIME_SHARING: Sensor Task 136[0m
+[0;32mI (28071) TIME_SHARING: Processing Task 136[0m
+[0;32mI (28121) TIME_SHARING: Actuator Task 136[0m
+[0;32mI (28171) TIME_SHARING: Display Task 136[0m
+[0;32mI (28221) TIME_SHARING: Sensor Task 137[0m
+[0;32mI (28271) TIME_SHARING: Processing Task 137[0m
+[0;32mI (28321) TIME_SHARING: Actuator Task 137[0m
+[0;32mI (28371) TIME_SHARING: Display Task 137[0m
+[0;32mI (28421) TIME_SHARING: Sensor Task 138[0m
+[0;32mI (28471) TIME_SHARING: Processing Task 138[0m
+[0;32mI (28521) TIME_SHARING: Actuator Task 138[0m
+[0;32mI (28571) TIME_SHARING: Display Task 138[0m
+[0;32mI (28621) TIME_SHARING: Sensor Task 139[0m
+[0;32mI (28671) TIME_SHARING: Processing Task 139[0m
+[0;32mI (28721) TIME_SHARING: Actuator Task 139[0m
+[0;32mI (28771) TIME_SHARING: Display Task 139[0m
+[0;32mI (28821) TIME_SHARING: === Round 28 Statistics ===[0m
+[0;32mI (28821) TIME_SHARING: Context switches: 560[0m
+[0;32mI (28821) TIME_SHARING: Total time: 28536181 us[0m
+[0;32mI (28821) TIME_SHARING: Task execution time: 2126195 us[0m
+[0;32mI (28821) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (28831) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (28831) TIME_SHARING: Avg time per task: 3796 us[0m
+[0;32mI (28831) TIME_SHARING: Sensor Task 140[0m
+[0;32mI (28891) TIME_SHARING: Processing Task 140[0m
+[0;32mI (28941) TIME_SHARING: Actuator Task 140[0m
+[0;32mI (28991) TIME_SHARING: Display Task 140[0m
+[0;32mI (29041) TIME_SHARING: Sensor Task 141[0m
+[0;32mI (29091) TIME_SHARING: Processing Task 141[0m
+[0;32mI (29141) TIME_SHARING: Actuator Task 141[0m
+[0;32mI (29191) TIME_SHARING: Display Task 141[0m
+[0;32mI (29241) TIME_SHARING: Sensor Task 142[0m
+[0;32mI (29291) TIME_SHARING: Processing Task 142[0m
+[0;32mI (29341) TIME_SHARING: Actuator Task 142[0m
+[0;32mI (29391) TIME_SHARING: Display Task 142[0m
+[0;32mI (29441) TIME_SHARING: Sensor Task 143[0m
+[0;32mI (29491) TIME_SHARING: Processing Task 143[0m
+[0;32mI (29541) TIME_SHARING: Actuator Task 143[0m
+[0;32mI (29591) TIME_SHARING: Display Task 143[0m
+[0;32mI (29641) TIME_SHARING: Sensor Task 144[0m
+[0;32mI (29691) TIME_SHARING: Processing Task 144[0m
+[0;32mI (29741) TIME_SHARING: Actuator Task 144[0m
+[0;32mI (29791) TIME_SHARING: Display Task 144[0m
+[0;32mI (29841) TIME_SHARING: === Round 29 Statistics ===[0m
+[0;32mI (29841) TIME_SHARING: Context switches: 580[0m
+[0;32mI (29841) TIME_SHARING: Total time: 29556181 us[0m
+[0;32mI (29841) TIME_SHARING: Task execution time: 2202271 us[0m
+[0;32mI (29841) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (29851) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (29851) TIME_SHARING: Avg time per task: 3797 us[0m
+[0;32mI (29851) TIME_SHARING: Sensor Task 145[0m
+[0;32mI (29911) TIME_SHARING: Processing Task 145[0m
+[0;32mI (29961) TIME_SHARING: Actuator Task 145[0m
+[0;32mI (30011) TIME_SHARING: Display Task 145[0m
+[0;32mI (30061) TIME_SHARING: Sensor Task 146[0m
+[0;32mI (30111) TIME_SHARING: Processing Task 146[0m
+[0;32mI (30161) TIME_SHARING: Actuator Task 146[0m
+[0;32mI (30211) TIME_SHARING: Display Task 146[0m
+[0;32mI (30261) TIME_SHARING: Sensor Task 147[0m
+[0;32mI (30311) TIME_SHARING: Processing Task 147[0m
+[0;32mI (30361) TIME_SHARING: Actuator Task 147[0m
+[0;32mI (30411) TIME_SHARING: Display Task 147[0m
+[0;32mI (30461) TIME_SHARING: Sensor Task 148[0m
+[0;32mI (30511) TIME_SHARING: Processing Task 148[0m
+[0;32mI (30561) TIME_SHARING: Actuator Task 148[0m
+[0;32mI (30611) TIME_SHARING: Display Task 148[0m
+[0;32mI (30661) TIME_SHARING: Sensor Task 149[0m
+[0;32mI (30711) TIME_SHARING: Processing Task 149[0m
+[0;32mI (30761) TIME_SHARING: Actuator Task 149[0m
+[0;32mI (30811) TIME_SHARING: Display Task 149[0m
+[0;32mI (30861) TIME_SHARING: === Round 30 Statistics ===[0m
+[0;32mI (30861) TIME_SHARING: Context switches: 600[0m
+[0;32mI (30861) TIME_SHARING: Total time: 30576181 us[0m
+[0;32mI (30861) TIME_SHARING: Task execution time: 2278347 us[0m
+[0;32mI (30861) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (30871) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (30871) TIME_SHARING: Avg time per task: 3797 us[0m
+[0;32mI (30871) TIME_SHARING: Sensor Task 150[0m
+[0;32mI (30931) TIME_SHARING: Processing Task 150[0m
+[0;32mI (30981) TIME_SHARING: Actuator Task 150[0m
+[0;32mI (31031) TIME_SHARING: Display Task 150[0m
+[0;32mI (31081) TIME_SHARING: Sensor Task 151[0m
+[0;32mI (31131) TIME_SHARING: Processing Task 151[0m
+[0;32mI (31181) TIME_SHARING: Actuator Task 151[0m
+[0;32mI (31231) TIME_SHARING: Display Task 151[0m
+[0;32mI (31281) TIME_SHARING: Sensor Task 152[0m
+[0;32mI (31331) TIME_SHARING: Processing Task 152[0m
+[0;32mI (31381) TIME_SHARING: Actuator Task 152[0m
+[0;32mI (31431) TIME_SHARING: Display Task 152[0m
+[0;32mI (31481) TIME_SHARING: Sensor Task 153[0m
+[0;32mI (31531) TIME_SHARING: Processing Task 153[0m
+[0;32mI (31581) TIME_SHARING: Actuator Task 153[0m
+[0;32mI (31631) TIME_SHARING: Display Task 153[0m
+[0;32mI (31681) TIME_SHARING: Sensor Task 154[0m
+[0;32mI (31731) TIME_SHARING: Processing Task 154[0m
+[0;32mI (31781) TIME_SHARING: Actuator Task 154[0m
+[0;32mI (31831) TIME_SHARING: Display Task 154[0m
+[0;32mI (31881) TIME_SHARING: === Round 31 Statistics ===[0m
+[0;32mI (31881) TIME_SHARING: Context switches: 620[0m
+[0;32mI (31881) TIME_SHARING: Total time: 31596181 us[0m
+[0;32mI (31881) TIME_SHARING: Task execution time: 2354423 us[0m
+[0;32mI (31881) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (31891) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (31891) TIME_SHARING: Avg time per task: 3797 us[0m
+[0;32mI (31891) TIME_SHARING: Sensor Task 155[0m
+[0;32mI (31951) TIME_SHARING: Processing Task 155[0m
+[0;32mI (32001) TIME_SHARING: Actuator Task 155[0m
+[0;32mI (32051) TIME_SHARING: Display Task 155[0m
+[0;32mI (32101) TIME_SHARING: Sensor Task 156[0m
+[0;32mI (32151) TIME_SHARING: Processing Task 156[0m
+[0;32mI (32201) TIME_SHARING: Actuator Task 156[0m
+[0;32mI (32251) TIME_SHARING: Display Task 156[0m
+[0;32mI (32301) TIME_SHARING: Sensor Task 157[0m
+[0;32mI (32351) TIME_SHARING: Processing Task 157[0m
+[0;32mI (32401) TIME_SHARING: Actuator Task 157[0m
+[0;32mI (32451) TIME_SHARING: Display Task 157[0m
+[0;32mI (32501) TIME_SHARING: Sensor Task 158[0m
+[0;32mI (32551) TIME_SHARING: Processing Task 158[0m
+[0;32mI (32601) TIME_SHARING: Actuator Task 158[0m
+[0;32mI (32651) TIME_SHARING: Display Task 158[0m
+[0;32mI (32701) TIME_SHARING: Sensor Task 159[0m
+[0;32mI (32751) TIME_SHARING: Processing Task 159[0m
+[0;32mI (32801) TIME_SHARING: Actuator Task 159[0m
+[0;32mI (32851) TIME_SHARING: Display Task 159[0m
+[0;32mI (32901) TIME_SHARING: === Round 32 Statistics ===[0m
+[0;32mI (32901) TIME_SHARING: Context switches: 640[0m
+[0;32mI (32901) TIME_SHARING: Total time: 32616181 us[0m
+[0;32mI (32901) TIME_SHARING: Task execution time: 2430499 us[0m
+[0;32mI (32901) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (32911) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (32911) TIME_SHARING: Avg time per task: 3797 us[0m
+[0;32mI (32911) TIME_SHARING: Sensor Task 160[0m
+[0;32mI (32971) TIME_SHARING: Processing Task 160[0m
+[0;32mI (33021) TIME_SHARING: Actuator Task 160[0m
+[0;32mI (33071) TIME_SHARING: Display Task 160[0m
+[0;32mI (33121) TIME_SHARING: Sensor Task 161[0m
+[0;32mI (33171) TIME_SHARING: Processing Task 161[0m
+[0;32mI (33221) TIME_SHARING: Actuator Task 161[0m
+[0;32mI (33271) TIME_SHARING: Display Task 161[0m
+[0;32mI (33321) TIME_SHARING: Sensor Task 162[0m
+[0;32mI (33371) TIME_SHARING: Processing Task 162[0m
+[0;32mI (33421) TIME_SHARING: Actuator Task 162[0m
+[0;32mI (33471) TIME_SHARING: Display Task 162[0m
+[0;32mI (33521) TIME_SHARING: Sensor Task 163[0m
+[0;32mI (33571) TIME_SHARING: Processing Task 163[0m
+[0;32mI (33621) TIME_SHARING: Actuator Task 163[0m
+[0;32mI (33671) TIME_SHARING: Display Task 163[0m
+[0;32mI (33721) TIME_SHARING: Sensor Task 164[0m
+[0;32mI (33771) TIME_SHARING: Processing Task 164[0m
+[0;32mI (33821) TIME_SHARING: Actuator Task 164[0m
+[0;32mI (33871) TIME_SHARING: Display Task 164[0m
+[0;32mI (33921) TIME_SHARING: === Round 33 Statistics ===[0m
+[0;32mI (33921) TIME_SHARING: Context switches: 660[0m
+[0;32mI (33921) TIME_SHARING: Total time: 33636181 us[0m
+[0;32mI (33921) TIME_SHARING: Task execution time: 2506575 us[0m
+[0;32mI (33921) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (33931) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (33931) TIME_SHARING: Avg time per task: 3797 us[0m
+[0;32mI (33931) TIME_SHARING: Sensor Task 165[0m
+[0;32mI (33991) TIME_SHARING: Processing Task 165[0m
+[0;32mI (34041) TIME_SHARING: Actuator Task 165[0m
+[0;32mI (34091) TIME_SHARING: Display Task 165[0m
+[0;32mI (34141) TIME_SHARING: Sensor Task 166[0m
+[0;32mI (34191) TIME_SHARING: Processing Task 166[0m
+[0;32mI (34241) TIME_SHARING: Actuator Task 166[0m
+[0;32mI (34291) TIME_SHARING: Display Task 166[0m
+[0;32mI (34341) TIME_SHARING: Sensor Task 167[0m
+[0;32mI (34391) TIME_SHARING: Processing Task 167[0m
+[0;32mI (34441) TIME_SHARING: Actuator Task 167[0m
+[0;32mI (34491) TIME_SHARING: Display Task 167[0m
+[0;32mI (34541) TIME_SHARING: Sensor Task 168[0m
+[0;32mI (34591) TIME_SHARING: Processing Task 168[0m
+[0;32mI (34641) TIME_SHARING: Actuator Task 168[0m
+[0;32mI (34691) TIME_SHARING: Display Task 168[0m
+[0;32mI (34741) TIME_SHARING: Sensor Task 169[0m
+[0;32mI (34791) TIME_SHARING: Processing Task 169[0m
+[0;32mI (34841) TIME_SHARING: Actuator Task 169[0m
+[0;32mI (34891) TIME_SHARING: Display Task 169[0m
+[0;32mI (34941) TIME_SHARING: === Round 34 Statistics ===[0m
+[0;32mI (34941) TIME_SHARING: Context switches: 680[0m
+[0;32mI (34941) TIME_SHARING: Total time: 34656181 us[0m
+[0;32mI (34941) TIME_SHARING: Task execution time: 2582651 us[0m
+[0;32mI (34941) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (34951) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (34951) TIME_SHARING: Avg time per task: 3798 us[0m
+[0;32mI (34951) TIME_SHARING: Sensor Task 170[0m
+[0;32mI (35011) TIME_SHARING: Processing Task 170[0m
+[0;32mI (35061) TIME_SHARING: Actuator Task 170[0m
+[0;32mI (35111) TIME_SHARING: Display Task 170[0m
+[0;32mI (35161) TIME_SHARING: Sensor Task 171[0m
+[0;32mI (35211) TIME_SHARING: Processing Task 171[0m
+[0;32mI (35261) TIME_SHARING: Actuator Task 171[0m
+[0;32mI (35311) TIME_SHARING: Display Task 171[0m
+[0;32mI (35361) TIME_SHARING: Sensor Task 172[0m
+[0;32mI (35411) TIME_SHARING: Processing Task 172[0m
+[0;32mI (35461) TIME_SHARING: Actuator Task 172[0m
+[0;32mI (35511) TIME_SHARING: Display Task 172[0m
+[0;32mI (35561) TIME_SHARING: Sensor Task 173[0m
+[0;32mI (35611) TIME_SHARING: Processing Task 173[0m
+[0;32mI (35661) TIME_SHARING: Actuator Task 173[0m
+[0;32mI (35711) TIME_SHARING: Display Task 173[0m
+[0;32mI (35761) TIME_SHARING: Sensor Task 174[0m
+[0;32mI (35811) TIME_SHARING: Processing Task 174[0m
+[0;32mI (35861) TIME_SHARING: Actuator Task 174[0m
+[0;32mI (35911) TIME_SHARING: Display Task 174[0m
+[0;32mI (35961) TIME_SHARING: === Round 35 Statistics ===[0m
+[0;32mI (35961) TIME_SHARING: Context switches: 700[0m
+[0;32mI (35961) TIME_SHARING: Total time: 35676181 us[0m
+[0;32mI (35961) TIME_SHARING: Task execution time: 2658727 us[0m
+[0;32mI (35961) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (35971) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (35971) TIME_SHARING: Avg time per task: 3798 us[0m
+[0;32mI (35971) TIME_SHARING: Sensor Task 175[0m
+[0;32mI (36031) TIME_SHARING: Processing Task 175[0m
+[0;32mI (36081) TIME_SHARING: Actuator Task 175[0m
+[0;32mI (36131) TIME_SHARING: Display Task 175[0m
+[0;32mI (36181) TIME_SHARING: Sensor Task 176[0m
+[0;32mI (36231) TIME_SHARING: Processing Task 176[0m
+[0;32mI (36281) TIME_SHARING: Actuator Task 176[0m
+[0;32mI (36331) TIME_SHARING: Display Task 176[0m
+[0;32mI (36381) TIME_SHARING: Sensor Task 177[0m
+[0;32mI (36431) TIME_SHARING: Processing Task 177[0m
+[0;32mI (36481) TIME_SHARING: Actuator Task 177[0m
+[0;32mI (36531) TIME_SHARING: Display Task 177[0m
+[0;32mI (36581) TIME_SHARING: Sensor Task 178[0m
+[0;32mI (36631) TIME_SHARING: Processing Task 178[0m
+[0;32mI (36681) TIME_SHARING: Actuator Task 178[0m
+[0;32mI (36731) TIME_SHARING: Display Task 178[0m
+[0;32mI (36781) TIME_SHARING: Sensor Task 179[0m
+[0;32mI (36831) TIME_SHARING: Processing Task 179[0m
+[0;32mI (36881) TIME_SHARING: Actuator Task 179[0m
+[0;32mI (36931) TIME_SHARING: Display Task 179[0m
+[0;32mI (36981) TIME_SHARING: === Round 36 Statistics ===[0m
+[0;32mI (36981) TIME_SHARING: Context switches: 720[0m
+[0;32mI (36981) TIME_SHARING: Total time: 36696181 us[0m
+[0;32mI (36981) TIME_SHARING: Task execution time: 2734803 us[0m
+[0;32mI (36981) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (36991) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (36991) TIME_SHARING: Avg time per task: 3798 us[0m
+[0;32mI (36991) TIME_SHARING: Sensor Task 180[0m
+[0;32mI (37051) TIME_SHARING: Processing Task 180[0m
+[0;32mI (37101) TIME_SHARING: Actuator Task 180[0m
+[0;32mI (37151) TIME_SHARING: Display Task 180[0m
+[0;32mI (37201) TIME_SHARING: Sensor Task 181[0m
+[0;32mI (37251) TIME_SHARING: Processing Task 181[0m
+[0;32mI (37301) TIME_SHARING: Actuator Task 181[0m
+[0;32mI (37351) TIME_SHARING: Display Task 181[0m
+[0;32mI (37401) TIME_SHARING: Sensor Task 182[0m
+[0;32mI (37451) TIME_SHARING: Processing Task 182[0m
+[0;32mI (37501) TIME_SHARING: Actuator Task 182[0m
+[0;32mI (37551) TIME_SHARING: Display Task 182[0m
+[0;32mI (37601) TIME_SHARING: Sensor Task 183[0m
+[0;32mI (37651) TIME_SHARING: Processing Task 183[0m
+[0;32mI (37701) TIME_SHARING: Actuator Task 183[0m
+[0;32mI (37751) TIME_SHARING: Display Task 183[0m
+[0;32mI (37801) TIME_SHARING: Sensor Task 184[0m
+[0;32mI (37851) TIME_SHARING: Processing Task 184[0m
+[0;32mI (37901) TIME_SHARING: Actuator Task 184[0m
+[0;32mI (37951) TIME_SHARING: Display Task 184[0m
+[0;32mI (38001) TIME_SHARING: === Round 37 Statistics ===[0m
+[0;32mI (38001) TIME_SHARING: Context switches: 740[0m
+[0;32mI (38001) TIME_SHARING: Total time: 37716181 us[0m
+[0;32mI (38001) TIME_SHARING: Task execution time: 2810879 us[0m
+[0;32mI (38001) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (38011) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (38011) TIME_SHARING: Avg time per task: 3798 us[0m
+[0;32mI (38011) TIME_SHARING: Sensor Task 185[0m
+[0;32mI (38071) TIME_SHARING: Processing Task 185[0m
+[0;32mI (38121) TIME_SHARING: Actuator Task 185[0m
+[0;32mI (38171) TIME_SHARING: Display Task 185[0m
+[0;32mI (38221) TIME_SHARING: Sensor Task 186[0m
+[0;32mI (38271) TIME_SHARING: Processing Task 186[0m
+[0;32mI (38321) TIME_SHARING: Actuator Task 186[0m
+[0;32mI (38371) TIME_SHARING: Display Task 186[0m
+[0;32mI (38421) TIME_SHARING: Sensor Task 187[0m
+[0;32mI (38471) TIME_SHARING: Processing Task 187[0m
+[0;32mI (38521) TIME_SHARING: Actuator Task 187[0m
+[0;32mI (38571) TIME_SHARING: Display Task 187[0m
+[0;32mI (38621) TIME_SHARING: Sensor Task 188[0m
+[0;32mI (38671) TIME_SHARING: Processing Task 188[0m
+[0;32mI (38721) TIME_SHARING: Actuator Task 188[0m
+[0;32mI (38771) TIME_SHARING: Display Task 188[0m
+[0;32mI (38821) TIME_SHARING: Sensor Task 189[0m
+[0;32mI (38871) TIME_SHARING: Processing Task 189[0m
+[0;32mI (38921) TIME_SHARING: Actuator Task 189[0m
+[0;32mI (38971) TIME_SHARING: Display Task 189[0m
+[0;32mI (39021) TIME_SHARING: === Round 38 Statistics ===[0m
+[0;32mI (39021) TIME_SHARING: Context switches: 760[0m
+[0;32mI (39021) TIME_SHARING: Total time: 38736181 us[0m
+[0;32mI (39021) TIME_SHARING: Task execution time: 2886955 us[0m
+[0;32mI (39021) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (39031) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (39031) TIME_SHARING: Avg time per task: 3798 us[0m
+[0;32mI (39031) TIME_SHARING: Sensor Task 190[0m
+[0;32mI (39091) TIME_SHARING: Processing Task 190[0m
+[0;32mI (39141) TIME_SHARING: Actuator Task 190[0m
+[0;32mI (39191) TIME_SHARING: Display Task 190[0m
+[0;32mI (39241) TIME_SHARING: Sensor Task 191[0m
+[0;32mI (39291) TIME_SHARING: Processing Task 191[0m
+[0;32mI (39341) TIME_SHARING: Actuator Task 191[0m
+[0;32mI (39391) TIME_SHARING: Display Task 191[0m
+[0;32mI (39441) TIME_SHARING: Sensor Task 192[0m
+[0;32mI (39491) TIME_SHARING: Processing Task 192[0m
+[0;32mI (39541) TIME_SHARING: Actuator Task 192[0m
+[0;32mI (39591) TIME_SHARING: Display Task 192[0m
+[0;32mI (39641) TIME_SHARING: Sensor Task 193[0m
+[0;32mI (39691) TIME_SHARING: Processing Task 193[0m
+[0;32mI (39741) TIME_SHARING: Actuator Task 193[0m
+[0;32mI (39791) TIME_SHARING: Display Task 193[0m
+[0;32mI (39841) TIME_SHARING: Sensor Task 194[0m
+[0;32mI (39891) TIME_SHARING: Processing Task 194[0m
+[0;32mI (39941) TIME_SHARING: Actuator Task 194[0m
+[0;32mI (39991) TIME_SHARING: Display Task 194[0m
+[0;32mI (40041) TIME_SHARING: === Round 39 Statistics ===[0m
+[0;32mI (40041) TIME_SHARING: Context switches: 780[0m
+[0;32mI (40041) TIME_SHARING: Total time: 39756181 us[0m
+[0;32mI (40041) TIME_SHARING: Task execution time: 2963031 us[0m
+[0;32mI (40041) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (40051) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (40051) TIME_SHARING: Avg time per task: 3798 us[0m
+[0;32mI (40051) TIME_SHARING: Sensor Task 195[0m
+[0;32mI (40111) TIME_SHARING: Processing Task 195[0m
+[0;32mI (40161) TIME_SHARING: Actuator Task 195[0m
+[0;32mI (40211) TIME_SHARING: Display Task 195[0m
+[0;32mI (40261) TIME_SHARING: Sensor Task 196[0m
+[0;32mI (40311) TIME_SHARING: Processing Task 196[0m
+[0;32mI (40361) TIME_SHARING: Actuator Task 196[0m
+[0;32mI (40411) TIME_SHARING: Display Task 196[0m
+[0;32mI (40461) TIME_SHARING: Sensor Task 197[0m
+[0;32mI (40511) TIME_SHARING: Processing Task 197[0m
+[0;32mI (40561) TIME_SHARING: Actuator Task 197[0m
+[0;32mI (40611) TIME_SHARING: Display Task 197[0m
+[0;32mI (40661) TIME_SHARING: Sensor Task 198[0m
+[0;32mI (40711) TIME_SHARING: Processing Task 198[0m
+[0;32mI (40761) TIME_SHARING: Actuator Task 198[0m
+[0;32mI (40811) TIME_SHARING: Display Task 198[0m
+[0;32mI (40861) TIME_SHARING: Sensor Task 199[0m
+[0;32mI (40911) TIME_SHARING: Processing Task 199[0m
+[0;32mI (40961) TIME_SHARING: Actuator Task 199[0m
+[0;32mI (41011) TIME_SHARING: Display Task 199[0m
+[0;32mI (41061) TIME_SHARING: === Round 40 Statistics ===[0m
+[0;32mI (41061) TIME_SHARING: Context switches: 800[0m
+[0;32mI (41061) TIME_SHARING: Total time: 40776181 us[0m
+[0;32mI (41061) TIME_SHARING: Task execution time: 3039108 us[0m
+[0;32mI (41061) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (41071) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (41071) TIME_SHARING: Avg time per task: 3798 us[0m
+[0;32mI (41071) TIME_SHARING: Sensor Task 200[0m
+[0;32mI (41131) TIME_SHARING: Processing Task 200[0m
+[0;32mI (41181) TIME_SHARING: Actuator Task 200[0m
+[0;32mI (41231) TIME_SHARING: Display Task 200[0m
+[0;32mI (41281) TIME_SHARING: Sensor Task 201[0m
+[0;32mI (41331) TIME_SHARING: Processing Task 201[0m
+[0;32mI (41381) TIME_SHARING: Actuator Task 201[0m
+[0;32mI (41431) TIME_SHARING: Display Task 201[0m
+[0;32mI (41481) TIME_SHARING: Sensor Task 202[0m
+[0;32mI (41531) TIME_SHARING: Processing Task 202[0m
+[0;32mI (41581) TIME_SHARING: Actuator Task 202[0m
+[0;32mI (41631) TIME_SHARING: Display Task 202[0m
+[0;32mI (41681) TIME_SHARING: Sensor Task 203[0m
+[0;32mI (41731) TIME_SHARING: Processing Task 203[0m
+[0;32mI (41781) TIME_SHARING: Actuator Task 203[0m
+[0;32mI (41831) TIME_SHARING: Display Task 203[0m
+[0;32mI (41881) TIME_SHARING: Sensor Task 204[0m
+[0;32mI (41931) TIME_SHARING: Processing Task 204[0m
+[0;32mI (41981) TIME_SHARING: Actuator Task 204[0m
+[0;32mI (42031) TIME_SHARING: Display Task 204[0m
+[0;32mI (42081) TIME_SHARING: === Round 41 Statistics ===[0m
+[0;32mI (42081) TIME_SHARING: Context switches: 820[0m
+[0;32mI (42081) TIME_SHARING: Total time: 41796181 us[0m
+[0;32mI (42081) TIME_SHARING: Task execution time: 3115193 us[0m
+[0;32mI (42081) TIME_SHARING: CPU utilization: 7.5%[0m
+[0;32mI (42091) TIME_SHARING: Overhead: 92.5%[0m
+[0;32mI (42091) TIME_SHARING: Avg time per task: 3799 us[0m
+[0;32mI (42091) TIME_SHARING: Sensor Task 205[0m
+[0;32mI (42151) TIME_SHARING: Processing Task 205[0m
+[0;32mI (42201) TIME_SHARING: Actuator Task 205[0m

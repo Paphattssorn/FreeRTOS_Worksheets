@@ -1,0 +1,836 @@
+Command: C:\Users\HP\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\HP\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\HP\Documents\APPLICATIONSOFMICROCONTROLLERS\ESPRTOS\FreeRTOS_Worksheets\Basic_Task_States_Demo\build\Basic_Task_States_Demo.elf C:\Users\HP\Documents\APPLICATIONSOFMICROCONTROLLERS\ESPRTOS\FreeRTOS_Worksheets\Basic_Task_States_Demo\build\bootloader\bootloader.elf --force-color -m 'C:\Users\HP\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\HP\esp\v5.5.1\esp-idf\tools\idf.py'
+3 (SPI_FAST_FLASH_BOOT)�ɽ���source...
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Uets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 15 2025 13:08:54[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0aae0h ( 43744) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001ab08 vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001cf48 vaddr=40080000 size=030d0h ( 12496) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17c94h ( 97428) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00037cbc vaddr=400830d0 size=0a604h ( 42500) load[0m
+[0;32mI (164) esp_image: segment 5: paddr=000422c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (171) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (171) boot: Disabling RNG early entropy source...[0m
+[0;32mI (183) cpu_start: Multicore app[0m
+[0;32mI (191) cpu_start: Pro cpu start user code[0m
+[0;32mI (191) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (191) app_init: Application information:[0m
+[0;32mI (191) app_init: Project name:     Basic_Task_States_Demo[0m
+[0;32mI (196) app_init: App version:      813e069[0m
+[0;32mI (200) app_init: Compile time:     Oct 15 2025 13:09:43[0m
+[0;32mI (205) app_init: ELF file SHA256:  a537156a4...[0m
+[0;32mI (210) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (213) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (217) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (221) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (225) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (232) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFB2D28 len 0002D2D8 (180 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 4008D6D4 len 0001292C (74 KiB): IRAM[0m
+[0;32mI (259) spi_flash: detected chip: generic[0m
+[0;32mI (262) spi_flash: flash io: dio[0m
+[0;33mW (265) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (277) main_task: Started on CPU0[0m
+[0;32mI (287) main_task: Calling app_main()[0m
+[0;32mI (287) TASK_STATES: === FreeRTOS Task States Demo ===[0m
+[1;31mE (287) gpio: gpio_pullup_en(78): GPIO number error (input-only pad has no internal PU)[0m
+[0;32mI (287) TASK_STATES: LED Indicators:[0m
+[0;32mI (297) TASK_STATES: GPIO2 = Running, GPIO4 = Ready[0m
+[0;32mI (297) TASK_STATES: GPIO5 = Blocked, GPIO18 = Suspended[0m
+[0;32mI (307) TASK_STATES: Button Controls:[0m
+[0;32mI (307) TASK_STATES: GPIO0 = Suspend/Resume, GPIO35 = Give Semaphore[0m
+[0;32mI (317) TASK_STATES: State Demo Task started[0m
+[0;32mI (317) TASK_STATES: === Cycle 1 ===[0m
+[0;32mI (317) TASK_STATES: Task is RUNNING[0m
+[0;32mI (397) TASK_STATES: Task will be READY (yielding to other tasks)[0m
+[0;32mI (397) TASK_STATES: Ready state demo task running[0m
+[0;32mI (397) TASK_STATES: Control Task started[0m
+[0;32mI (397) TASK_STATES: All tasks created. Monitoring task states...[0m
+[0;32mI (397) main_task: Returned from app_main()[0m
+[0;32mI (407) TASK_STATES: System Monitor started[0m
+[0;32mI (407) TASK_STATES: [0m
+=== SYSTEM MONITOR ===
+[0;32mI (417) TASK_STATES: Task List:[0m
+[0;32mI (417) TASK_STATES: Name		State	Prio	Stack	Num[0m
+[0;32mI (417) TASK_STATES: Monitor        	X	1	2276	9[0m
+IDLE0          	R	0	1028	4
+IDLE1          	R	0	1024	5
+Control        	B	4	1244	8
+ReadyDemo      	B	3	212	7
+StateDemo      	B	3	2268	6
+ipc1           	S	24	504	2
+ipc0           	S	24	496	1
+
+[0;32mI (447) TASK_STATES: [0m
+Runtime Stats:
+[0;32mI (447) TASK_STATES: Task		Abs Time	%Time[0m
+[0;32mI (447) TASK_STATES: Monitor        	45		<1%[0m
+IDLE0          	36891		19%
+IDLE1          	132319		69%
+ReadyDemo      	7000		3%
+StateDemo      	79513		41%
+Control        	145		<1%
+ipc0           	19398		10%
+ipc1           	20159		10%
+
+[0;32mI (497) TASK_STATES: Task will be BLOCKED (waiting for semaphore)[0m
+[0;33mW (547) TASK_STATES: === GIVING SEMAPHORE ===[0m
+[0;32mI (547) TASK_STATES: Ready state demo task running[0m
+[0;32mI (547) TASK_STATES: Got semaphore! Task is RUNNING again[0m
+[0;32mI (697) TASK_STATES: Ready state demo task running[0m
+[0;32mI (847) TASK_STATES: Ready state demo task running[0m
+[0;32mI (997) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1047) TASK_STATES: Task is BLOCKED (in vTaskDelay)[0m
+[0;32mI (1147) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1297) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1447) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1597) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1747) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1897) TASK_STATES: Ready state demo task running[0m
+[0;32mI (2047) TASK_STATES: === Cycle 2 ===[0m
+[0;32mI (2047) TASK_STATES: Task is RUNNING[0m
+[0;32mI (2047) TASK_STATES: Ready state demo task running[0m
+[0;32mI (2107) TASK_STATES: Task will be READY (yielding to other tasks)[0m
+[0;32mI (2197) TASK_STATES: Ready state demo task running[0m
+[0;32mI (2207) TASK_STATES: Task will be BLOCKED (waiting for semaphore)[0m
+[0;32mI (2347) TASK_STATES: Ready state demo task running[0m
+[0;32mI (2497) TASK_STATES: Ready state demo task running[0m
+[0;32mI (2647) TASK_STATES: Ready state demo task running[0m
+[0;32mI (2797) TASK_STATES: Ready state demo task running[0m
+[0;32mI (2947) TASK_STATES: Ready state demo task running[0m
+[0;33mW (3097) TASK_STATES: === GIVING SEMAPHORE ===[0m
+[0;32mI (3097) TASK_STATES: Ready state demo task running[0m
+[0;32mI (3097) TASK_STATES: Got semaphore! Task is RUNNING again[0m
+[0;32mI (3247) TASK_STATES: Ready state demo task running[0m
+[0;32mI (3397) TASK_STATES: Ready state demo task running[0m
+[0;32mI (3547) TASK_STATES: Ready state demo task running[0m
+[0;32mI (3597) TASK_STATES: Task is BLOCKED (in vTaskDelay)[0m
+[0;32mI (3697) TASK_STATES: Ready state demo task running[0m
+[0;32mI (3847) TASK_STATES: Ready state demo task running[0m
+[0;32mI (3997) TASK_STATES: Ready state demo task running[0m
+[0;32mI (4147) TASK_STATES: Ready state demo task running[0m
+[0;32mI (4297) TASK_STATES: Ready state demo task running[0m
+[0;32mI (4447) TASK_STATES: === TASK STATUS REPORT ===[0m
+[0;32mI (4447) TASK_STATES: State Demo Task: Blocked[0m
+[0;32mI (4447) TASK_STATES: Priority: 3[0m
+[0;32mI (4447) TASK_STATES: Stack remaining: 2268 bytes[0m
+[0;32mI (4447) TASK_STATES: Ready state demo task running[0m
+[0;32mI (4597) TASK_STATES: === Cycle 3 ===[0m
+[0;32mI (4597) TASK_STATES: Task is RUNNING[0m
+[0;32mI (4607) TASK_STATES: Ready state demo task running[0m
+[0;32mI (4657) TASK_STATES: Task will be READY (yielding to other tasks)[0m
+[0;32mI (4757) TASK_STATES: Ready state demo task running[0m
+[0;32mI (4757) TASK_STATES: Task will be BLOCKED (waiting for semaphore)[0m
+[0;32mI (4907) TASK_STATES: Ready state demo task running[0m
+[0;33mW (4997) TASK_STATES: === GIVING SEMAPHORE ===[0m
+[0;32mI (4997) TASK_STATES: Got semaphore! Task is RUNNING again[0m
+[0;32mI (5057) TASK_STATES: Ready state demo task running[0m
+[0;32mI (5207) TASK_STATES: Ready state demo task running[0m
+[0;32mI (5357) TASK_STATES: Ready state demo task running[0m
+[0;32mI (5467) TASK_STATES: [0m
+=== SYSTEM MONITOR ===
+[0;32mI (5467) TASK_STATES: Task List:[0m
+[0;32mI (5467) TASK_STATES: Name		State	Prio	Stack	Num[0m
+[0;32mI (5467) TASK_STATES: Monitor        	X	1	2276	9[0m
+IDLE1          	R	0	1024	5
+IDLE0          	R	0	1028	4
+StateDemo      	B	3	2268	6
+ReadyDemo      	B	3	212	7
+Control        	B	4	1244	8
+ipc1           	S	24	504	2
+ipc0           	S	24	496	1
+
+[0;32mI (5487) TASK_STATES: [0m
+Runtime Stats:
+[0;32mI (5487) TASK_STATES: Task		Abs Time	%Time[0m
+[0;32mI (5487) TASK_STATES: Monitor        	85898		1%[0m
+IDLE1          	5052029		96%
+IDLE0          	4761155		90%
+Control        	8286		<1%
+ReadyDemo      	242417		4%
+StateDemo      	223792		4%
+ipc0           	19398		<1%
+ipc1           	20159		<1%
+
+[0;32mI (5497) TASK_STATES: Task is BLOCKED (in vTaskDelay)[0m
+[0;32mI (5507) TASK_STATES: Ready state demo task running[0m
+[0;32mI (5677) TASK_STATES: Ready state demo task running[0m
+[0;32mI (5827) TASK_STATES: Ready state demo task running[0m
+[0;32mI (5977) TASK_STATES: Ready state demo task running[0m
+[0;32mI (6127) TASK_STATES: Ready state demo task running[0m
+[0;32mI (6277) TASK_STATES: Ready state demo task running[0m
+[0;32mI (6427) TASK_STATES: Ready state demo task running[0m
+[0;32mI (6517) TASK_STATES: === Cycle 4 ===[0m
+[0;32mI (6517) TASK_STATES: Task is RUNNING[0m
+[0;32mI (6577) TASK_STATES: Ready state demo task running[0m
+[0;32mI (6577) TASK_STATES: Task will be READY (yielding to other tasks)[0m
+[0;32mI (6677) TASK_STATES: Task will be BLOCKED (waiting for semaphore)[0m
+[0;32mI (6727) TASK_STATES: Ready state demo task running[0m
+[0;32mI (6877) TASK_STATES: Ready state demo task running[0m
+[0;32mI (7027) TASK_STATES: Ready state demo task running[0m
+[0;32mI (7177) TASK_STATES: Ready state demo task running[0m
+[0;32mI (7327) TASK_STATES: Ready state demo task running[0m
+[0;32mI (7477) TASK_STATES: Ready state demo task running[0m
+[0;32mI (7627) TASK_STATES: Ready state demo task running[0m
+[0;32mI (7777) TASK_STATES: Ready state demo task running[0m
+[0;32mI (7927) TASK_STATES: Ready state demo task running[0m
+[0;32mI (8077) TASK_STATES: === TASK STATUS REPORT ===[0m
+[0;32mI (8077) TASK_STATES: State Demo Task: Blocked[0m
+[0;32mI (8077) TASK_STATES: Priority: 3[0m
+[0;32mI (8077) TASK_STATES: Stack remaining: 2268 bytes[0m
+[0;32mI (8077) TASK_STATES: Ready state demo task running[0m
+[0;32mI (8237) TASK_STATES: Ready state demo task running[0m
+[0;32mI (8387) TASK_STATES: Ready state demo task running[0m
+[0;32mI (8537) TASK_STATES: Ready state demo task running[0m
+[0;32mI (8677) TASK_STATES: Semaphore timeout! Continuing...[0m
+[0;32mI (8677) TASK_STATES: Task is BLOCKED (in vTaskDelay)[0m
+[0;32mI (8687) TASK_STATES: Ready state demo task running[0m
+[0;32mI (8837) TASK_STATES: Ready state demo task running[0m
+[0;32mI (8987) TASK_STATES: Ready state demo task running[0m
+[0;32mI (9137) TASK_STATES: Ready state demo task running[0m
+[0;32mI (9287) TASK_STATES: Ready state demo task running[0m
+[0;32mI (9437) TASK_STATES: Ready state demo task running[0m
+[0;32mI (9587) TASK_STATES: Ready state demo task running[0m
+[0;32mI (9677) TASK_STATES: === Cycle 5 ===[0m
+[0;32mI (9677) TASK_STATES: Task is RUNNING[0m
+[0;32mI (9737) TASK_STATES: Ready state demo task running[0m
+[0;32mI (9737) TASK_STATES: Task will be READY (yielding to other tasks)[0m
+[0;32mI (9837) TASK_STATES: Task will be BLOCKED (waiting for semaphore)[0m
+[0;32mI (9887) TASK_STATES: Ready state demo task running[0m
+[0;32mI (10037) TASK_STATES: Ready state demo task running[0m
+[0;32mI (10187) TASK_STATES: Ready state demo task running[0m
+[0;32mI (10337) TASK_STATES: Ready state demo task running[0m
+[0;32mI (10487) TASK_STATES: Ready state demo task running[0m
+[0;32mI (10517) TASK_STATES: [0m
+=== SYSTEM MONITOR ===
+[0;32mI (10517) TASK_STATES: Task List:[0m
+[0;32mI (10517) TASK_STATES: Name		State	Prio	Stack	Num[0m
+[0;32mI (10517) TASK_STATES: Monitor        	X	1	2244	9[0m
+IDLE1          	R	0	1024	5
+IDLE0          	R	0	1028	4
+ReadyDemo      	B	3	212	7
+StateDemo      	B	3	2268	6
+Control        	B	4	1244	8
+ipc1           	S	24	504	2
+ipc0           	S	24	496	1
+
+[0;32mI (10537) TASK_STATES: [0m
+Runtime Stats:
+[0;32mI (10537) TASK_STATES: Task		Abs Time	%Time[0m
+[0;32mI (10547) TASK_STATES: Monitor        	118024		1%[0m
+IDLE1          	10060760		97%
+IDLE0          	9404035		91%
+StateDemo      	367389		3%
+Control        	14099		<1%
+ReadyDemo      	489255		4%
+ipc0           	19398		<1%
+ipc1           	20159		<1%
+
+[0;32mI (10637) TASK_STATES: Ready state demo task running[0m
+[0;32mI (10787) TASK_STATES: Ready state demo task running[0m
+[0;32mI (10937) TASK_STATES: Ready state demo task running[0m
+[0;32mI (11077) TASK_STATES: === TASK STATUS REPORT ===[0m
+[0;32mI (11077) TASK_STATES: State Demo Task: Blocked[0m
+[0;32mI (11077) TASK_STATES: Priority: 3[0m
+[0;32mI (11077) TASK_STATES: Stack remaining: 2268 bytes[0m
+[0;32mI (11087) TASK_STATES: Ready state demo task running[0m
+[0;32mI (11237) TASK_STATES: Ready state demo task running[0m
+[0;32mI (11387) TASK_STATES: Ready state demo task running[0m
+[0;32mI (11537) TASK_STATES: Ready state demo task running[0m
+[0;32mI (11687) TASK_STATES: Ready state demo task running[0m
+[0;32mI (11837) TASK_STATES: Semaphore timeout! Continuing...[0m
+[0;32mI (11837) TASK_STATES: Task is BLOCKED (in vTaskDelay)[0m
+[0;32mI (11837) TASK_STATES: Ready state demo task running[0m
+[0;32mI (11997) TASK_STATES: Ready state demo task running[0m
+[0;32mI (12147) TASK_STATES: Ready state demo task running[0m
+[0;32mI (12297) TASK_STATES: Ready state demo task running[0m
+[0;32mI (12447) TASK_STATES: Ready state demo task running[0m
+[0;32mI (12597) TASK_STATES: Ready state demo task running[0m
+[0;32mI (12747) TASK_STATES: Ready state demo task running[0m
+[0;32mI (12837) TASK_STATES: === Cycle 6 ===[0m
+[0;32mI (12837) TASK_STATES: Task is RUNNING[0m
+[0;32mI (12897) TASK_STATES: Ready state demo task running[0m
+[0;32mI (12897) TASK_STATES: Task will be READY (yielding to other tasks)[0m
+[0;32mI (12997) TASK_STATES: Task will be BLOCKED (waiting for semaphore)[0m
+[0;32mI (13047) TASK_STATES: Ready state demo task running[0m
+[0;32mI (13197) TASK_STATES: Ready state demo task running[0m
+[0;32mI (13347) TASK_STATES: Ready state demo task running[0m
+[0;32mI (13497) TASK_STATES: Ready state demo task running[0m
+[0;32mI (13647) TASK_STATES: Ready state demo task running[0m
+[0;32mI (13797) TASK_STATES: Ready state demo task running[0m
+[0;32mI (13947) TASK_STATES: Ready state demo task running[0m
+[0;32mI (14077) TASK_STATES: === TASK STATUS REPORT ===[0m
+[0;32mI (14077) TASK_STATES: State Demo Task: Blocked[0m
+[0;32mI (14077) TASK_STATES: Priority: 3[0m
+[0;32mI (14077) TASK_STATES: Stack remaining: 2268 bytes[0m
+[0;32mI (14097) TASK_STATES: Ready state demo task running[0m
+[0;32mI (14247) TASK_STATES: Ready state demo task running[0m
+[0;32mI (14397) TASK_STATES: Ready state demo task running[0m
+[0;33mW (14427) TASK_STATES: === GIVING SEMAPHORE ===[0m
+[0;32mI (14427) TASK_STATES: Got semaphore! Task is RUNNING again[0m
+[0;32mI (14547) TASK_STATES: Ready state demo task running[0m
+[0;32mI (14697) TASK_STATES: Ready state demo task running[0m
+[0;32mI (14847) TASK_STATES: Ready state demo task running[0m
+[0;32mI (14927) TASK_STATES: Task is BLOCKED (in vTaskDelay)[0m
+[0;32mI (14997) TASK_STATES: Ready state demo task running[0m
+[0;32mI (15147) TASK_STATES: Ready state demo task running[0m
+[0;32mI (15297) TASK_STATES: Ready state demo task running[0m
+[0;32mI (15447) TASK_STATES: Ready state demo task running[0m
+[0;32mI (15567) TASK_STATES: [0m
+=== SYSTEM MONITOR ===
+[0;32mI (15567) TASK_STATES: Task List:[0m
+[0;32mI (15567) TASK_STATES: Name		State	Prio	Stack	Num[0m
+[0;32mI (15567) TASK_STATES: Monitor        	X	1	2244	9[0m
+IDLE1          	R	0	1024	5
+IDLE0          	R	0	1028	4
+ReadyDemo      	B	3	212	7
+StateDemo      	B	3	2268	6
+Control        	B	4	1244	8
+ipc1           	S	24	504	2
+ipc0           	S	24	496	1
+
+[0;32mI (15587) TASK_STATES: [0m
+Runtime Stats:
+[0;32mI (15587) TASK_STATES: Task		Abs Time	%Time[0m
+[0;32mI (15597) TASK_STATES: Ready state demo task running[0m
+[0;32mI (15597) TASK_STATES: Monitor        	191073		1%[0m
+IDLE1          	15101463		98%
+IDLE0          	14093608		91%
+Control        	27054		<1%
+StateDemo      	437170		2%
+ReadyDemo      	723209		4%
+ipc0           	19398		<1%
+ipc1           	20159		<1%
+
+[0;32mI (15757) TASK_STATES: Ready state demo task running[0m
+[0;32mI (15907) TASK_STATES: Ready state demo task running[0m
+[0;32mI (15927) TASK_STATES: === Cycle 7 ===[0m
+[0;32mI (15927) TASK_STATES: Task is RUNNING[0m
+[0;32mI (15987) TASK_STATES: Task will be READY (yielding to other tasks)[0m
+[0;32mI (16057) TASK_STATES: Ready state demo task running[0m
+[0;32mI (16087) TASK_STATES: Task will be BLOCKED (waiting for semaphore)[0m
+[0;32mI (16207) TASK_STATES: Ready state demo task running[0m
+[0;32mI (16357) TASK_STATES: Ready state demo task running[0m
+[0;32mI (16507) TASK_STATES: Ready state demo task running[0m
+[0;32mI (16657) TASK_STATES: Ready state demo task running[0m
+[0;32mI (16807) TASK_STATES: Ready state demo task running[0m
+[0;32mI (16957) TASK_STATES: Ready state demo task running[0m
+[0;32mI (17107) TASK_STATES: Ready state demo task running[0m
+[0;32mI (17257) TASK_STATES: Ready state demo task running[0m
+[0;32mI (17407) TASK_STATES: Ready state demo task running[0m
+[0;32mI (17557) TASK_STATES: Ready state demo task running[0m
+[0;32mI (17707) TASK_STATES: Ready state demo task running[0m
+[0;32mI (17857) TASK_STATES: Ready state demo task running[0m
+[0;32mI (18007) TASK_STATES: Ready state demo task running[0m
+[0;32mI (18087) TASK_STATES: Semaphore timeout! Continuing...[0m
+[0;32mI (18087) TASK_STATES: Task is BLOCKED (in vTaskDelay)[0m
+[0;32mI (18157) TASK_STATES: Ready state demo task running[0m
+[0;32mI (18307) TASK_STATES: Ready state demo task running[0m
+[0;32mI (18457) TASK_STATES: Ready state demo task running[0m
+[0;32mI (18607) TASK_STATES: Ready state demo task running[0m
+[0;32mI (18757) TASK_STATES: Ready state demo task running[0m
+[0;32mI (18907) TASK_STATES: Ready state demo task running[0m
+[0;32mI (19057) TASK_STATES: Ready state demo task running[0m
+[0;32mI (19087) TASK_STATES: === Cycle 8 ===[0m
+[0;32mI (19087) TASK_STATES: Task is RUNNING[0m
+[0;32mI (19147) TASK_STATES: Task will be READY (yielding to other tasks)[0m
+[0;32mI (19207) TASK_STATES: Ready state demo task running[0m
+[0;32mI (19247) TASK_STATES: Task will be BLOCKED (waiting for semaphore)[0m
+[0;32mI (19357) TASK_STATES: Ready state demo task running[0m
+[0;32mI (19507) TASK_STATES: Ready state demo task running[0m
+[0;32mI (19657) TASK_STATES: Ready state demo task running[0m
+[0;32mI (19807) TASK_STATES: Ready state demo task running[0m
+[0;32mI (19957) TASK_STATES: Ready state demo task running[0m
+[0;32mI (20107) TASK_STATES: Ready state demo task running[0m
+[0;32mI (20257) TASK_STATES: Ready state demo task running[0m
+[0;32mI (20407) TASK_STATES: Ready state demo task running[0m
+[0;32mI (20557) TASK_STATES: Ready state demo task running[0m
+[0;32mI (20617) TASK_STATES: [0m
+=== SYSTEM MONITOR ===
+[0;32mI (20617) TASK_STATES: Task List:[0m
+[0;32mI (20617) TASK_STATES: Name		State	Prio	Stack	Num[0m
+[0;32mI (20617) TASK_STATES: Monitor        	X	1	2244	9[0m
+IDLE1          	R	0	1024	5
+IDLE0          	R	0	1028	4
+ReadyDemo      	B	3	212	7
+StateDemo      	B	3	2268	6
+Control        	B	4	1244	8
+ipc1           	S	24	504	2
+ipc0           	S	24	496	1
+
+[0;32mI (20637) TASK_STATES: [0m
+Runtime Stats:
+[0;32mI (20637) TASK_STATES: Task		Abs Time	%Time[0m
+[0;32mI (20647) TASK_STATES: Monitor        	244200		1%[0m
+IDLE1          	20128595		98%
+IDLE0          	18724380		91%
+ReadyDemo      	965730		4%
+StateDemo      	576042		2%
+Control        	34630		<1%
+ipc0           	19398		<1%
+ipc1           	20159		<1%
+
+[0;32mI (20707) TASK_STATES: Ready state demo task running[0m
+[0;32mI (20857) TASK_STATES: Ready state demo task running[0m
+[0;32mI (21007) TASK_STATES: Ready state demo task running[0m
+[0;32mI (21157) TASK_STATES: Ready state demo task running[0m
+[0;32mI (21247) TASK_STATES: Semaphore timeout! Continuing...[0m
+[0;32mI (21247) TASK_STATES: Task is BLOCKED (in vTaskDelay)[0m
+[0;32mI (21307) TASK_STATES: Ready state demo task running[0m
+[0;32mI (21457) TASK_STATES: Ready state demo task running[0m
+[0;32mI (21607) TASK_STATES: Ready state demo task running[0m
+[0;32mI (21757) TASK_STATES: Ready state demo task running[0m
+[0;32mI (21907) TASK_STATES: Ready state demo task running[0m
+[0;32mI (22057) TASK_STATES: Ready state demo task running[0m
+[0;32mI (22207) TASK_STATES: Ready state demo task running[0m
+[0;32mI (22247) TASK_STATES: === Cycle 9 ===[0m
+[0;32mI (22247) TASK_STATES: Task is RUNNING[0m
+[0;32mI (22307) TASK_STATES: Task will be READY (yielding to other tasks)[0m
+[0;32mI (22357) TASK_STATES: Ready state demo task running[0m
+[0;32mI (22407) TASK_STATES: Task will be BLOCKED (waiting for semaphore)[0m
+[0;32mI (22507) TASK_STATES: Ready state demo task running[0m
+[0;32mI (22657) TASK_STATES: Ready state demo task running[0m
+[0;32mI (22807) TASK_STATES: Ready state demo task running[0m
+[0;32mI (22957) TASK_STATES: Ready state demo task running[0m
+[0;32mI (23107) TASK_STATES: Ready state demo task running[0m
+[0;32mI (23257) TASK_STATES: Ready state demo task running[0m
+[0;32mI (23407) TASK_STATES: Ready state demo task running[0m
+[0;32mI (23557) TASK_STATES: Ready state demo task running[0m
+[0;32mI (23707) TASK_STATES: Ready state demo task running[0m
+[0;32mI (23857) TASK_STATES: Ready state demo task running[0m
+[0;32mI (24007) TASK_STATES: Ready state demo task running[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 15 2025 13:08:54[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0aae0h ( 43744) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001ab08 vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001cf48 vaddr=40080000 size=030d0h ( 12496) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17c94h ( 97428) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00037cbc vaddr=400830d0 size=0a604h ( 42500) load[0m
+[0;32mI (164) esp_image: segment 5: paddr=000422c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (171) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (171) boot: Disabling RNG early entropy source...[0m
+[0;32mI (183) cpu_start: Multicore app[0m
+[0;32mI (191) cpu_start: Pro cpu start user code[0m
+[0;32mI (191) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (191) app_init: Application information:[0m
+[0;32mI (191) app_init: Project name:     Basic_Task_States_Demo[0m
+[0;32mI (196) app_init: App version:      813e069[0m
+[0;32mI (200) app_init: Compile time:     Oct 15 2025 13:09:43[0m
+[0;32mI (205) app_init: ELF file SHA256:  a537156a4...[0m
+[0;32mI (210) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (213) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (217) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (221) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (225) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (232) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFB2D28 len 0002D2D8 (180 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 4008D6D4 len 0001292C (74 KiB): IRAM[0m
+[0;32mI (259) spi_flash: detected chip: generic[0m
+[0;32mI (262) spi_flash: flash io: dio[0m
+[0;33mW (265) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (277) main_task: Started on CPU0[0m
+[0;32mI (287) main_task: Calling app_main()[0m
+[0;32mI (287) TASK_STATES: === FreeRTOS Task States Demo ===[0m
+[1;31mE (287) gpio: gpio_pullup_en(78): GPIO number error (input-only pad has no internal PU)[0m
+[0;32mI (287) TASK_STATES: LED Indicators:[0m
+[0;32mI (297) TASK_STATES: GPIO2 = Running, GPIO4 = Ready[0m
+[0;32mI (297) TASK_STATES: GPIO5 = Blocked, GPIO18 = Suspended[0m
+[0;32mI (307) TASK_STATES: Button Controls:[0m
+[0;32mI (307) TASK_STATES: GPIO0 = Suspend/Resume, GPIO35 = Give Semaphore[0m
+[0;32mI (317) TASK_STATES: State Demo Task started[0m
+[0;32mI (317) TASK_STATES: === Cycle 1 ===[0m
+[0;32mI (317) TASK_STATES: Task is RUNNING[0m
+[0;32mI (397) TASK_STATES: Task will be READY (yielding to other tasks)[0m
+[0;32mI (397) TASK_STATES: Ready state demo task running[0m
+[0;32mI (397) TASK_STATES: Control Task started[0m
+[0;32mI (397) TASK_STATES: All tasks created. Monitoring task states...[0m
+[0;32mI (397) main_task: Returned from app_main()[0m
+[0;32mI (407) TASK_STATES: System Monitor started[0m
+[0;32mI (407) TASK_STATES: [0m
+=== SYSTEM MONITOR ===
+[0;32mI (417) TASK_STATES: Task List:[0m
+[0;32mI (417) TASK_STATES: Name		State	Prio	Stack	Num[0m
+[0;32mI (417) TASK_STATES: Monitor        	X	1	2276	9[0m
+IDLE0          	R	0	1028	4
+IDLE1          	R	0	1024	5
+StateDemo      	B	3	2268	6
+ReadyDemo      	B	3	212	7
+Control        	B	4	1244	8
+ipc1           	S	24	504	2
+ipc0           	S	24	496	1
+
+[0;33mW (447) TASK_STATES: === GIVING SEMAPHORE ===[0m
+[0;32mI (447) TASK_STATES: [0m
+Runtime Stats:
+[0;32mI (447) TASK_STATES: Task		Abs Time	%Time[0m
+[0;32mI (457) TASK_STATES: Monitor        	37197		19%[0m
+IDLE0          	36893		18%
+IDLE1          	132319		68%
+StateDemo      	79513		40%
+ReadyDemo      	7000		3%
+Control        	4275		2%
+ipc0           	19398		9%
+ipc1           	20159		10%
+
+[0;32mI (497) TASK_STATES: Task will be BLOCKED (waiting for semaphore)[0m
+[0;32mI (497) TASK_STATES: Got semaphore! Task is RUNNING again[0m
+[0;32mI (547) TASK_STATES: Ready state demo task running[0m
+[0;32mI (697) TASK_STATES: Ready state demo task running[0m
+[0;32mI (847) TASK_STATES: Ready state demo task running[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 15 2025 13:08:54[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0aae0h ( 43744) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001ab08 vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001cf48 vaddr=40080000 size=030d0h ( 12496) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17c94h ( 97428) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00037cbc vaddr=400830d0 size=0a604h ( 42500) load[0m
+[0;32mI (164) esp_image: segment 5: paddr=000422c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (171) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (171) boot: Disabling RNG early entropy source...[0m
+[0;32mI (183) cpu_start: Multicore app[0m
+[0;32mI (191) cpu_start: Pro cpu start user code[0m
+[0;32mI (191) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (191) app_init: Application information:[0m
+[0;32mI (191) app_init: Project name:     Basic_Task_States_Demo[0m
+[0;32mI (196) app_init: App version:      813e069[0m
+[0;32mI (200) app_init: Compile time:     Oct 15 2025 13:09:43[0m
+[0;32mI (205) app_init: ELF file SHA256:  a537156a4...[0m
+[0;32mI (210) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (213) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (217) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (221) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (225) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (232) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFB2D28 len 0002D2D8 (180 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 4008D6D4 len 0001292C (74 KiB): IRAM[0m
+[0;32mI (259) spi_flash: detected chip: generic[0m
+[0;32mI (262) spi_flash: flash io: dio[0m
+[0;33mW (265) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (277) main_task: Started on CPU0[0m
+[0;32mI (287) main_task: Calling app_main()[0m
+[0;32mI (287) TASK_STATES: === FreeRTOS Task States Demo ===[0m
+[1;31mE (287) gpio: gpio_pullup_en(78): GPIO number error (input-only pad has no internal PU)[0m
+[0;32mI (287) TASK_STATES: LED Indicators:[0m
+[0;32mI (297) TASK_STATES: GPIO2 = Running, GPIO4 = Ready[0m
+[0;32mI (297) TASK_STATES: GPIO5 = Blocked, GPIO18 = Suspended[0m
+[0;32mI (307) TASK_STATES: Button Controls:[0m
+[0;32mI (307) TASK_STATES: GPIO0 = Suspend/Resume, GPIO35 = Give Semaphore[0m
+[0;32mI (317) TASK_STATES: State Demo Task started[0m
+[0;32mI (317) TASK_STATES: === Cycle 1 ===[0m
+[0;32mI (317) TASK_STATES: Task is RUNNING[0m
+[0;32mI (397) TASK_STATES: Task will be READY (yielding to other tasks)[0m
+[0;32mI (397) TASK_STATES: Ready state demo task running[0m
+[0;32mI (397) TASK_STATES: Control Task started[0m
+[0;32mI (397) TASK_STATES: All tasks created. Monitoring task states...[0m
+[0;32mI (397) main_task: Returned from app_main()[0m
+[0;32mI (407) TASK_STATES: System Monitor started[0m
+[0;32mI (407) TASK_STATES: [0m
+=== SYSTEM MONITOR ===
+[0;32mI (417) TASK_STATES: Task List:[0m
+[0;32mI (417) TASK_STATES: Name		State	Prio	Stack	Num[0m
+[0;32mI (417) TASK_STATES: Monitor        	X	1	2276	9[0m
+IDLE0          	R	0	1028	4
+IDLE1          	R	0	1024	5
+StateDemo      	B	3	2268	6
+ReadyDemo      	B	3	212	7
+Control        	B	4	1244	8
+ipc1           	S	24	504	2
+ipc0           	S	24	496	1
+
+[0;33mW (447) TASK_STATES: === GIVING SEMAPHORE ===[0m
+[0;32mI (447) TASK_STATES: [0m
+Runtime Stats:
+[0;32mI (447) TASK_STATES: Task		Abs Time	%Time[0m
+[0;32mI (457) TASK_STATES: Monitor        	37197		19%[0m
+IDLE0          	36892		18%
+IDLE1          	132319		68%
+StateDemo      	79514		40%
+ReadyDemo      	7000		3%
+Control        	4276		2%
+ipc0           	19398		9%
+ipc1           	20159		10%
+
+[0;32mI (497) TASK_STATES: Task will be BLOCKED (waiting for semaphore)[0m
+[0;32mI (497) TASK_STATES: Got semaphore! Task is RUNNING again[0m
+[0;32mI (547) TASK_STATES: Ready state demo task running[0m
+[0;32mI (697) TASK_STATES: Ready state demo task running[0m
+[0;32mI (847) TASK_STATES: Ready state demo task running[0m
+[0;32mI (997) TASK_STATES: Task is BLOCKED (in vTaskDelay)[0m
+[0;32mI (997) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1147) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1297) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1447) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1597) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1747) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1897) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1997) TASK_STATES: === Cycle 2 ===[0m
+[0;32mI (1997) TASK_STATES: Task is RUNNING[0m
+[0;32mI (2047) TASK_STATES: Ready state demo task running[0m
+[0;32mI (2057) TASK_STATES: Task will be READY (yielding to other tasks)[0m
+[0;32mI (2167) TASK_STATES: Task will be BLOCKED (waiting for semaphore)[0m
+[0;32mI (2197) TASK_STATES: Ready state demo task running[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 15 2025 13:08:54[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0aae0h ( 43744) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001ab08 vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001cf48 vaddr=40080000 size=030d0h ( 12496) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17c94h ( 97428) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00037cbc vaddr=400830d0 size=0a604h ( 42500) load[0m
+[0;32mI (164) esp_image: segment 5: paddr=000422c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (171) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (171) boot: Disabling RNG early entropy source...[0m
+[0;32mI (183) cpu_start: Multicore app[0m
+[0;32mI (191) cpu_start: Pro cpu start user code[0m
+[0;32mI (191) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (191) app_init: Application information:[0m
+[0;32mI (191) app_init: Project name:     Basic_Task_States_Demo[0m
+[0;32mI (196) app_init: App version:      813e069[0m
+[0;32mI (200) app_init: Compile time:     Oct 15 2025 13:09:43[0m
+[0;32mI (205) app_init: ELF file SHA256:  a537156a4...[0m
+[0;32mI (210) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (213) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (217) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (221) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (225) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (232) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFB2D28 len 0002D2D8 (180 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 4008D6D4 len 0001292C (74 KiB): IRAM[0m
+[0;32mI (259) spi_flash: detected chip: generic[0m
+[0;32mI (262) spi_flash: flash io: dio[0m
+[0;33mW (265) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (277) main_task: Started on CPU0[0m
+[0;32mI (287) main_task: Calling app_main()[0m
+[0;32mI (287) TASK_STATES: === FreeRTOS Task States Demo ===[0m
+[1;31mE (287) gpio: gpio_pullup_en(78): GPIO number error (input-only pad has no internal PU)[0m
+[0;32mI (287) TASK_STATES: LED Indicators:[0m
+[0;32mI (297) TASK_STATES: GPIO2 = Running, GPIO4 = Ready[0m
+[0;32mI (297) TASK_STATES: GPIO5 = Blocked, GPIO18 = Suspended[0m
+[0;32mI (307) TASK_STATES: Button Controls:[0m
+[0;32mI (307) TASK_STATES: GPIO0 = Suspend/Resume, GPIO35 = Give Semaphore[0m
+[0;32mI (317) TASK_STATES: State Demo Task started[0m
+[0;32mI (317) TASK_STATES: === Cycle 1 ===[0m
+[0;32mI (317) TASK_STATES: Task is RUNNING[0m
+[0;32mI (397) TASK_STATES: Task will be READY (yielding to other tasks)[0m
+[0;32mI (397) TASK_STATES: Ready state demo task running[0m
+[0;32mI (397) TASK_STATES: Control Task started[0m
+[0;32mI (397) TASK_STATES: All tasks created. Monitoring task states...[0m
+[0;32mI (397) main_task: Returned from app_main()[0m
+[0;32mI (407) TASK_STATES: System Monitor started[0m
+[0;32mI (407) TASK_STATES: [0m
+=== SYSTEM MONITOR ===
+[0;32mI (417) TASK_STATES: Task List:[0m
+[0;32mI (417) TASK_STATES: Name		State	Prio	Stack	Num[0m
+[0;32mI (417) TASK_STATES: Monitor        	X	1	2276	9[0m
+IDLE0          	R	0	1028	4
+IDLE1          	R	0	1024	5
+StateDemo      	B	3	2268	6
+ReadyDemo      	B	3	212	7
+Control        	B	4	1244	8
+ipc1           	S	24	504	2
+ipc0           	S	24	496	1
+
+[0;33mW (447) TASK_STATES: === GIVING SEMAPHORE ===[0m
+[0;32mI (447) TASK_STATES: [0m
+Runtime Stats:
+[0;32mI (447) TASK_STATES: Task		Abs Time	%Time[0m
+[0;32mI (457) TASK_STATES: Monitor        	37197		19%[0m
+IDLE0          	36893		18%
+IDLE1          	132319		68%
+StateDemo      	79513		40%
+ReadyDemo      	7000		3%
+Control        	4275		2%
+ipc0           	19398		9%
+ipc1           	20159		10%
+
+[0;32mI (497) TASK_STATES: Task will be BLOCKED (waiting for semaphore)[0m
+[0;32mI (497) TASK_STATES: Got semaphore! Task is RUNNING again[0m
+[0;32mI (547) TASK_STATES: Ready state demo task running[0m
+[0;32mI (697) TASK_STATES: Ready state demo task running[0m
+[0;32mI (847) TASK_STATES: Ready state demo task running[0m
+[0;32mI (997) TASK_STATES: Task is BLOCKED (in vTaskDelay)[0m
+[0;32mI (997) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1147) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1297) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1447) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1597) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1747) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1897) TASK_STATES: Ready state demo task running[0m
+[0;32mI (1997) TASK_STATES: === Cycle 2 ===[0m
+[0;32mI (1997) TASK_STATES: Task is RUNNING[0m
+[0;32mI (2047) TASK_STATES: Ready state demo task running[0m
+[0;32mI (2057) TASK_STATES: Task will be READY (yielding to other tasks)[0m
+[0;32mI (2167) TASK_STATES: Task will be BLOCKED (waiting for semaphore)[0m
+[0;32mI (2197) TASK_STATES: Ready state demo task running[0m
+[0;32mI (2347) TASK_STATES: Ready state demo task running[0m
+[0;32mI (2497) TASK_STATES: Ready state demo task running[0m
+[0;32mI (2647) TASK_STATES: Ready state demo task running[0m
+[0;32mI (2797) TASK_STATES: Ready state demo task running[0m
+[0;32mI (2947) TASK_STATES: Ready state demo task running[0m
+[0;32mI (3097) TASK_STATES: Ready state demo task running[0m
+[0;32mI (3247) TASK_STATES: Ready state demo task running[0m
+[0;32mI (3397) TASK_STATES: Ready state demo task running[0m
+[0;32mI (3547) TASK_STATES: Ready state demo task running[0m
+[0;32mI (3697) TASK_STATES: Ready state demo task running[0m
+[0;32mI (3847) TASK_STATES: Ready state demo task running[0m
+[0;33mW (3947) TASK_STATES: === GIVING SEMAPHORE ===[0m
+[0;32mI (3947) TASK_STATES: Got semaphore! Task is RUNNING again[0m
+[0;32mI (3997) TASK_STATES: Ready state demo task running[0m
+[0;32mI (4147) TASK_STATES: Ready state demo task running[0m
+[0;33mW (4247) TASK_STATES: === GIVING SEMAPHORE ===[0m
+[0;32mI (4297) TASK_STATES: Ready state demo task running[0m
+[0;32mI (4447) TASK_STATES: Task is BLOCKED (in vTaskDelay)[0m
+[0;32mI (4447) TASK_STATES: Ready state demo task running[0m
+[0;32mI (4597) TASK_STATES: Ready state demo task running[0m
+[0;32mI (4747) TASK_STATES: Ready state demo task running[0m
+[0;32mI (4897) TASK_STATES: Ready state demo task running[0m
+[0;32mI (5047) TASK_STATES: Ready state demo task running[0m
+[0;32mI (5197) TASK_STATES: Ready state demo task running[0m
+[0;32mI (5347) TASK_STATES: Ready state demo task running[0m
+[0;32mI (5447) TASK_STATES: === Cycle 3 ===[0m
+[0;32mI (5447) TASK_STATES: Task is RUNNING[0m
+[0;32mI (5477) TASK_STATES: [0m
+=== SYSTEM MONITOR ===
+[0;32mI (5477) TASK_STATES: Task List:[0m
+[0;32mI (5477) TASK_STATES: Name		State	Prio	Stack	Num[0m
+[0;32mI (5477) TASK_STATES: StateDemo      	R	3	2268	6[0m
+Monitor        	X	1	2276	9
+IDLE1          	R	0	1024	5
+IDLE0          	R	0	1028	4
+ReadyDemo      	B	3	212	7
+Control        	B	4	1244	8
+ipc1           	S	24	504	2
+ipc0           	S	24	496	1
+
+[0;32mI (5497) TASK_STATES: Ready state demo task running[0m
+[0;32mI (5507) TASK_STATES: [0m
+Runtime Stats:
+[0;32mI (5507) TASK_STATES: Task		Abs Time	%Time[0m
+[0;32mI (5507) TASK_STATES: StateDemo      	209454		3%[0m
+Monitor        	88562		1%
+IDLE0          	4749312		90%
+IDLE1          	5110384		97%
+ReadyDemo      	249333		4%
+Control        	10540		<1%
+ipc0           	19398		<1%
+ipc1           	20159		<1%
+
+[0;32mI (5507) TASK_STATES: Task will be READY (yielding to other tasks)[0m
+[0;32mI (5637) TASK_STATES: Task will be BLOCKED (waiting for semaphore)[0m
+[0;32mI (5637) TASK_STATES: Got semaphore! Task is RUNNING again[0m
+[0;32mI (5657) TASK_STATES: Ready state demo task running[0m
+[0;32mI (5807) TASK_STATES: Ready state demo task running[0m
+[0;32mI (5957) TASK_STATES: Ready state demo task running[0m
+[0;32mI (6107) TASK_STATES: Ready state demo task running[0m
+[0;32mI (6137) TASK_STATES: Task is BLOCKED (in vTaskDelay)[0m
+[0;32mI (6257) TASK_STATES: Ready state demo task running[0m
+[0;32mI (6407) TASK_STATES: Ready state demo task running[0m
+[0;32mI (6557) TASK_STATES: Ready state demo task running[0m
+[0;32mI (6707) TASK_STATES: Ready state demo task running[0m
+[0;32mI (6857) TASK_STATES: Ready state demo task running[0m
+[0;32mI (7007) TASK_STATES: Ready state demo task running[0m
+[0;32mI (7137) TASK_STATES: === Cycle 4 ===[0m
+[0;32mI (7137) TASK_STATES: Task is RUNNING[0m
+[0;32mI (7157) TASK_STATES: Ready state demo task running[0m
+[0;32mI (7197) TASK_STATES: Task will be READY (yielding to other tasks)[0m
+[0;32mI (7297) TASK_STATES: Task will be BLOCKED (waiting for semaphore)[0m
+[0;32mI (7307) TASK_STATES: Ready state demo task running[0m

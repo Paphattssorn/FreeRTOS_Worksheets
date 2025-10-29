@@ -1,0 +1,282 @@
+Command: C:\Users\HP\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\HP\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\HP\Documents\APPLICATIONSOFMICROCONTROLLERS\ESPRTOS\FreeRTOS_Worksheets\Basic_Task_States_Demo\build\Basic_Task_States_Demo.elf C:\Users\HP\Documents\APPLICATIONSOFMICROCONTROLLERS\ESPRTOS\FreeRTOS_Worksheets\Basic_Task_States_Demo\build\bootloader\bootloader.elf --force-color -m 'C:\Users\HP\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\HP\esp\v5.5.1\esp-idf\tools\idf.py'
+
+rst:0x1 (POWERON_RESE�I (44) boot: Enabling RNG early entropy source...
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Lengets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 15 2025 13:08:54[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a5e0h ( 42464) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001a608 vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001ca48 vaddr=40080000 size=035d0h ( 13776) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14a6ch ( 84588) map[0m
+[0;32mI (143) esp_image: segment 4: paddr=00034a94 vaddr=400835d0 size=09d7ch ( 40316) load[0m
+[0;32mI (159) esp_image: segment 5: paddr=0003e818 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (166) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (177) cpu_start: Multicore app[0m
+[0;32mI (185) cpu_start: Pro cpu start user code[0m
+[0;32mI (185) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (185) app_init: Application information:[0m
+[0;32mI (185) app_init: Project name:     Basic_Task_States_Demo[0m
+[0;32mI (191) app_init: App version:      813e069[0m
+[0;32mI (195) app_init: Compile time:     Oct 15 2025 13:09:43[0m
+[0;32mI (200) app_init: ELF file SHA256:  63bcc0340...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB2D40 len 0002D2C0 (180 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (241) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008D34C len 00012CB4 (75 KiB): IRAM[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (259) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (272) main_task: Started on CPU0[0m
+[0;32mI (282) main_task: Calling app_main()[0m
+[0;32mI (282) TASK_STATES: === Exercise 1: State Transition Counter ===[0m
+[0;32mI (282) TASK_STATES: State Demo Task started[0m
+[0;32mI (282) TASK_STATES: === Cycle 1 ===[0m
+[0;32mI (362) TASK_STATES: State change: Running -> Ready (Count: 1)[0m
+[0;32mI (362) TASK_STATES: Ready demo task running[0m
+[0;32mI (372) TASK_STATES: Control Task started[0m
+[0;32mI (372) TASK_STATES: External delete task running: 0[0m
+[0;32mI (372) TASK_STATES: System ready. Press GPIO0 to Suspend/Resume, GPIO15 to Give Semaphore.[0m
+[0;32mI (372) main_task: Returned from app_main()[0m
+[0;32mI (462) TASK_STATES: State change: Ready -> Blocked (Count: 1)[0m
+[0;32mI (522) TASK_STATES: Ready demo task running[0m
+[0;32mI (672) TASK_STATES: Ready demo task running[0m
+[0;32mI (822) TASK_STATES: Ready demo task running[0m
+[0;32mI (972) TASK_STATES: Ready demo task running[0m
+[0;32mI (1122) TASK_STATES: Ready demo task running[0m
+[0;32mI (1272) TASK_STATES: Ready demo task running[0m
+[0;32mI (1372) TASK_STATES: External delete task running: 1[0m
+[0;32mI (1422) TASK_STATES: Ready demo task running[0m
+[0;32mI (1572) TASK_STATES: Ready demo task running[0m
+[0;32mI (1722) TASK_STATES: Ready demo task running[0m
+[0;32mI (1872) TASK_STATES: Ready demo task running[0m
+[0;32mI (2022) TASK_STATES: Ready demo task running[0m
+[0;32mI (2172) TASK_STATES: Ready demo task running[0m
+[0;32mI (2322) TASK_STATES: Ready demo task running[0m
+[0;32mI (2372) TASK_STATES: External delete task running: 2[0m
+[0;32mI (2462) TASK_STATES: Semaphore timeout![0m
+[0;32mI (2472) TASK_STATES: Ready demo task running[0m
+[0;32mI (2622) TASK_STATES: Ready demo task running[0m
+[0;32mI (2772) TASK_STATES: Ready demo task running[0m
+[0;33mW (2822) TASK_STATES: === SUSPENDING Task ===[0m
+[0;32mI (2822) TASK_STATES: State change: Blocked -> Suspended (Count: 1)[0m
+[0;32mI (2922) TASK_STATES: Ready demo task running[0m
+[0;32mI (3072) TASK_STATES: Ready demo task running[0m
+[0;32mI (3222) TASK_STATES: Ready demo task running[0m
+[0;32mI (3372) TASK_STATES: Ready demo task running[0m
+[0;32mI (3372) TASK_STATES: External delete task running: 3[0m
+[0;32mI (3522) TASK_STATES: Ready demo task running[0m
+[0;32mI (3672) TASK_STATES: Ready demo task running[0m
+[0;32mI (3822) TASK_STATES: Ready demo task running[0m
+[0;32mI (3972) TASK_STATES: Ready demo task running[0m
+[0;32mI (4122) TASK_STATES: Ready demo task running[0m
+[0;32mI (4272) TASK_STATES: Ready demo task running[0m
+[0;32mI (4372) TASK_STATES: External delete task running: 4[0m
+[0;32mI (4422) TASK_STATES: Ready demo task running[0m
+[0;32mI (4572) TASK_STATES: Ready demo task running[0m
+[0;32mI (4722) TASK_STATES: Ready demo task running[0m
+[0;33mW (4732) TASK_STATES: === RESUMING Task ===[0m
+[0;32mI (4732) TASK_STATES: State change: Suspended -> Running (Count: 1)[0m
+[0;32mI (4732) TASK_STATES: === Cycle 2 ===[0m
+[0;32mI (4732) TASK_STATES: State change: Blocked -> Running (Count: 2)[0m
+[0;32mI (4812) TASK_STATES: State change: Running -> Ready (Count: 2)[0m
+[0;32mI (4872) TASK_STATES: Ready demo task running[0m
+[0;32mI (4912) TASK_STATES: State change: Ready -> Blocked (Count: 2)[0m
+[0;32mI (5022) TASK_STATES: Ready demo task running[0m
+[0;32mI (5172) TASK_STATES: Ready demo task running[0m
+[0;32mI (5322) TASK_STATES: Ready demo task running[0m
+[0;32mI (5372) TASK_STATES: External delete task running: 5[0m
+[0;32mI (5472) TASK_STATES: Ready demo task running[0m
+[0;32mI (5622) TASK_STATES: Ready demo task running[0m
+[0;32mI (5772) TASK_STATES: Ready demo task running[0m
+[0;32mI (5922) TASK_STATES: Ready demo task running[0m
+[0;33mW (5982) TASK_STATES: === SUSPENDING Task ===[0m
+[0;32mI (5982) TASK_STATES: State change: Blocked -> Suspended (Count: 2)[0m
+[0;32mI (6072) TASK_STATES: Ready demo task running[0m
+[0;32mI (6222) TASK_STATES: Ready demo task running[0m
+[0;32mI (6372) TASK_STATES: Ready demo task running[0m
+[0;32mI (6372) TASK_STATES: External delete task running: 6[0m
+[0;32mI (6522) TASK_STATES: Ready demo task running[0m
+[0;32mI (6672) TASK_STATES: Ready demo task running[0m
+[0;33mW (6742) TASK_STATES: === RESUMING Task ===[0m
+[0;32mI (6742) TASK_STATES: State change: Suspended -> Running (Count: 3)[0m
+[0;32mI (6822) TASK_STATES: Ready demo task running[0m
+[0;32mI (6912) TASK_STATES: Semaphore timeout![0m
+[0;32mI (6972) TASK_STATES: Ready demo task running[0m
+[0;32mI (7122) TASK_STATES: Ready demo task running[0m
+[0;33mW (7232) TASK_STATES: === SUSPENDING Task ===[0m
+[0;32mI (7232) TASK_STATES: State change: Blocked -> Suspended (Count: 3)[0m
+[0;32mI (7272) TASK_STATES: Ready demo task running[0m
+[0;32mI (7372) TASK_STATES: External delete task running: 7[0m
+[0;32mI (7422) TASK_STATES: Ready demo task running[0m
+[0;32mI (7572) TASK_STATES: Ready demo task running[0m
+[0;32mI (7722) TASK_STATES: Ready demo task running[0m
+[0;32mI (7872) TASK_STATES: Ready demo task running[0m
+[0;33mW (7902) TASK_STATES: === RESUMING Task ===[0m
+[0;32mI (7902) TASK_STATES: State change: Suspended -> Running (Count: 4)[0m
+[0;32mI (7902) TASK_STATES: === Cycle 3 ===[0m
+[0;32mI (7902) TASK_STATES: State change: Blocked -> Running (Count: 5)[0m
+[0;32mI (7982) TASK_STATES: State change: Running -> Ready (Count: 3)[0m
+[0;32mI (8022) TASK_STATES: Ready demo task running[0m
+[0;32mI (8082) TASK_STATES: State change: Ready -> Blocked (Count: 3)[0m
+[0;32mI (8172) TASK_STATES: Ready demo task running[0m
+[0;32mI (8322) TASK_STATES: Ready demo task running[0m
+[0;32mI (8372) TASK_STATES: External delete task running: 8[0m
+[0;33mW (8412) TASK_STATES: === SUSPENDING Task ===[0m
+[0;32mI (8412) TASK_STATES: State change: Blocked -> Suspended (Count: 4)[0m
+[0;32mI (8472) TASK_STATES: Ready demo task running[0m
+[0;32mI (8492) TASK_STATES: === STATE CHANGE COUNTER ===[0m
+[0;32mI (8492) TASK_STATES: Running: 5[0m
+[0;32mI (8492) TASK_STATES: Ready: 3[0m
+[0;32mI (8492) TASK_STATES: Blocked: 3[0m
+[0;32mI (8492) TASK_STATES: Suspended: 4[0m
+[0;32mI (8492) TASK_STATES: Deleted: 0[0m
+[0;32mI (8622) TASK_STATES: Ready demo task running[0m
+[0;32mI (8772) TASK_STATES: Ready demo task running[0m
+[0;32mI (8922) TASK_STATES: Ready demo task running[0m
+[0;32mI (9072) TASK_STATES: Ready demo task running[0m
+[0;32mI (9222) TASK_STATES: Ready demo task running[0m
+[0;32mI (9372) TASK_STATES: Ready demo task running[0m
+[0;32mI (9372) TASK_STATES: External delete task running: 9[0m
+[0;32mI (9522) TASK_STATES: Ready demo task running[0m
+[0;33mW (9642) TASK_STATES: === RESUMING Task ===[0m
+[0;32mI (9642) TASK_STATES: State change: Suspended -> Running (Count: 6)[0m
+[0;32mI (9672) TASK_STATES: Ready demo task running[0m
+[0;32mI (9822) TASK_STATES: Ready demo task running[0m
+[0;32mI (9972) TASK_STATES: Ready demo task running[0m
+[0;32mI (10082) TASK_STATES: Semaphore timeout![0m
+[0;32mI (10122) TASK_STATES: Ready demo task running[0m
+[0;33mW (10162) TASK_STATES: === SUSPENDING Task ===[0m
+[0;32mI (10162) TASK_STATES: State change: Blocked -> Suspended (Count: 5)[0m
+[0;32mI (10272) TASK_STATES: Ready demo task running[0m
+[0;32mI (10372) TASK_STATES: External delete task running: 10[0m
+[0;32mI (10422) TASK_STATES: Ready demo task running[0m
+[0;32mI (10572) TASK_STATES: Ready demo task running[0m
+[0;32mI (10722) TASK_STATES: Ready demo task running[0m
+[0;33mW (10842) TASK_STATES: === RESUMING Task ===[0m
+[0;32mI (10842) TASK_STATES: State change: Suspended -> Running (Count: 7)[0m
+[0;32mI (10842) TASK_STATES: === Cycle 4 ===[0m
+[0;32mI (10842) TASK_STATES: State change: Blocked -> Running (Count: 8)[0m
+[0;32mI (10872) TASK_STATES: Ready demo task running[0m
+[0;32mI (10922) TASK_STATES: State change: Running -> Ready (Count: 4)[0m
+[0;32mI (11022) TASK_STATES: Ready demo task running[0m
+[0;32mI (11022) TASK_STATES: State change: Ready -> Blocked (Count: 4)[0m
+[0;32mI (11172) TASK_STATES: Ready demo task running[0m
+[0;32mI (11322) TASK_STATES: Ready demo task running[0m
+[0;32mI (11372) TASK_STATES: External delete task running: 11[0m
+[0;32mI (11472) TASK_STATES: Ready demo task running[0m
+[0;32mI (11622) TASK_STATES: Ready demo task running[0m
+[0;32mI (11772) TASK_STATES: Ready demo task running[0m
+[0;32mI (11922) TASK_STATES: Ready demo task running[0m
+[0;32mI (12072) TASK_STATES: Ready demo task running[0m
+[0;32mI (12222) TASK_STATES: Ready demo task running[0m
+[0;32mI (12372) TASK_STATES: Ready demo task running[0m
+[0;32mI (12372) TASK_STATES: External delete task running: 12[0m
+[0;32mI (12522) TASK_STATES: Ready demo task running[0m
+[0;32mI (12672) TASK_STATES: Ready demo task running[0m
+[0;32mI (12822) TASK_STATES: Ready demo task running[0m
+[0;32mI (12972) TASK_STATES: Ready demo task running[0m
+[0;32mI (13022) TASK_STATES: Semaphore timeout![0m
+[0;32mI (13122) TASK_STATES: Ready demo task running[0m
+[0;32mI (13272) TASK_STATES: Ready demo task running[0m
+[0;32mI (13372) TASK_STATES: External delete task running: 13[0m
+[0;32mI (13422) TASK_STATES: Ready demo task running[0m
+[0;32mI (13572) TASK_STATES: Ready demo task running[0m
+[0;32mI (13722) TASK_STATES: Ready demo task running[0m
+[0;32mI (13872) TASK_STATES: Ready demo task running[0m
+[0;32mI (13932) TASK_STATES: === STATE CHANGE COUNTER ===[0m
+[0;32mI (13932) TASK_STATES: Running: 8[0m
+[0;32mI (13932) TASK_STATES: Ready: 4[0m
+[0;32mI (13932) TASK_STATES: Blocked: 4[0m
+[0;32mI (13932) TASK_STATES: Suspended: 5[0m
+[0;32mI (13932) TASK_STATES: Deleted: 0[0m
+[0;32mI (14022) TASK_STATES: === Cycle 5 ===[0m
+[0;32mI (14022) TASK_STATES: State change: Blocked -> Running (Count: 9)[0m
+[0;32mI (14022) TASK_STATES: Ready demo task running[0m
+[0;32mI (14092) TASK_STATES: State change: Running -> Ready (Count: 5)[0m
+[0;32mI (14172) TASK_STATES: Ready demo task running[0m
+[0;32mI (14192) TASK_STATES: State change: Ready -> Blocked (Count: 5)[0m
+[0;32mI (14322) TASK_STATES: Ready demo task running[0m
+[0;32mI (14372) TASK_STATES: External delete task running: 14[0m
+[0;32mI (14472) TASK_STATES: Ready demo task running[0m
+[0;32mI (14622) TASK_STATES: Ready demo task running[0m
+[0;32mI (14772) TASK_STATES: Ready demo task running[0m
+[0;32mI (14922) TASK_STATES: Ready demo task running[0m
+[0;32mI (15072) TASK_STATES: Ready demo task running[0m
+[0;32mI (15222) TASK_STATES: Ready demo task running[0m
+[0;32mI (15372) TASK_STATES: Ready demo task running[0m
+[0;32mI (15372) TASK_STATES: External delete task running: 15[0m
+[0;32mI (15522) TASK_STATES: Ready demo task running[0m
+[0;32mI (15672) TASK_STATES: Ready demo task running[0m
+[0;32mI (15822) TASK_STATES: Ready demo task running[0m
+[0;33mW (15882) TASK_STATES: === SUSPENDING Task ===[0m
+[0;32mI (15882) TASK_STATES: State change: Blocked -> Suspended (Count: 6)[0m
+[0;32mI (15972) TASK_STATES: Ready demo task running[0m
+[0;32mI (16122) TASK_STATES: Ready demo task running[0m
+[0;32mI (16272) TASK_STATES: Ready demo task running[0m
+[0;32mI (16372) TASK_STATES: External delete task running: 16[0m
+[0;32mI (16422) TASK_STATES: Ready demo task running[0m
+[0;32mI (16572) TASK_STATES: Ready demo task running[0m
+[0;32mI (16722) TASK_STATES: Ready demo task running[0m
+[0;32mI (16872) TASK_STATES: Ready demo task running[0m
+[0;32mI (17022) TASK_STATES: Ready demo task running[0m
+[0;33mW (17172) TASK_STATES: === RESUMING Task ===[0m
+[0;32mI (17172) TASK_STATES: State change: Suspended -> Running (Count: 10)[0m
+[0;32mI (17172) TASK_STATES: Ready demo task running[0m
+[0;32mI (17172) TASK_STATES: Semaphore timeout![0m
+[0;32mI (17332) TASK_STATES: Ready demo task running[0m
+[0;32mI (17372) TASK_STATES: External delete task running: 17[0m
+[0;32mI (17482) TASK_STATES: Ready demo task running[0m
+[0;32mI (17632) TASK_STATES: Ready demo task running[0m
+[0;33mW (17672) TASK_STATES: === SUSPENDING Task ===[0m
+[0;32mI (17672) TASK_STATES: State change: Blocked -> Suspended (Count: 7)[0m
+[0;32mI (17782) TASK_STATES: Ready demo task running[0m
+[0;32mI (17932) TASK_STATES: Ready demo task running[0m
+[0;33mW (17972) TASK_STATES: === RESUMING Task ===[0m
+[0;32mI (17972) TASK_STATES: State change: Suspended -> Running (Count: 11)[0m
+[0;32mI (17972) TASK_STATES: === Cycle 6 ===[0m
+[0;32mI (17972) TASK_STATES: State change: Blocked -> Running (Count: 12)[0m
+[0;32mI (18052) TASK_STATES: State change: Running -> Ready (Count: 6)[0m
+[0;32mI (18082) TASK_STATES: Ready demo task running[0m
+[0;32mI (18152) TASK_STATES: State change: Ready -> Blocked (Count: 6)[0m
+[0;32mI (18232) TASK_STATES: Ready demo task running[0m
+[0;33mW (18242) TASK_STATES: === SUSPENDING Task ===[0m
+[0;32mI (18242) TASK_STATES: State change: Blocked -> Suspended (Count: 8)[0m
+[0;32mI (18372) TASK_STATES: External delete task running: 18[0m
+[0;32mI (18382) TASK_STATES: Ready demo task running[0m
+[0;33mW (18492) TASK_STATES: === RESUMING Task ===[0m
+[0;32mI (18492) TASK_STATES: State change: Suspended -> Running (Count: 13)[0m
+[0;32mI (18532) TASK_STATES: Ready demo task running[0m
+[0;32mI (18682) TASK_STATES: Ready demo task running[0m
+[0;32mI (18832) TASK_STATES: Ready demo task running[0m
+[0;32mI (18982) TASK_STATES: Ready demo task running[0m
+[0;32mI (19132) TASK_STATES: Ready demo task running[0m

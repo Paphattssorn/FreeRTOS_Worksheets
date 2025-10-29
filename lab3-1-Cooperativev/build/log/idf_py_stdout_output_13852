@@ -1,0 +1,938 @@
+Command: C:\Users\HP\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\HP\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p com5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\HP\Documents\APPLICATIONSOFMICROCONTROLLERS\ESPRTOS\FreeRTOS_Worksheets\lab3-1-Cooperativev\build\lab3-1-Cooperativev.elf C:\Users\HP\Documents\APPLICATIONSOFMICROCONTROLLERS\ESPRTOS\FreeRTOS_Worksheets\lab3-1-Cooperativev\build\bootloader\bootloader.elf --force-color -m 'C:\Users\HP\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\HP\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'com5'
+x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct  8 2025 11:08:43[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a480h ( 42112) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a4a8 vaddr=3ffb0000 size=023f8h (  9208) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c8a8 vaddr=40080000 size=03770h ( 14192) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14878h ( 84088) map[0m
+[0;32mI (143) esp_image: segment 4: paddr=000348a0 vaddr=40083770 size=09840h ( 38976) load[0m
+[0;32mI (158) esp_image: segment 5: paddr=0003e0e8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (165) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (165) boot: Disabling RNG early entropy source...[0m
+[0;32mI (176) cpu_start: Multicore app[0m
+[0;32mI (184) cpu_start: Pro cpu start user code[0m
+[0;32mI (184) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (185) app_init: Application information:[0m
+[0;32mI (185) app_init: Project name:     lab3-1-Cooperativev[0m
+[0;32mI (190) app_init: App version:      813e069[0m
+[0;32mI (193) app_init: Compile time:     Oct  8 2025 11:08:06[0m
+[0;32mI (198) app_init: ELF file SHA256:  5a54b5210...[0m
+[0;32mI (203) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (207) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (210) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (214) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (219) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (225) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (230) heap_init: At 3FFB2CD8 len 0002D328 (180 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (240) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 4008CFB0 len 00013050 (76 KiB): IRAM[0m
+I (253) spi_flash: detected chip: generic
+[0;32mI (255) spi_flash: flash io: dio[0m
+[0;33mW (258) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (271) main_task: Started on CPU0[0m
+[0;32mI (281) main_task: Calling app_main()[0m
+[0;32mI (281) COOPERATIVE: Starting Cooperative Multitasking Demo...[0m
+[0;32mI (281) COOPERATIVE: === Cooperative Multitasking Demo ===[0m
+[0;32mI (281) COOPERATIVE: Tasks yield voluntarily when emergency occurs.[0m
+[0;32mI (291) COOPERATIVE: Press button (GPIO0) to test emergency response.[0m
+[0;32mI (291) COOPERATIVE: Coop Task1 running: 0[0m
+[0;32mI (331) COOPERATIVE: Coop Task2 running: 0[0m
+[0;32mI (381) COOPERATIVE: Coop Task1 running: 1[0m
+[0;32mI (411) COOPERATIVE: Coop Task2 running: 1[0m
+[0;32mI (461) COOPERATIVE: Coop Task1 running: 2[0m
+[0;32mI (491) COOPERATIVE: Coop Task2 running: 2[0m
+[0;32mI (541) COOPERATIVE: Coop Task1 running: 3[0m
+[0;32mI (571) COOPERATIVE: Coop Task2 running: 3[0m
+[0;32mI (621) COOPERATIVE: Coop Task1 running: 4[0m
+[0;32mI (651) COOPERATIVE: Coop Task2 running: 4[0m
+[0;32mI (701) COOPERATIVE: Coop Task1 running: 5[0m
+[0;32mI (731) COOPERATIVE: Coop Task2 running: 5[0m
+[0;32mI (781) COOPERATIVE: Coop Task1 running: 6[0m
+[0;32mI (811) COOPERATIVE: Coop Task2 running: 6[0m
+[0;32mI (861) COOPERATIVE: Coop Task1 running: 7[0m
+[0;32mI (891) COOPERATIVE: Coop Task2 running: 7[0m
+[0;32mI (941) COOPERATIVE: Coop Task1 running: 8[0m
+[0;32mI (971) COOPERATIVE: Coop Task2 running: 8[0m
+[0;32mI (1021) COOPERATIVE: Coop Task1 running: 9[0m
+[0;32mI (1051) COOPERATIVE: Coop Task2 running: 9[0m
+[0;32mI (1101) COOPERATIVE: Coop Task1 running: 10[0m
+[0;32mI (1131) COOPERATIVE: Coop Task2 running: 10[0m
+[0;32mI (1181) COOPERATIVE: Coop Task1 running: 11[0m
+[0;32mI (1211) COOPERATIVE: Coop Task2 running: 11[0m
+[0;32mI (1261) COOPERATIVE: Coop Task1 running: 12[0m
+[0;32mI (1291) COOPERATIVE: Coop Task2 running: 12[0m
+[0;32mI (1341) COOPERATIVE: Coop Task1 running: 13[0m
+[0;32mI (1371) COOPERATIVE: Coop Task2 running: 13[0m
+[0;32mI (1421) COOPERATIVE: Coop Task1 running: 14[0m
+[0;32mI (1451) COOPERATIVE: Coop Task2 running: 14[0m
+[0;32mI (1501) COOPERATIVE: Coop Task1 running: 15[0m
+[0;32mI (1531) COOPERATIVE: Coop Task2 running: 15[0m
+[0;32mI (1581) COOPERATIVE: Coop Task1 running: 16[0m
+[0;32mI (1611) COOPERATIVE: Coop Task2 running: 16[0m
+[0;32mI (1661) COOPERATIVE: Coop Task1 running: 17[0m
+[0;32mI (1691) COOPERATIVE: Coop Task2 running: 17[0m
+[0;32mI (1741) COOPERATIVE: Coop Task1 running: 18[0m
+[0;32mI (1771) COOPERATIVE: Coop Task2 running: 18[0m
+[0;32mI (1821) COOPERATIVE: Coop Task1 running: 19[0m
+[0;32mI (1851) COOPERATIVE: Coop Task2 running: 19[0m
+[0;32mI (1901) COOPERATIVE: Coop Task1 running: 20[0m
+[0;32mI (1931) COOPERATIVE: Coop Task2 running: 20[0m
+[0;32mI (1981) COOPERATIVE: Coop Task1 running: 21[0m
+[0;32mI (2011) COOPERATIVE: Coop Task2 running: 21[0m
+[0;32mI (2061) COOPERATIVE: Coop Task1 running: 22[0m
+[0;32mI (2091) COOPERATIVE: Coop Task2 running: 22[0m
+[0;32mI (2141) COOPERATIVE: Coop Task1 running: 23[0m
+[0;32mI (2171) COOPERATIVE: Coop Task2 running: 23[0m
+[0;32mI (2221) COOPERATIVE: Coop Task1 running: 24[0m
+[0;32mI (2251) COOPERATIVE: Coop Task2 running: 24[0m
+[0;32mI (2301) COOPERATIVE: Coop Task1 running: 25[0m
+[0;32mI (2331) COOPERATIVE: Coop Task2 running: 25[0m
+[0;32mI (2381) COOPERATIVE: Coop Task1 running: 26[0m
+[0;32mI (2411) COOPERATIVE: Coop Task2 running: 26[0m
+[0;32mI (2461) COOPERATIVE: Coop Task1 running: 27[0m
+[0;32mI (2491) COOPERATIVE: Coop Task2 running: 27[0m
+[0;32mI (2541) COOPERATIVE: Coop Task1 running: 28[0m
+[0;32mI (2571) COOPERATIVE: Coop Task2 running: 28[0m
+[0;32mI (2621) COOPERATIVE: Coop Task1 running: 29[0m
+[0;32mI (2651) COOPERATIVE: Coop Task2 running: 29[0m
+[0;32mI (2701) COOPERATIVE: Coop Task1 running: 30[0m
+[0;32mI (2731) COOPERATIVE: Coop Task2 running: 30[0m
+[0;32mI (2781) COOPERATIVE: Coop Task1 running: 31[0m
+[0;32mI (2811) COOPERATIVE: Coop Task2 running: 31[0m
+[0;32mI (2861) COOPERATIVE: Coop Task1 running: 32[0m
+[0;32mI (2891) COOPERATIVE: Coop Task2 running: 32[0m
+[0;32mI (2941) COOPERATIVE: Coop Task1 running: 33[0m
+[0;32mI (2971) COOPERATIVE: Coop Task2 running: 33[0m
+[0;32mI (3021) COOPERATIVE: Coop Task1 running: 34[0m
+[0;32mI (3051) COOPERATIVE: Coop Task2 running: 34[0m
+[0;32mI (3101) COOPERATIVE: Coop Task1 running: 35[0m
+[0;32mI (3131) COOPERATIVE: Coop Task2 running: 35[0m
+[0;32mI (3181) COOPERATIVE: Coop Task1 running: 36[0m
+[0;32mI (3211) COOPERATIVE: Coop Task2 running: 36[0m
+[0;32mI (3261) COOPERATIVE: Coop Task1 running: 37[0m
+[0;32mI (3291) COOPERATIVE: Coop Task2 running: 37[0m
+[0;32mI (3341) COOPERATIVE: Coop Task1 running: 38[0m
+[0;32mI (3371) COOPERATIVE: Coop Task2 running: 38[0m
+[0;32mI (3421) COOPERATIVE: Coop Task1 running: 39[0m
+[0;32mI (3451) COOPERATIVE: Coop Task2 running: 39[0m
+[0;32mI (3501) COOPERATIVE: Coop Task1 running: 40[0m
+[0;32mI (3531) COOPERATIVE: Coop Task2 running: 40[0m
+[0;32mI (3581) COOPERATIVE: Coop Task1 running: 41[0m
+[0;32mI (3611) COOPERATIVE: Coop Task2 running: 41[0m
+[0;32mI (3661) COOPERATIVE: Coop Task1 running: 42[0m
+[0;32mI (3691) COOPERATIVE: Coop Task2 running: 42[0m
+[0;32mI (3741) COOPERATIVE: Coop Task1 running: 43[0m
+[0;32mI (3771) COOPERATIVE: Coop Task2 running: 43[0m
+[0;32mI (3821) COOPERATIVE: Coop Task1 running: 44[0m
+[0;32mI (3851) COOPERATIVE: Coop Task2 running: 44[0m
+[0;32mI (3901) COOPERATIVE: Coop Task1 running: 45[0m
+[0;32mI (3931) COOPERATIVE: Coop Task2 running: 45[0m
+[0;32mI (3981) COOPERATIVE: Coop Task1 running: 46[0m
+[0;32mI (4011) COOPERATIVE: Coop Task2 running: 46[0m
+[0;32mI (4061) COOPERATIVE: Coop Task1 running: 47[0m
+[0;32mI (4091) COOPERATIVE: Coop Task2 running: 47[0m
+[0;32mI (4141) COOPERATIVE: Coop Task1 running: 48[0m
+[0;32mI (4171) COOPERATIVE: Coop Task2 running: 48[0m
+[0;32mI (4221) COOPERATIVE: Coop Task1 running: 49[0m
+[0;32mI (4251) COOPERATIVE: Coop Task2 running: 49[0m
+[0;32mI (4301) COOPERATIVE: Coop Task1 running: 50[0m
+[0;32mI (4331) COOPERATIVE: Coop Task2 running: 50[0m
+[0;32mI (4381) COOPERATIVE: Coop Task1 running: 51[0m
+[0;32mI (4411) COOPERATIVE: Coop Task2 running: 51[0m
+[0;32mI (4461) COOPERATIVE: Coop Task1 running: 52[0m
+[0;32mI (4491) COOPERATIVE: Coop Task2 running: 52[0m
+[0;32mI (4541) COOPERATIVE: Coop Task1 running: 53[0m
+[0;32mI (4571) COOPERATIVE: Coop Task2 running: 53[0m
+[0;32mI (4621) COOPERATIVE: Coop Task1 running: 54[0m
+[0;32mI (4651) COOPERATIVE: Coop Task2 running: 54[0m
+[0;32mI (4701) COOPERATIVE: Coop Task1 running: 55[0m
+[0;32mI (4731) COOPERATIVE: Coop Task2 running: 55[0m
+[0;32mI (4781) COOPERATIVE: Coop Task1 running: 56[0m
+[0;32mI (4811) COOPERATIVE: Coop Task2 running: 56[0m
+[0;32mI (4861) COOPERATIVE: Coop Task1 running: 57[0m
+[0;32mI (4891) COOPERATIVE: Coop Task2 running: 57[0m
+[0;32mI (4941) COOPERATIVE: Coop Task1 running: 58[0m
+[0;32mI (4971) COOPERATIVE: Coop Task2 running: 58[0m
+[0;32mI (5021) COOPERATIVE: Coop Task1 running: 59[0m
+[0;32mI (5051) COOPERATIVE: Coop Task2 running: 59[0m
+[0;32mI (5101) COOPERATIVE: Coop Task1 running: 60[0m
+[0;32mI (5131) COOPERATIVE: Coop Task2 running: 60[0m
+[0;32mI (5181) COOPERATIVE: Coop Task1 running: 61[0m
+[0;32mI (5211) COOPERATIVE: Coop Task2 running: 61[0m
+[0;32mI (5261) COOPERATIVE: Coop Task1 running: 62[0m
+[0;32mI (5291) COOPERATIVE: Coop Task2 running: 62[0m
+[0;32mI (5341) COOPERATIVE: Coop Task1 running: 63[0m
+[0;32mI (5371) COOPERATIVE: Coop Task2 running: 63[0m
+[0;32mI (5421) COOPERATIVE: Coop Task1 running: 64[0m
+[0;32mI (5451) COOPERATIVE: Coop Task2 running: 64[0m
+[0;32mI (5501) COOPERATIVE: Coop Task1 running: 65[0m
+[0;32mI (5531) COOPERATIVE: Coop Task2 running: 65[0m
+[0;32mI (5581) COOPERATIVE: Coop Task1 running: 66[0m
+[0;32mI (5611) COOPERATIVE: Coop Task2 running: 66[0m
+[0;32mI (5661) COOPERATIVE: Coop Task1 running: 67[0m
+[0;32mI (5691) COOPERATIVE: Coop Task2 running: 67[0m
+[0;32mI (5741) COOPERATIVE: Coop Task1 running: 68[0m
+[0;32mI (5771) COOPERATIVE: Coop Task2 running: 68[0m
+[0;32mI (5821) COOPERATIVE: Coop Task1 running: 69[0m
+[0;32mI (5851) COOPERATIVE: Coop Task2 running: 69[0m
+[0;32mI (5901) COOPERATIVE: Coop Task1 running: 70[0m
+[0;32mI (5931) COOPERATIVE: Coop Task2 running: 70[0m
+[0;32mI (5981) COOPERATIVE: Coop Task1 running: 71[0m
+[0;32mI (6011) COOPERATIVE: Coop Task2 running: 71[0m
+[0;32mI (6061) COOPERATIVE: Coop Task1 running: 72[0m
+[0;32mI (6091) COOPERATIVE: Coop Task2 running: 72[0m
+[0;32mI (6141) COOPERATIVE: Coop Task1 running: 73[0m
+[0;32mI (6171) COOPERATIVE: Coop Task2 running: 73[0m
+[0;32mI (6221) COOPERATIVE: Coop Task1 running: 74[0m
+[0;32mI (6251) COOPERATIVE: Coop Task2 running: 74[0m
+[0;32mI (6301) COOPERATIVE: Coop Task1 running: 75[0m
+[0;32mI (6331) COOPERATIVE: Coop Task2 running: 75[0m
+[0;32mI (6381) COOPERATIVE: Coop Task1 running: 76[0m
+[0;32mI (6411) COOPERATIVE: Coop Task2 running: 76[0m
+[0;32mI (6461) COOPERATIVE: Coop Task1 running: 77[0m
+[0;32mI (6491) COOPERATIVE: Coop Task2 running: 77[0m
+[0;32mI (6541) COOPERATIVE: Coop Task1 running: 78[0m
+[0;32mI (6571) COOPERATIVE: Coop Task2 running: 78[0m
+[0;32mI (6621) COOPERATIVE: Coop Task1 running: 79[0m
+[0;32mI (6651) COOPERATIVE: Coop Task2 running: 79[0m
+[0;32mI (6701) COOPERATIVE: Coop Task1 running: 80[0m
+[0;32mI (6731) COOPERATIVE: Coop Task2 running: 80[0m
+[0;32mI (6781) COOPERATIVE: Coop Task1 running: 81[0m
+[0;32mI (6811) COOPERATIVE: Coop Task2 running: 81[0m
+[0;32mI (6861) COOPERATIVE: Coop Task1 running: 82[0m
+[0;32mI (6891) COOPERATIVE: Coop Task2 running: 82[0m
+[0;32mI (6941) COOPERATIVE: Coop Task1 running: 83[0m
+[0;32mI (6971) COOPERATIVE: Coop Task2 running: 83[0m
+[0;32mI (7021) COOPERATIVE: Coop Task1 running: 84[0m
+[0;32mI (7051) COOPERATIVE: Coop Task2 running: 84[0m
+[0;32mI (7101) COOPERATIVE: Coop Task1 running: 85[0m
+[0;32mI (7131) COOPERATIVE: Coop Task2 running: 85[0m
+[0;32mI (7181) COOPERATIVE: Coop Task1 running: 86[0m
+[0;32mI (7211) COOPERATIVE: Coop Task2 running: 86[0m
+[0;32mI (7261) COOPERATIVE: Coop Task1 running: 87[0m
+[0;32mI (7291) COOPERATIVE: Coop Task2 running: 87[0m
+[0;32mI (7341) COOPERATIVE: Coop Task1 running: 88[0m
+[0;32mI (7371) COOPERATIVE: Coop Task2 running: 88[0m
+[0;32mI (7421) COOPERATIVE: Coop Task1 running: 89[0m
+[0;32mI (7451) COOPERATIVE: Coop Task2 running: 89[0m
+[0;32mI (7501) COOPERATIVE: Coop Task1 running: 90[0m
+[0;32mI (7531) COOPERATIVE: Coop Task2 running: 90[0m
+[0;32mI (7581) COOPERATIVE: Coop Task1 running: 91[0m
+[0;32mI (7611) COOPERATIVE: Coop Task2 running: 91[0m
+[0;32mI (7661) COOPERATIVE: Coop Task1 running: 92[0m
+[0;32mI (7691) COOPERATIVE: Coop Task2 running: 92[0m
+[0;32mI (7741) COOPERATIVE: Coop Task1 running: 93[0m
+[0;32mI (7771) COOPERATIVE: Coop Task2 running: 93[0m
+[0;32mI (7821) COOPERATIVE: Coop Task1 running: 94[0m
+[0;32mI (7851) COOPERATIVE: Coop Task2 running: 94[0m
+[0;32mI (7901) COOPERATIVE: Coop Task1 running: 95[0m
+[0;32mI (7931) COOPERATIVE: Coop Task2 running: 95[0m
+[0;32mI (7981) COOPERATIVE: Coop Task1 running: 96[0m
+[0;32mI (8011) COOPERATIVE: Coop Task2 running: 96[0m
+[0;32mI (8061) COOPERATIVE: Coop Task1 running: 97[0m
+[0;32mI (8091) COOPERATIVE: Coop Task2 running: 97[0m
+[0;32mI (8141) COOPERATIVE: Coop Task1 running: 98[0m
+[0;32mI (8171) COOPERATIVE: Coop Task2 running: 98[0m
+[0;32mI (8221) COOPERATIVE: Coop Task1 running: 99[0m
+[0;32mI (8251) COOPERATIVE: Coop Task2 running: 99[0m
+[0;32mI (8301) COOPERATIVE: Coop Task1 running: 100[0m
+[0;32mI (8331) COOPERATIVE: Coop Task2 running: 100[0m
+[0;32mI (8381) COOPERATIVE: Coop Task1 running: 101[0m
+[0;32mI (8411) COOPERATIVE: Coop Task2 running: 101[0m
+[0;32mI (8461) COOPERATIVE: Coop Task1 running: 102[0m
+[0;32mI (8491) COOPERATIVE: Coop Task2 running: 102[0m
+[0;32mI (8541) COOPERATIVE: Coop Task1 running: 103[0m
+[0;32mI (8571) COOPERATIVE: Coop Task2 running: 103[0m
+[0;32mI (8621) COOPERATIVE: Coop Task1 running: 104[0m
+[0;32mI (8651) COOPERATIVE: Coop Task2 running: 104[0m
+[0;32mI (8701) COOPERATIVE: Coop Task1 running: 105[0m
+[0;32mI (8731) COOPERATIVE: Coop Task2 running: 105[0m
+[0;32mI (8781) COOPERATIVE: Coop Task1 running: 106[0m
+[0;32mI (8811) COOPERATIVE: Coop Task2 running: 106[0m
+[0;32mI (8861) COOPERATIVE: Coop Task1 running: 107[0m
+[0;32mI (8891) COOPERATIVE: Coop Task2 running: 107[0m
+[0;32mI (8941) COOPERATIVE: Coop Task1 running: 108[0m
+[0;32mI (8971) COOPERATIVE: Coop Task2 running: 108[0m
+[0;32mI (9021) COOPERATIVE: Coop Task1 running: 109[0m
+[0;32mI (9051) COOPERATIVE: Coop Task2 running: 109[0m
+[0;32mI (9101) COOPERATIVE: Coop Task1 running: 110[0m
+[0;32mI (9131) COOPERATIVE: Coop Task2 running: 110[0m
+[0;32mI (9181) COOPERATIVE: Coop Task1 running: 111[0m
+[0;32mI (9211) COOPERATIVE: Coop Task2 running: 111[0m
+[0;32mI (9261) COOPERATIVE: Coop Task1 running: 112[0m
+[0;32mI (9291) COOPERATIVE: Coop Task2 running: 112[0m
+[0;32mI (9341) COOPERATIVE: Coop Task1 running: 113[0m
+[0;32mI (9371) COOPERATIVE: Coop Task2 running: 113[0m
+[0;32mI (9421) COOPERATIVE: Coop Task1 running: 114[0m
+[0;32mI (9451) COOPERATIVE: Coop Task2 running: 114[0m
+[0;32mI (9501) COOPERATIVE: Coop Task1 running: 115[0m
+[0;32mI (9531) COOPERATIVE: Coop Task2 running: 115[0m
+[0;32mI (9581) COOPERATIVE: Coop Task1 running: 116[0m
+[0;32mI (9611) COOPERATIVE: Coop Task2 running: 116[0m
+[0;32mI (9661) COOPERATIVE: Coop Task1 running: 117[0m
+[0;32mI (9691) COOPERATIVE: Coop Task2 running: 117[0m
+[0;32mI (9741) COOPERATIVE: Coop Task1 running: 118[0m
+[0;32mI (9771) COOPERATIVE: Coop Task2 running: 118[0m
+[0;32mI (9821) COOPERATIVE: Coop Task1 running: 119[0m
+[0;32mI (9851) COOPERATIVE: Coop Task2 running: 119[0m
+[0;32mI (9901) COOPERATIVE: Coop Task1 running: 120[0m
+[0;32mI (9931) COOPERATIVE: Coop Task2 running: 120[0m
+[0;32mI (9981) COOPERATIVE: Coop Task1 running: 121[0m
+[0;32mI (10011) COOPERATIVE: Coop Task2 running: 121[0m
+[0;32mI (10061) COOPERATIVE: Coop Task1 running: 122[0m
+[0;32mI (10091) COOPERATIVE: Coop Task2 running: 122[0m
+[0;32mI (10141) COOPERATIVE: Coop Task1 running: 123[0m
+[0;32mI (10171) COOPERATIVE: Coop Task2 running: 123[0m
+[0;32mI (10221) COOPERATIVE: Coop Task1 running: 124[0m
+[0;32mI (10251) COOPERATIVE: Coop Task2 running: 124[0m
+[0;32mI (10301) COOPERATIVE: Coop Task1 running: 125[0m
+[0;32mI (10331) COOPERATIVE: Coop Task2 running: 125[0m
+[0;32mI (10381) COOPERATIVE: Coop Task1 running: 126[0m
+[0;32mI (10411) COOPERATIVE: Coop Task2 running: 126[0m
+[0;32mI (10461) COOPERATIVE: Coop Task1 running: 127[0m
+[0;32mI (10491) COOPERATIVE: Coop Task2 running: 127[0m
+[0;32mI (10541) COOPERATIVE: Coop Task1 running: 128[0m
+[0;32mI (10571) COOPERATIVE: Coop Task2 running: 128[0m
+[0;32mI (10621) COOPERATIVE: Coop Task1 running: 129[0m
+[0;32mI (10651) COOPERATIVE: Coop Task2 running: 129[0m
+[0;32mI (10701) COOPERATIVE: Coop Task1 running: 130[0m
+[0;32mI (10731) COOPERATIVE: Coop Task2 running: 130[0m
+[0;32mI (10781) COOPERATIVE: Coop Task1 running: 131[0m
+[0;32mI (10811) COOPERATIVE: Coop Task2 running: 131[0m
+[0;32mI (10861) COOPERATIVE: Coop Task1 running: 132[0m
+[0;32mI (10891) COOPERATIVE: Coop Task2 running: 132[0m
+[0;32mI (10941) COOPERATIVE: Coop Task1 running: 133[0m
+[0;32mI (10971) COOPERATIVE: Coop Task2 running: 133[0m
+[0;32mI (11021) COOPERATIVE: Coop Task1 running: 134[0m
+[0;32mI (11051) COOPERATIVE: Coop Task2 running: 134[0m
+[0;32mI (11101) COOPERATIVE: Coop Task1 running: 135[0m
+[0;32mI (11131) COOPERATIVE: Coop Task2 running: 135[0m
+[0;32mI (11181) COOPERATIVE: Coop Task1 running: 136[0m
+[0;32mI (11211) COOPERATIVE: Coop Task2 running: 136[0m
+[0;32mI (11261) COOPERATIVE: Coop Task1 running: 137[0m
+[0;32mI (11291) COOPERATIVE: Coop Task2 running: 137[0m
+[0;32mI (11341) COOPERATIVE: Coop Task1 running: 138[0m
+[0;32mI (11371) COOPERATIVE: Coop Task2 running: 138[0m
+[0;32mI (11421) COOPERATIVE: Coop Task1 running: 139[0m
+[0;32mI (11451) COOPERATIVE: Coop Task2 running: 139[0m
+[0;32mI (11501) COOPERATIVE: Coop Task1 running: 140[0m
+[0;32mI (11531) COOPERATIVE: Coop Task2 running: 140[0m
+[0;32mI (11581) COOPERATIVE: Coop Task1 running: 141[0m
+[0;32mI (11611) COOPERATIVE: Coop Task2 running: 141[0m
+[0;32mI (11661) COOPERATIVE: Coop Task1 running: 142[0m
+[0;32mI (11691) COOPERATIVE: Coop Task2 running: 142[0m
+[0;32mI (11741) COOPERATIVE: Coop Task1 running: 143[0m
+[0;32mI (11771) COOPERATIVE: Coop Task2 running: 143[0m
+[0;32mI (11821) COOPERATIVE: Coop Task1 running: 144[0m
+[0;32mI (11851) COOPERATIVE: Coop Task2 running: 144[0m
+[0;32mI (11901) COOPERATIVE: Coop Task1 running: 145[0m
+[0;32mI (11931) COOPERATIVE: Coop Task2 running: 145[0m
+[0;32mI (11981) COOPERATIVE: Coop Task1 running: 146[0m
+[0;32mI (12011) COOPERATIVE: Coop Task2 running: 146[0m
+[0;32mI (12061) COOPERATIVE: Coop Task1 running: 147[0m
+[0;32mI (12091) COOPERATIVE: Coop Task2 running: 147[0m
+[0;32mI (12141) COOPERATIVE: Coop Task1 running: 148[0m
+[0;32mI (12171) COOPERATIVE: Coop Task2 running: 148[0m
+[0;32mI (12221) COOPERATIVE: Coop Task1 running: 149[0m
+[0;32mI (12251) COOPERATIVE: Coop Task2 running: 149[0m
+[0;32mI (12301) COOPERATIVE: Coop Task1 running: 150[0m
+[0;32mI (12331) COOPERATIVE: Coop Task2 running: 150[0m
+[0;32mI (12381) COOPERATIVE: Coop Task1 running: 151[0m
+[0;32mI (12411) COOPERATIVE: Coop Task2 running: 151[0m
+[0;32mI (12461) COOPERATIVE: Coop Task1 running: 152[0m
+[0;32mI (12491) COOPERATIVE: Coop Task2 running: 152[0m
+[0;32mI (12541) COOPERATIVE: Coop Task1 running: 153[0m
+[0;32mI (12571) COOPERATIVE: Coop Task2 running: 153[0m
+[0;32mI (12621) COOPERATIVE: Coop Task1 running: 154[0m
+[0;32mI (12651) COOPERATIVE: Coop Task2 running: 154[0m
+[0;32mI (12701) COOPERATIVE: Coop Task1 running: 155[0m
+[0;32mI (12731) COOPERATIVE: Coop Task2 running: 155[0m
+[0;32mI (12781) COOPERATIVE: Coop Task1 running: 156[0m
+[0;32mI (12811) COOPERATIVE: Coop Task2 running: 156[0m
+[0;32mI (12861) COOPERATIVE: Coop Task1 running: 157[0m
+[0;32mI (12891) COOPERATIVE: Coop Task2 running: 157[0m
+[0;32mI (12941) COOPERATIVE: Coop Task1 running: 158[0m
+[0;32mI (12971) COOPERATIVE: Coop Task2 running: 158[0m
+[0;32mI (13021) COOPERATIVE: Coop Task1 running: 159[0m
+[0;32mI (13051) COOPERATIVE: Coop Task2 running: 159[0m
+[0;32mI (13101) COOPERATIVE: Coop Task1 running: 160[0m
+[0;32mI (13131) COOPERATIVE: Coop Task2 running: 160[0m
+[0;32mI (13181) COOPERATIVE: Coop Task1 running: 161[0m
+[0;32mI (13211) COOPERATIVE: Coop Task2 running: 161[0m
+[0;32mI (13261) COOPERATIVE: Coop Task1 running: 162[0m
+[0;32mI (13291) COOPERATIVE: Coop Task2 running: 162[0m
+[0;32mI (13341) COOPERATIVE: Coop Task1 running: 163[0m
+[0;32mI (13371) COOPERATIVE: Coop Task2 running: 163[0m
+[0;32mI (13421) COOPERATIVE: Coop Task1 running: 164[0m
+[0;32mI (13451) COOPERATIVE: Coop Task2 running: 164[0m
+[0;32mI (13501) COOPERATIVE: Coop Task1 running: 165[0m
+[0;32mI (13531) COOPERATIVE: Coop Task2 running: 165[0m
+[0;32mI (13581) COOPERATIVE: Coop Task1 running: 166[0m
+[0;32mI (13611) COOPERATIVE: Coop Task2 running: 166[0m
+[0;32mI (13661) COOPERATIVE: Coop Task1 running: 167[0m
+[0;32mI (13691) COOPERATIVE: Coop Task2 running: 167[0m
+[0;32mI (13741) COOPERATIVE: Coop Task1 running: 168[0m
+[0;32mI (13771) COOPERATIVE: Coop Task2 running: 168[0m
+[0;32mI (13821) COOPERATIVE: Coop Task1 running: 169[0m
+[0;32mI (13851) COOPERATIVE: Coop Task2 running: 169[0m
+[0;32mI (13901) COOPERATIVE: Coop Task1 running: 170[0m
+[0;32mI (13931) COOPERATIVE: Coop Task2 running: 170[0m
+[0;32mI (13981) COOPERATIVE: Coop Task1 running: 171[0m
+[0;32mI (14011) COOPERATIVE: Coop Task2 running: 171[0m
+[0;32mI (14061) COOPERATIVE: Coop Task1 running: 172[0m
+[0;32mI (14091) COOPERATIVE: Coop Task2 running: 172[0m
+[0;32mI (14141) COOPERATIVE: Coop Task1 running: 173[0m
+[0;32mI (14171) COOPERATIVE: Coop Task2 running: 173[0m
+[0;32mI (14221) COOPERATIVE: Coop Task1 running: 174[0m
+[0;32mI (14251) COOPERATIVE: Coop Task2 running: 174[0m
+[0;32mI (14301) COOPERATIVE: Coop Task1 running: 175[0m
+[0;32mI (14331) COOPERATIVE: Coop Task2 running: 175[0m
+[0;32mI (14381) COOPERATIVE: Coop Task1 running: 176[0m
+[0;32mI (14411) COOPERATIVE: Coop Task2 running: 176[0m
+[0;32mI (14461) COOPERATIVE: Coop Task1 running: 177[0m
+[0;32mI (14491) COOPERATIVE: Coop Task2 running: 177[0m
+[0;32mI (14541) COOPERATIVE: Coop Task1 running: 178[0m
+[0;32mI (14571) COOPERATIVE: Coop Task2 running: 178[0m
+[0;32mI (14621) COOPERATIVE: Coop Task1 running: 179[0m
+[0;32mI (14651) COOPERATIVE: Coop Task2 running: 179[0m
+[0;32mI (14701) COOPERATIVE: Coop Task1 running: 180[0m
+[0;32mI (14731) COOPERATIVE: Coop Task2 running: 180[0m
+[0;32mI (14781) COOPERATIVE: Coop Task1 running: 181[0m
+[0;32mI (14811) COOPERATIVE: Coop Task2 running: 181[0m
+[0;32mI (14861) COOPERATIVE: Coop Task1 running: 182[0m
+[0;32mI (14891) COOPERATIVE: Coop Task2 running: 182[0m
+[0;32mI (14941) COOPERATIVE: Coop Task1 running: 183[0m
+[0;32mI (14971) COOPERATIVE: Coop Task2 running: 183[0m
+[0;32mI (15021) COOPERATIVE: Coop Task1 running: 184[0m
+[0;32mI (15051) COOPERATIVE: Coop Task2 running: 184[0m
+[0;32mI (15101) COOPERATIVE: Coop Task1 running: 185[0m
+[0;32mI (15131) COOPERATIVE: Coop Task2 running: 185[0m
+[0;32mI (15181) COOPERATIVE: Coop Task1 running: 186[0m
+[0;32mI (15211) COOPERATIVE: Coop Task2 running: 186[0m
+[0;32mI (15261) COOPERATIVE: Coop Task1 running: 187[0m
+[0;32mI (15291) COOPERATIVE: Coop Task2 running: 187[0m
+[0;32mI (15341) COOPERATIVE: Coop Task1 running: 188[0m
+[0;32mI (15371) COOPERATIVE: Coop Task2 running: 188[0m
+[0;32mI (15421) COOPERATIVE: Coop Task1 running: 189[0m
+[0;32mI (15451) COOPERATIVE: Coop Task2 running: 189[0m
+[0;32mI (15501) COOPERATIVE: Coop Task1 running: 190[0m
+[0;32mI (15531) COOPERATIVE: Coop Task2 running: 190[0m
+[0;32mI (15581) COOPERATIVE: Coop Task1 running: 191[0m
+[0;32mI (15611) COOPERATIVE: Coop Task2 running: 191[0m
+[0;32mI (15661) COOPERATIVE: Coop Task1 running: 192[0m
+[0;32mI (15691) COOPERATIVE: Coop Task2 running: 192[0m
+[0;32mI (15741) COOPERATIVE: Coop Task1 running: 193[0m
+[0;32mI (15771) COOPERATIVE: Coop Task2 running: 193[0m
+[0;32mI (15821) COOPERATIVE: Coop Task1 running: 194[0m
+[0;32mI (15851) COOPERATIVE: Coop Task2 running: 194[0m
+[0;32mI (15901) COOPERATIVE: Coop Task1 running: 195[0m
+[0;32mI (15931) COOPERATIVE: Coop Task2 running: 195[0m
+[0;32mI (15981) COOPERATIVE: Coop Task1 running: 196[0m
+[0;32mI (16011) COOPERATIVE: Coop Task2 running: 196[0m
+[0;32mI (16061) COOPERATIVE: Coop Task1 running: 197[0m
+[0;32mI (16091) COOPERATIVE: Coop Task2 running: 197[0m
+[0;32mI (16141) COOPERATIVE: Coop Task1 running: 198[0m
+[0;33mW (16171) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (16171) COOPERATIVE: Coop Task2 running: 198[0m
+[0;33mW (16171) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (16181) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 10 ms (Max: 10 ms)[0m
+[0;33mW (16491) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (16491) COOPERATIVE: Coop Task1 running: 199[0m
+[0;33mW (16491) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (16501) COOPERATIVE: Coop Task2 running: 199[0m
+[0;33mW (16501) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (16511) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (16821) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (16821) COOPERATIVE: Coop Task1 running: 200[0m
+[0;33mW (16821) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (16831) COOPERATIVE: Coop Task2 running: 200[0m
+[0;33mW (16831) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (16841) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (17151) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (17151) COOPERATIVE: Coop Task1 running: 201[0m
+[0;33mW (17151) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (17161) COOPERATIVE: Coop Task2 running: 201[0m
+[0;33mW (17161) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (17171) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (17481) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (17481) COOPERATIVE: Coop Task1 running: 202[0m
+[0;33mW (17481) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (17491) COOPERATIVE: Coop Task2 running: 202[0m
+[0;33mW (17491) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (17501) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (17811) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (17811) COOPERATIVE: Coop Task1 running: 203[0m
+[0;33mW (17811) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (17821) COOPERATIVE: Coop Task2 running: 203[0m
+[0;33mW (17821) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (17831) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (18141) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (18141) COOPERATIVE: Coop Task1 running: 204[0m
+[0;33mW (18141) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (18151) COOPERATIVE: Coop Task2 running: 204[0m
+[0;33mW (18151) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (18161) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (18471) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (18471) COOPERATIVE: Coop Task1 running: 205[0m
+[0;33mW (18471) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (18481) COOPERATIVE: Coop Task2 running: 205[0m
+[0;33mW (18481) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (18491) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (18801) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (18801) COOPERATIVE: Coop Task1 running: 206[0m
+[0;33mW (18801) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (18811) COOPERATIVE: Coop Task2 running: 206[0m
+[0;33mW (18811) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (18821) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (19131) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (19131) COOPERATIVE: Coop Task1 running: 207[0m
+[0;33mW (19131) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (19141) COOPERATIVE: Coop Task2 running: 207[0m
+[0;33mW (19141) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (19151) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (19461) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (19461) COOPERATIVE: Coop Task1 running: 208[0m
+[0;33mW (19461) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (19471) COOPERATIVE: Coop Task2 running: 208[0m
+[0;33mW (19471) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (19481) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (19791) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (19791) COOPERATIVE: Coop Task1 running: 209[0m
+[0;33mW (19791) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (19801) COOPERATIVE: Coop Task2 running: 209[0m
+[0;33mW (19801) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (19811) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (20121) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (20121) COOPERATIVE: Coop Task1 running: 210[0m
+[0;33mW (20121) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (20131) COOPERATIVE: Coop Task2 running: 210[0m
+[0;33mW (20131) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (20141) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (20451) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (20451) COOPERATIVE: Coop Task1 running: 211[0m
+[0;33mW (20451) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (20461) COOPERATIVE: Coop Task2 running: 211[0m
+[0;33mW (20461) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (20471) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (20781) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (20781) COOPERATIVE: Coop Task1 running: 212[0m
+[0;33mW (20781) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (20791) COOPERATIVE: Coop Task2 running: 212[0m
+[0;33mW (20791) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (20801) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (21111) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (21111) COOPERATIVE: Coop Task1 running: 213[0m
+[0;33mW (21111) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (21121) COOPERATIVE: Coop Task2 running: 213[0m
+[0;33mW (21121) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (21131) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;32mI (21441) COOPERATIVE: Coop Task1 running: 214[0m
+[0;32mI (21471) COOPERATIVE: Coop Task2 running: 214[0m
+[0;32mI (21521) COOPERATIVE: Coop Task1 running: 215[0m
+[0;32mI (21551) COOPERATIVE: Coop Task2 running: 215[0m
+[0;32mI (21601) COOPERATIVE: Coop Task1 running: 216[0m
+[0;32mI (21631) COOPERATIVE: Coop Task2 running: 216[0m
+[0;32mI (21681) COOPERATIVE: Coop Task1 running: 217[0m
+[0;32mI (21711) COOPERATIVE: Coop Task2 running: 217[0m
+[0;32mI (21761) COOPERATIVE: Coop Task1 running: 218[0m
+[0;32mI (21791) COOPERATIVE: Coop Task2 running: 218[0m
+[0;32mI (21841) COOPERATIVE: Coop Task1 running: 219[0m
+[0;32mI (21871) COOPERATIVE: Coop Task2 running: 219[0m
+[0;32mI (21921) COOPERATIVE: Coop Task1 running: 220[0m
+[0;32mI (21951) COOPERATIVE: Coop Task2 running: 220[0m
+[0;32mI (22001) COOPERATIVE: Coop Task1 running: 221[0m
+[0;32mI (22031) COOPERATIVE: Coop Task2 running: 221[0m
+[0;32mI (22081) COOPERATIVE: Coop Task1 running: 222[0m
+[0;32mI (22111) COOPERATIVE: Coop Task2 running: 222[0m
+[0;32mI (22161) COOPERATIVE: Coop Task1 running: 223[0m
+[0;32mI (22191) COOPERATIVE: Coop Task2 running: 223[0m
+[0;32mI (22241) COOPERATIVE: Coop Task1 running: 224[0m
+[0;32mI (22271) COOPERATIVE: Coop Task2 running: 224[0m
+[0;32mI (22321) COOPERATIVE: Coop Task1 running: 225[0m
+[0;32mI (22351) COOPERATIVE: Coop Task2 running: 225[0m
+[0;32mI (22401) COOPERATIVE: Coop Task1 running: 226[0m
+[0;32mI (22431) COOPERATIVE: Coop Task2 running: 226[0m
+[0;32mI (22481) COOPERATIVE: Coop Task1 running: 227[0m
+[0;32mI (22511) COOPERATIVE: Coop Task2 running: 227[0m
+[0;32mI (22561) COOPERATIVE: Coop Task1 running: 228[0m
+[0;32mI (22591) COOPERATIVE: Coop Task2 running: 228[0m
+[0;32mI (22641) COOPERATIVE: Coop Task1 running: 229[0m
+[0;32mI (22671) COOPERATIVE: Coop Task2 running: 229[0m
+[0;32mI (22721) COOPERATIVE: Coop Task1 running: 230[0m
+[0;32mI (22751) COOPERATIVE: Coop Task2 running: 230[0m
+[0;32mI (22801) COOPERATIVE: Coop Task1 running: 231[0m
+[0;32mI (22831) COOPERATIVE: Coop Task2 running: 231[0m
+[0;32mI (22881) COOPERATIVE: Coop Task1 running: 232[0m
+[0;32mI (22911) COOPERATIVE: Coop Task2 running: 232[0m
+[0;32mI (22961) COOPERATIVE: Coop Task1 running: 233[0m
+[0;32mI (22991) COOPERATIVE: Coop Task2 running: 233[0m
+[0;32mI (23041) COOPERATIVE: Coop Task1 running: 234[0m
+[0;32mI (23071) COOPERATIVE: Coop Task2 running: 234[0m
+[0;32mI (23121) COOPERATIVE: Coop Task1 running: 235[0m
+[0;32mI (23151) COOPERATIVE: Coop Task2 running: 235[0m
+[0;32mI (23201) COOPERATIVE: Coop Task1 running: 236[0m
+[0;32mI (23231) COOPERATIVE: Coop Task2 running: 236[0m
+[0;32mI (23281) COOPERATIVE: Coop Task1 running: 237[0m
+[0;32mI (23311) COOPERATIVE: Coop Task2 running: 237[0m
+[0;32mI (23361) COOPERATIVE: Coop Task1 running: 238[0m
+[0;32mI (23391) COOPERATIVE: Coop Task2 running: 238[0m
+[0;32mI (23441) COOPERATIVE: Coop Task1 running: 239[0m
+[0;32mI (23471) COOPERATIVE: Coop Task2 running: 239[0m
+[0;32mI (23521) COOPERATIVE: Coop Task1 running: 240[0m
+[0;32mI (23551) COOPERATIVE: Coop Task2 running: 240[0m
+[0;32mI (23601) COOPERATIVE: Coop Task1 running: 241[0m
+[0;32mI (23631) COOPERATIVE: Coop Task2 running: 241[0m
+[0;32mI (23681) COOPERATIVE: Coop Task1 running: 242[0m
+[0;32mI (23711) COOPERATIVE: Coop Task2 running: 242[0m
+[0;32mI (23761) COOPERATIVE: Coop Task1 running: 243[0m
+[0;32mI (23791) COOPERATIVE: Coop Task2 running: 243[0m
+[0;32mI (23841) COOPERATIVE: Coop Task1 running: 244[0m
+[0;32mI (23871) COOPERATIVE: Coop Task2 running: 244[0m
+[0;32mI (23921) COOPERATIVE: Coop Task1 running: 245[0m
+[0;32mI (23951) COOPERATIVE: Coop Task2 running: 245[0m
+[0;32mI (24001) COOPERATIVE: Coop Task1 running: 246[0m
+[0;32mI (24031) COOPERATIVE: Coop Task2 running: 246[0m
+[0;32mI (24081) COOPERATIVE: Coop Task1 running: 247[0m
+[0;32mI (24111) COOPERATIVE: Coop Task2 running: 247[0m
+[0;32mI (24161) COOPERATIVE: Coop Task1 running: 248[0m
+[0;32mI (24191) COOPERATIVE: Coop Task2 running: 248[0m
+[0;32mI (24241) COOPERATIVE: Coop Task1 running: 249[0m
+[0;32mI (24271) COOPERATIVE: Coop Task2 running: 249[0m
+[0;32mI (24321) COOPERATIVE: Coop Task1 running: 250[0m
+[0;32mI (24351) COOPERATIVE: Coop Task2 running: 250[0m
+[0;32mI (24401) COOPERATIVE: Coop Task1 running: 251[0m
+[0;32mI (24431) COOPERATIVE: Coop Task2 running: 251[0m
+[0;32mI (24481) COOPERATIVE: Coop Task1 running: 252[0m
+[0;32mI (24511) COOPERATIVE: Coop Task2 running: 252[0m
+[0;32mI (24561) COOPERATIVE: Coop Task1 running: 253[0m
+[0;32mI (24591) COOPERATIVE: Coop Task2 running: 253[0m
+[0;32mI (24641) COOPERATIVE: Coop Task1 running: 254[0m
+[0;32mI (24671) COOPERATIVE: Coop Task2 running: 254[0m
+[0;32mI (24721) COOPERATIVE: Coop Task1 running: 255[0m
+[0;32mI (24751) COOPERATIVE: Coop Task2 running: 255[0m
+[0;32mI (24801) COOPERATIVE: Coop Task1 running: 256[0m
+[0;32mI (24831) COOPERATIVE: Coop Task2 running: 256[0m
+[0;32mI (24881) COOPERATIVE: Coop Task1 running: 257[0m
+[0;32mI (24911) COOPERATIVE: Coop Task2 running: 257[0m
+[0;32mI (24961) COOPERATIVE: Coop Task1 running: 258[0m
+[0;32mI (24991) COOPERATIVE: Coop Task2 running: 258[0m
+[0;32mI (25041) COOPERATIVE: Coop Task1 running: 259[0m
+[0;32mI (25071) COOPERATIVE: Coop Task2 running: 259[0m
+[0;32mI (25121) COOPERATIVE: Coop Task1 running: 260[0m
+[0;32mI (25151) COOPERATIVE: Coop Task2 running: 260[0m
+[0;32mI (25201) COOPERATIVE: Coop Task1 running: 261[0m
+[0;32mI (25231) COOPERATIVE: Coop Task2 running: 261[0m
+[0;32mI (25281) COOPERATIVE: Coop Task1 running: 262[0m
+[0;32mI (25311) COOPERATIVE: Coop Task2 running: 262[0m
+[0;32mI (25361) COOPERATIVE: Coop Task1 running: 263[0m
+[0;32mI (25391) COOPERATIVE: Coop Task2 running: 263[0m
+[0;32mI (25441) COOPERATIVE: Coop Task1 running: 264[0m
+[0;32mI (25471) COOPERATIVE: Coop Task2 running: 264[0m
+[0;32mI (25521) COOPERATIVE: Coop Task1 running: 265[0m
+[0;32mI (25551) COOPERATIVE: Coop Task2 running: 265[0m
+[0;32mI (25601) COOPERATIVE: Coop Task1 running: 266[0m
+[0;32mI (25631) COOPERATIVE: Coop Task2 running: 266[0m
+[0;32mI (25681) COOPERATIVE: Coop Task1 running: 267[0m
+[0;32mI (25711) COOPERATIVE: Coop Task2 running: 267[0m
+[0;32mI (25761) COOPERATIVE: Coop Task1 running: 268[0m
+[0;32mI (25791) COOPERATIVE: Coop Task2 running: 268[0m
+[0;32mI (25841) COOPERATIVE: Coop Task1 running: 269[0m
+[0;32mI (25871) COOPERATIVE: Coop Task2 running: 269[0m
+[0;32mI (25921) COOPERATIVE: Coop Task1 running: 270[0m
+[0;32mI (25951) COOPERATIVE: Coop Task2 running: 270[0m
+[0;32mI (26001) COOPERATIVE: Coop Task1 running: 271[0m
+[0;32mI (26031) COOPERATIVE: Coop Task2 running: 271[0m
+[0;32mI (26081) COOPERATIVE: Coop Task1 running: 272[0m
+[0;32mI (26111) COOPERATIVE: Coop Task2 running: 272[0m
+[0;32mI (26161) COOPERATIVE: Coop Task1 running: 273[0m
+[0;32mI (26191) COOPERATIVE: Coop Task2 running: 273[0m
+[0;32mI (26241) COOPERATIVE: Coop Task1 running: 274[0m
+[0;32mI (26271) COOPERATIVE: Coop Task2 running: 274[0m
+[0;32mI (26321) COOPERATIVE: Coop Task1 running: 275[0m
+[0;32mI (26351) COOPERATIVE: Coop Task2 running: 275[0m
+[0;32mI (26401) COOPERATIVE: Coop Task1 running: 276[0m
+[0;32mI (26431) COOPERATIVE: Coop Task2 running: 276[0m
+[0;32mI (26481) COOPERATIVE: Coop Task1 running: 277[0m
+[0;32mI (26511) COOPERATIVE: Coop Task2 running: 277[0m
+[0;32mI (26561) COOPERATIVE: Coop Task1 running: 278[0m
+[0;32mI (26591) COOPERATIVE: Coop Task2 running: 278[0m
+[0;32mI (26641) COOPERATIVE: Coop Task1 running: 279[0m
+[0;32mI (26671) COOPERATIVE: Coop Task2 running: 279[0m
+[0;32mI (26721) COOPERATIVE: Coop Task1 running: 280[0m
+[0;32mI (26751) COOPERATIVE: Coop Task2 running: 280[0m
+[0;32mI (26801) COOPERATIVE: Coop Task1 running: 281[0m
+[0;32mI (26831) COOPERATIVE: Coop Task2 running: 281[0m
+[0;32mI (26881) COOPERATIVE: Coop Task1 running: 282[0m
+[0;32mI (26911) COOPERATIVE: Coop Task2 running: 282[0m
+[0;32mI (26961) COOPERATIVE: Coop Task1 running: 283[0m
+[0;32mI (26991) COOPERATIVE: Coop Task2 running: 283[0m
+[0;32mI (27041) COOPERATIVE: Coop Task1 running: 284[0m
+[0;32mI (27071) COOPERATIVE: Coop Task2 running: 284[0m
+[0;32mI (27121) COOPERATIVE: Coop Task1 running: 285[0m
+[0;32mI (27151) COOPERATIVE: Coop Task2 running: 285[0m
+[0;32mI (27201) COOPERATIVE: Coop Task1 running: 286[0m
+[0;32mI (27231) COOPERATIVE: Coop Task2 running: 286[0m
+[0;32mI (27281) COOPERATIVE: Coop Task1 running: 287[0m
+[0;32mI (27311) COOPERATIVE: Coop Task2 running: 287[0m
+[0;32mI (27361) COOPERATIVE: Coop Task1 running: 288[0m
+[0;32mI (27391) COOPERATIVE: Coop Task2 running: 288[0m
+[0;32mI (27441) COOPERATIVE: Coop Task1 running: 289[0m
+[0;32mI (27471) COOPERATIVE: Coop Task2 running: 289[0m
+[0;32mI (27521) COOPERATIVE: Coop Task1 running: 290[0m
+[0;32mI (27551) COOPERATIVE: Coop Task2 running: 290[0m
+[0;32mI (27601) COOPERATIVE: Coop Task1 running: 291[0m
+[0;32mI (27631) COOPERATIVE: Coop Task2 running: 291[0m
+[0;32mI (27681) COOPERATIVE: Coop Task1 running: 292[0m
+[0;32mI (27711) COOPERATIVE: Coop Task2 running: 292[0m
+[0;32mI (27761) COOPERATIVE: Coop Task1 running: 293[0m
+[0;32mI (27791) COOPERATIVE: Coop Task2 running: 293[0m
+[0;32mI (27841) COOPERATIVE: Coop Task1 running: 294[0m
+[0;32mI (27871) COOPERATIVE: Coop Task2 running: 294[0m
+[0;32mI (27921) COOPERATIVE: Coop Task1 running: 295[0m
+[0;32mI (27951) COOPERATIVE: Coop Task2 running: 295[0m
+[0;32mI (28001) COOPERATIVE: Coop Task1 running: 296[0m
+[0;32mI (28031) COOPERATIVE: Coop Task2 running: 296[0m
+[0;32mI (28081) COOPERATIVE: Coop Task1 running: 297[0m
+[0;32mI (28111) COOPERATIVE: Coop Task2 running: 297[0m
+[0;32mI (28161) COOPERATIVE: Coop Task1 running: 298[0m
+[0;32mI (28191) COOPERATIVE: Coop Task2 running: 298[0m
+[0;32mI (28241) COOPERATIVE: Coop Task1 running: 299[0m
+[0;32mI (28271) COOPERATIVE: Coop Task2 running: 299[0m
+[0;32mI (28321) COOPERATIVE: Coop Task1 running: 300[0m
+[0;32mI (28351) COOPERATIVE: Coop Task2 running: 300[0m
+[0;32mI (28401) COOPERATIVE: Coop Task1 running: 301[0m
+[0;32mI (28431) COOPERATIVE: Coop Task2 running: 301[0m
+[0;32mI (28481) COOPERATIVE: Coop Task1 running: 302[0m
+[0;32mI (28511) COOPERATIVE: Coop Task2 running: 302[0m
+[0;32mI (28561) COOPERATIVE: Coop Task1 running: 303[0m
+[0;32mI (28591) COOPERATIVE: Coop Task2 running: 303[0m
+[0;32mI (28641) COOPERATIVE: Coop Task1 running: 304[0m
+[0;32mI (28671) COOPERATIVE: Coop Task2 running: 304[0m
+[0;32mI (28721) COOPERATIVE: Coop Task1 running: 305[0m
+[0;32mI (28751) COOPERATIVE: Coop Task2 running: 305[0m
+[0;32mI (28801) COOPERATIVE: Coop Task1 running: 306[0m
+[0;32mI (28831) COOPERATIVE: Coop Task2 running: 306[0m
+[0;32mI (28881) COOPERATIVE: Coop Task1 running: 307[0m
+[0;32mI (28911) COOPERATIVE: Coop Task2 running: 307[0m
+[0;32mI (28961) COOPERATIVE: Coop Task1 running: 308[0m
+[0;32mI (28991) COOPERATIVE: Coop Task2 running: 308[0m
+[0;32mI (29041) COOPERATIVE: Coop Task1 running: 309[0m
+[0;32mI (29071) COOPERATIVE: Coop Task2 running: 309[0m
+[0;32mI (29121) COOPERATIVE: Coop Task1 running: 310[0m
+[0;32mI (29151) COOPERATIVE: Coop Task2 running: 310[0m
+[0;32mI (29201) COOPERATIVE: Coop Task1 running: 311[0m
+[0;32mI (29231) COOPERATIVE: Coop Task2 running: 311[0m
+[0;32mI (29281) COOPERATIVE: Coop Task1 running: 312[0m
+[0;32mI (29311) COOPERATIVE: Coop Task2 running: 312[0m
+[0;32mI (29361) COOPERATIVE: Coop Task1 running: 313[0m
+[0;32mI (29391) COOPERATIVE: Coop Task2 running: 313[0m
+[0;32mI (29441) COOPERATIVE: Coop Task1 running: 314[0m
+[0;32mI (29471) COOPERATIVE: Coop Task2 running: 314[0m
+[0;32mI (29521) COOPERATIVE: Coop Task1 running: 315[0m
+[0;32mI (29551) COOPERATIVE: Coop Task2 running: 315[0m
+[0;32mI (29601) COOPERATIVE: Coop Task1 running: 316[0m
+[0;32mI (29631) COOPERATIVE: Coop Task2 running: 316[0m
+[0;32mI (29681) COOPERATIVE: Coop Task1 running: 317[0m
+[0;32mI (29711) COOPERATIVE: Coop Task2 running: 317[0m
+[0;32mI (29761) COOPERATIVE: Coop Task1 running: 318[0m
+[0;32mI (29791) COOPERATIVE: Coop Task2 running: 318[0m
+[0;32mI (29841) COOPERATIVE: Coop Task1 running: 319[0m
+[0;32mI (29871) COOPERATIVE: Coop Task2 running: 319[0m
+[0;32mI (29921) COOPERATIVE: Coop Task1 running: 320[0m
+[0;32mI (29951) COOPERATIVE: Coop Task2 running: 320[0m
+[0;33mW (29991) COOPERATIVE: Emergency button pressed![0m
+[0;33mW (29991) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 0 ms (Max: 20 ms)[0m
+[0;33mW (30301) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (30301) COOPERATIVE: Coop Task1 running: 321[0m
+[0;33mW (30301) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (30311) COOPERATIVE: Coop Task2 running: 321[0m
+[0;33mW (30311) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (30321) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (30631) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (30631) COOPERATIVE: Coop Task1 running: 322[0m
+[0;33mW (30631) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (30641) COOPERATIVE: Coop Task2 running: 322[0m
+[0;33mW (30641) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (30651) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (30961) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (30961) COOPERATIVE: Coop Task1 running: 323[0m
+[0;33mW (30961) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (30971) COOPERATIVE: Coop Task2 running: 323[0m
+[0;33mW (30971) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (30981) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (31291) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (31291) COOPERATIVE: Coop Task1 running: 324[0m
+[0;33mW (31291) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (31301) COOPERATIVE: Coop Task2 running: 324[0m
+[0;33mW (31301) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (31311) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (31621) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (31621) COOPERATIVE: Coop Task1 running: 325[0m
+[0;33mW (31621) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (31631) COOPERATIVE: Coop Task2 running: 325[0m
+[0;33mW (31631) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (31641) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (31951) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (31951) COOPERATIVE: Coop Task1 running: 326[0m
+[0;33mW (31951) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (31961) COOPERATIVE: Coop Task2 running: 326[0m
+[0;33mW (31961) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (31971) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (32281) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (32281) COOPERATIVE: Coop Task1 running: 327[0m
+[0;33mW (32281) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (32291) COOPERATIVE: Coop Task2 running: 327[0m
+[0;33mW (32291) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (32301) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (32611) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (32611) COOPERATIVE: Coop Task1 running: 328[0m
+[0;33mW (32611) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (32621) COOPERATIVE: Coop Task2 running: 328[0m
+[0;33mW (32621) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (32631) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (32941) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (32941) COOPERATIVE: Coop Task1 running: 329[0m
+[0;33mW (32941) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (32951) COOPERATIVE: Coop Task2 running: 329[0m
+[0;33mW (32951) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (32961) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (33271) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (33271) COOPERATIVE: Coop Task1 running: 330[0m
+[0;33mW (33271) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (33281) COOPERATIVE: Coop Task2 running: 330[0m
+[0;33mW (33281) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (33291) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (33601) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (33601) COOPERATIVE: Coop Task1 running: 331[0m
+[0;33mW (33601) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (33611) COOPERATIVE: Coop Task2 running: 331[0m
+[0;33mW (33611) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (33621) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (33931) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (33931) COOPERATIVE: Coop Task1 running: 332[0m
+[0;33mW (33931) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (33941) COOPERATIVE: Coop Task2 running: 332[0m
+[0;33mW (33941) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (33951) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (34261) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (34261) COOPERATIVE: Coop Task1 running: 333[0m
+[0;33mW (34261) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (34271) COOPERATIVE: Coop Task2 running: 333[0m
+[0;33mW (34271) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (34281) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (34591) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (34591) COOPERATIVE: Coop Task1 running: 334[0m
+[0;33mW (34591) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (34601) COOPERATIVE: Coop Task2 running: 334[0m
+[0;33mW (34601) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (34611) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (34921) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (34921) COOPERATIVE: Coop Task1 running: 335[0m
+[0;33mW (34921) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (34931) COOPERATIVE: Coop Task2 running: 335[0m
+[0;33mW (34931) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (34941) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (35251) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (35251) COOPERATIVE: Coop Task1 running: 336[0m
+[0;33mW (35251) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (35261) COOPERATIVE: Coop Task2 running: 336[0m
+[0;33mW (35261) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (35271) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (35581) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (35581) COOPERATIVE: Coop Task1 running: 337[0m
+[0;33mW (35581) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (35591) COOPERATIVE: Coop Task2 running: 337[0m
+[0;33mW (35591) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (35601) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (35911) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (35911) COOPERATIVE: Coop Task1 running: 338[0m
+[0;33mW (35911) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (35921) COOPERATIVE: Coop Task2 running: 338[0m
+[0;33mW (35921) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (35931) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (36241) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (36241) COOPERATIVE: Coop Task1 running: 339[0m
+[0;33mW (36241) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (36251) COOPERATIVE: Coop Task2 running: 339[0m
+[0;33mW (36251) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (36261) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (36571) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (36571) COOPERATIVE: Coop Task1 running: 340[0m
+[0;33mW (36571) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (36581) COOPERATIVE: Coop Task2 running: 340[0m
+[0;33mW (36581) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (36591) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (36901) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (36901) COOPERATIVE: Coop Task1 running: 341[0m
+[0;33mW (36901) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (36911) COOPERATIVE: Coop Task2 running: 341[0m
+[0;33mW (36911) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (36921) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (37231) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (37231) COOPERATIVE: Coop Task1 running: 342[0m
+[0;33mW (37231) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (37241) COOPERATIVE: Coop Task2 running: 342[0m
+[0;33mW (37241) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (37251) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (37561) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (37561) COOPERATIVE: Coop Task1 running: 343[0m
+[0;33mW (37561) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (37571) COOPERATIVE: Coop Task2 running: 343[0m
+[0;33mW (37571) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (37581) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (37891) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (37891) COOPERATIVE: Coop Task1 running: 344[0m
+[0;33mW (37891) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (37901) COOPERATIVE: Coop Task2 running: 344[0m
+[0;33mW (37901) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (37911) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (38221) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (38221) COOPERATIVE: Coop Task1 running: 345[0m
+[0;33mW (38221) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (38231) COOPERATIVE: Coop Task2 running: 345[0m
+[0;33mW (38231) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (38241) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (38551) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (38551) COOPERATIVE: Coop Task1 running: 346[0m
+[0;33mW (38551) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (38561) COOPERATIVE: Coop Task2 running: 346[0m
+[0;33mW (38561) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (38571) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (38881) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (38881) COOPERATIVE: Coop Task1 running: 347[0m
+[0;33mW (38881) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (38891) COOPERATIVE: Coop Task2 running: 347[0m
+[0;33mW (38891) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (38901) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
+[0;33mW (39211) COOPERATIVE: Emergency button pressed![0m
+[0;32mI (39211) COOPERATIVE: Coop Task1 running: 348[0m
+[0;33mW (39211) COOPERATIVE: Task1 yielding for emergency[0m
+[0;32mI (39221) COOPERATIVE: Coop Task2 running: 348[0m
+[0;33mW (39221) COOPERATIVE: Task2 yielding for emergency[0m
+[0;33mW (39231) COOPERATIVE: 🚨 EMERGENCY RESPONSE! Response time: 20 ms (Max: 20 ms)[0m
