@@ -330,8 +330,17 @@ if (xSemaphoreTake(xBinarySemaphore, pdMS_TO_TICKS(3000)) == pdTRUE) {
 
 ### คำถามสำหรับการทดลоง
 1. เมื่อ give semaphore หลายครั้งติดต่อกัน จะเกิดอะไรขึ้น?
+
+Binary Semaphore เก็บสัญญาณได้แค่ 1 ครั้ง ถ้า give ซ้ำระหว่างที่ยังไม่ถูก take → สัญญาณนั้น “หายไป”
+
 2. ISR สามารถใช้ `xSemaphoreGive` หรือต้องใช้ `xSemaphoreGiveFromISR`?
+
+ISR ต้องใช้ xSemaphoreGiveFromISR() เสมอ เพื่อให้ปลอดภัยและสอดคล้องกับระบบ interrupt ของ FreeRTOS
+
 3. Binary Semaphore แตกต่างจาก Queue อย่างไร?
+
+Binary Semaphore ใช้เพื่อ “บอกเหตุการณ์” (Signal)
+ส่วน Queue ใช้เพื่อ “ส่งข้อมูลจริง” (Data Transfer)
 
 ## 📋 สรุปผลการทดลอง
 
