@@ -405,8 +405,17 @@ void app_main(void) {
 
 ### คำถามสำหรับการทดลอง
 1. เมื่อ Producers มากกว่า Resources จะเกิดอะไรขึ้น?
+
+เมื่อ Producers > Resources → บาง Task ต้องรอ (Blocked) → Success Rate ลดลง และ Wait Time เพิ่มขึ้น
+
 2. Load Generator มีผลต่อ Success Rate อย่างไร?
+
+Load Generator ทำให้ระบบเกิดภาวะโหลดสูงชั่วคราว → Success Rate ลดลง และเวลารอเพิ่มขึ้น
+
 3. Counting Semaphore จัดการ Resource Pool อย่างไร?
+
+Counting Semaphore ควบคุมจำนวน Resource ที่ใช้งานได้พร้อมกัน
+โดยลดค่าเมื่อมีการใช้ และเพิ่มค่าเมื่อคืน เพื่อรักษาความสมดุลของ Resource Pool
 
 ## 📋 สรุปผลการทดลอง
 
