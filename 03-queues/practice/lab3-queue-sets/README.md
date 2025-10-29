@@ -25,7 +25,6 @@ graph TB
 
 ### 1. สร้างโปรเจคใหม่
 ```bash
-cd ~/esp
 idf.py create-project queue_sets
 cd queue_sets
 ```
@@ -431,8 +430,16 @@ vTaskDelay(pdMS_TO_TICKS(500)); // ส่งทุก 0.5 วินาที
 
 ### คำถามสำหรับการทดลอง
 1. Processor Task รู้ได้อย่างไรว่าข้อมูลมาจาก Queue ไหน?
+
+รู้ได้จากการตรวจค่า xActivatedMember ที่บ่งบอกว่า Queue ไหน “ถูกกระตุ้น” ใน Queue Set
+
 2. เมื่อหลาย Queue มีข้อมูลพร้อมกัน เลือกประมวลผลอันไหนก่อน?
+
+เมื่อหลาย Queue มีข้อมูลพร้อมกัน Processor Task จะประมวลผล Queue ที่ถูกเพิ่มเข้า Set ก่อน หรือ Queue ที่ FreeRTOS ตรวจเจอก่อน (ไม่ใช่สุ่ม)
+
 3. Queue Sets ช่วยประหยัด CPU อย่างไร?
+
+Queue Sets ลดการ polling หลาย queue ทำให้ CPU ไม่ต้องทำงานตลอดเวลา → ประหยัดพลังงานและเพิ่มประสิทธิภาพระบบ
 
 ## 📋 สรุปผลการทดลอง
 

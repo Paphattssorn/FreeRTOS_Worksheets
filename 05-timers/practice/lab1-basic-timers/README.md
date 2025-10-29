@@ -39,7 +39,6 @@ CONFIG_FREERTOS_TIMER_QUEUE_LENGTH=10
 
 ### 2. สร้างโปรเจคใหม่
 ```bash
-cd ~/esp
 idf.py create-project software_timers
 cd software_timers
 ```
@@ -376,11 +375,11 @@ for (int i = 0; i < 10; i++) {
 ## 📋 สรุปผลการทดลอง
 
 ### สิ่งที่เรียนรู้:
-- [ ] การสร้างและจัดการ Software Timers
-- [ ] One-shot vs Auto-reload timers
-- [ ] Timer callbacks และ context
-- [ ] Dynamic timer creation/deletion
-- [ ] Timer Service Task behavior
+- [ ✓] การสร้างและจัดการ Software Timers
+- [ ✓] One-shot vs Auto-reload timers
+- [ ✓] Timer callbacks และ context
+- [✓ ] Dynamic timer creation/deletion
+- [ ✓] Timer Service Task behavior
 
 ### APIs ที่ใช้:
 - `xTimerCreate()` - สร้าง timer

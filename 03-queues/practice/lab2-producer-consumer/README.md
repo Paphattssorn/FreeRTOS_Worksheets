@@ -30,7 +30,6 @@ graph LR
 
 ### 1. สร้างโปรเจคใหม่
 ```bash
-cd ~/esp
 idf.py create-project producer_consumer
 cd producer_consumer
 ```
@@ -331,14 +330,31 @@ xTaskCreate(producer_task, "Producer4", 3072, &producer4_id, 3, NULL);
 ### ตารางผลการทดลอง
 | ทดลอง | Producers | Consumers | Produced | Consumed | Dropped | Efficiency |
 |-------|-----------|-----------|----------|----------|---------|------------|
-| 1 | 3 | 2 | | | | |
-| 2 | 4 | 2 | | | | |
-| 3 | 3 | 1 | | | | |
+| 1 | 3 | 2 |1671 |1666 |149 |99.7% |           
+| 2 | 4 | 2 |138 |129 |51 |93.5% |
+| 3 | 3 | 1 |113 |103 |41 |91.2% |
 
 ### คำถามสำหรับการทดลอง
 1. ในทดลองที่ 2 เกิดอะไรขึ้นกับ Queue?
+Queue size: ขึ้นถึง 9–10
+มีข้อความเตือน: ⚠️ HIGH LOAD DETECTED! Queue size: 9–10
+Dropped: เยอะขึ้น (88 ชิ้น)
+Efficiency: ลดลงเหลือ ~95%
+สรุป: มีผู้ผลิตมากเกินไป ทำให้ Queue เต็มเร็ว สินค้าบางส่วนถูก Drop และระบบเตือนให้เพิ่มผู้บริโภค
+
 2. ในทดลองที่ 3 ระบบทำงานเป็นอย่างไร?
+Queue size: เต็ม (10 ชิ้นตลอด)
+มีการ Drop บ่อย: เช่น ✗ Producer ... Queue full!
+Dropped: 41 ชิ้น
+Efficiency: เหลือ ~91%
+สรุป: ผู้บริโภคลดลงทำให้รับของไม่ทัน Queue เต็มตลอด ระบบแจ้งเตือน Load สูงต่อเนื่อง
+
 3. Load Balancer แจ้งเตือนเมื่อไหร่?
+ระบบจะขึ้นข้อความ
+⚠️ HIGH LOAD DETECTED! Queue size: 9 หรือ 10
+💡 Suggestion: Add more consumers or optimize processing
+เมื่อจำนวนสินค้าค้างใน Queue เกิน 8 ชิ้น
+แสดงว่า “ระบบเริ่มล้น” และต้องมี Consumer เพิ่มเพื่อรักษาสมดุล
 
 ## 🔧 การปรับแต่งเพิ่มเติม
 
@@ -377,11 +393,11 @@ typedef struct {
 ## 📋 สรุปผลการทดลอง
 
 ### สิ่งที่เรียนรู้:
-- [ ] Producer-Consumer Pattern
-- [ ] การจัดการ Multiple Producers/Consumers
-- [ ] การใช้ Mutex สำหรับ Synchronized Output
-- [ ] การวิเคราะห์ประสิทธิภาพระบบ
-- [ ] การตรวจจับ Bottleneck
+- [ ✓] Producer-Consumer Pattern
+- [ ✓] การจัดการ Multiple Producers/Consumers
+- [✓ ] การใช้ Mutex สำหรับ Synchronized Output
+- [ ✓] การวิเคราะห์ประสิทธิภาพระบบ
+- [✓ ] การตรวจจับ Bottleneck
 
 ### APIs ที่ใช้:
 - `xQueueCreate()` - สร้าง Queue
