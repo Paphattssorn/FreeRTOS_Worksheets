@@ -389,8 +389,19 @@ xTaskCreate(low_priority_task, "LowPri", 3072, NULL, 5, NULL);   // เพิ่
 
 ### คำถามสำหรับการทดลอง
 1. เมื่อไม่ใช้ Mutex จะเกิด data corruption หรือไม่?
+
+เมื่อไม่ใช้ Mutex → shared data ไม่มีการป้องกัน → เกิด data corruption ได้จริง
+Mutex คือสิ่งที่ทำให้ Critical Section มี “การเข้าคิว” เพื่อความปลอดภัยของข้อมูล
+
 2. Priority Inheritance ทำงานอย่างไร?
+
+Priority Inheritance ช่วยให้ Task ที่ถือ Mutex เร่งทำงานเสร็จเร็วขึ้น
+ลดเวลา “ติดค้าง” ของ Task Priority สูง → ทำให้ระบบตอบสนองดีขึ้น
+
 3. Task priority มีผลต่อการเข้าถึง shared resource อย่างไร?
+
+Priority กำหนดลำดับการได้ mutex และเวลาการตอบสนองของระบบ
+แต่ Mutex และ Priority Inheritance ช่วยให้ระบบ “ยุติธรรมและปลอดภัย” ต่อข้อมูลร่วมกัน
 
 ## 📋 สรุปผลการทดลอง
 
